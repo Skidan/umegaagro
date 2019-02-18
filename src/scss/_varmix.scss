@@ -1,16 +1,16 @@
 /********** VARIABLES AND MIXINS ***********/
 // sizes
-$basic: 16px;
+$basic: 4mm;
 
 // colors
-$color-main: #508154;
-$color-light: #979797;
+$color-main: #004455;
+$color-light: #a9a9a9;
 $color-dark: #1a1a1a;
 $color-contrast: #f3B900;
-$color-bg: #808080;
+$color-bg: #fafafa;
 $color-bgdark: #4b4b4b;
 $gradient-main: linear-gradient(to bottom, $color-light, lighten($color-main, 10%) 48%, lighten($color-main, 5%) 52%, $color-dark);
-$gradient-bg: linear-gradient(to bottom, white , $color-bg 49%, lighten($color-bgdark, 10%) 51%, $color-bgdark);
+$gradient-bg: linear-gradient(to bottom, $color-bg 0%, lighten($color-light, 10%) 100%);
 $bgimg: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAMAAABL52QCAAAABlBMVEXCw8Tp6uwFw7MwAAAAF0lEQVR4AWNgYAQCCMEAIoAQgkA8/LIABOwAKWIaZEkAAAAASUVORK5CYII=);///////////////////////////////////
 
 // typography

@@ -9,66 +9,163 @@
 /* MIXINS */
 /********* COMMON STYLES *********/
 a, p, h1, h2, h3, h4, h5, h6, blockquote {
-  font-size: 16px; }
+  font-size: 4mm; }
 
 html {
-  font-size: 16px; }
+  font-size: 4mm; }
 
 body {
-  background: #e9eaec url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAMAAABL52QCAAAABlBMVEXCw8Tp6uwFw7MwAAAAF0lEQVR4AWNgYAQCCMEAIoAQgkA8/LIABOwAKWIaZEkAAAAASUVORK5CYII=);
+  background: #fafafa;
   font-family: "Roboto", sans-serif;
-  color: #508154; }
+  color: #004455;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cormorant Infant", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   line-height: 2em; }
 
 h2, h3 {
-  color: #127e9b; }
+  color: #a9a9a9; }
 
 h4, h5, h6 {
   font-family: "Roboto", sans-serif;
-  color: #002a35; }
+  color: #1a1a1a; }
 
 h1 {
-  font-size: 32px;
+  font-size: 8mm;
   color: #f3B900; }
 
 h2 {
-  font-size: 28px; }
+  font-size: 7mm; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 6mm; }
 
 h4 {
-  font-size: 20px; }
+  font-size: 5mm; }
 
 h5 {
-  font-size: 18px; }
+  font-size: 4.5mm; }
 
 h6 {
-  font-size: 16px; }
+  font-size: 4mm; }
 
 p {
-  text-indent: 2rem;
   text-align: left;
-  line-height: 24px; }
+  line-height: 1; }
 
 blockquote {
-  color: #127e9b;
-  margin: 16px 48px;
-  padding: 8px 8px 8px 16px;
-  border-left: 4px solid #127e9b;
+  color: #a9a9a9;
+  margin: 4mm 12mm;
+  padding: 2mm 2mm 2mm 4mm;
+  border-left: 1mm solid #a9a9a9;
   font-style: italic;
-  -webkit-border-radius: 0 16px 16px 0;
-          border-radius: 0 16px 16px 0; }
+  -webkit-border-radius: 0 4mm 4mm 0;
+          border-radius: 0 4mm 4mm 0; }
 
 a {
   text-indent: 0;
-  color: #127e9b;
+  color: #a9a9a9;
   text-decoration: none; }
   a:hover {
     color: #f3B900; }
 
 /************ MAIN STYLES *************/
+#wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+#statutory {
+  width: 120mm;
+  height: 110mm;
+  background: whitesmoke;
+  -webkit-box-shadow: 0 5mm 10mm rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5mm 10mm rgba(0, 0, 0, 0.15);
+  outline: 1px solid #a9a9a9;
+  margin: 0 auto; }
+
+#maininfo {
+  outline: 1px dotted #f3B900;
+  margin: 2mm;
+  width: 116mm;
+  height: 93mm;
+  position: relative; }
+
+.umegaagrologo {
+  margin: 4mm 1mm 3mm 0; }
+
+.left, .right {
+  outline: 1px dotted #f3B900;
+  width: 54mm;
+  height: 91mm;
+  display: inline-block;
+  margin: 2mm;
+  overflow: hidden; }
+
+.left::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 57.5mm;
+  top: 2mm;
+  width: 1mm;
+  height: 91mm;
+  background-color: #004455;
+  z-index: 99; }
+
+footer {
+  height: 13mm;
+  width: 116mm;
+  margin: 2mm;
+  background-color: #004455;
+  color: #a9a9a9; }
+
+span {
+  display: inline-block;
+  margin: .5mm 0; }
+
+.field {
+  color: #f3B900;
+  background-color: #004455;
+  font-family: "Ubuntu Mono", monospace;
+  text-align: center;
+  height: 6mm;
+  line-height: 6mm; }
+
+#address {
+  margin: 2mm 0 3mm 0; }
+
+#secondTrailer {
+  width: 54mm;
+  border-collapse: collapse; }
+  #secondTrailer td {
+    background-color: #004455;
+    text-align: center;
+    border: 1mm solid whitesmoke; }
+  #secondTrailer ._01 {
+    width: 6mm; }
+  #secondTrailer ._02, #secondTrailer ._03, #secondTrailer ._04 {
+    width: 11mm; }
+
+#vin, #homologation {
+  width: 54mm; }
+
+.left .field {
+  width: 22mm; }
+  .left .field.kg {
+    width: 16mm;
+    position: relative; }
+    .left .field.kg::after {
+      display: inline-block;
+      content: 'kg';
+      width: 6mm;
+      position: absolute;
+      right: -6mm;
+      color: #004455; }
+
+.left .label {
+  width: 30mm;
+  margin-right: 2mm;
+  text-align: right; }

@@ -8,12 +8,13 @@ html {
   font-size: $basic;
 }
 body {
-  background: $color-bg $bgimg;
+  background: $color-bg;
   font-family: $font-regular;
   color: $color-main;
+  box-sizing: border-box;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font-heading;
+  font-family: $font-regular;
   //color: $color-main;
   font-weight: bold;
   line-height: 2em;
@@ -45,9 +46,8 @@ h6 {
   font-size: $basic;
 }
 p {
-  text-indent: 2rem;
   text-align: left;
-  line-height: $line-h;
+  line-height: 1;
 }
 blockquote {
   color: $color-light;

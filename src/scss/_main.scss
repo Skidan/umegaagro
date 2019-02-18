@@ -1,1 +1,105 @@
 /************ MAIN STYLES *************/
+#wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#statutory {
+  width: 120mm;
+  height: 110mm;
+  background: whitesmoke;
+  box-shadow: 0 5mm 10mm rgba(0,0,0,.15);
+  outline: 1px solid $color-light;
+  margin: 0 auto;
+}
+#maininfo {
+  outline: $test;
+  margin: 2mm;
+  width: 116mm;
+  height: 93mm;
+  position: relative;
+}
+.umegaagrologo {
+  margin: 4mm 1mm 3mm 0;
+}
+.left, .right {
+  outline: $test;
+  width: 54mm;
+  height: 91mm;
+  display: inline-block;
+  margin: 2mm;
+  overflow: hidden;
+}
+.left::after {
+  content:'';
+  display: inline-block;
+  position: absolute;
+  left: 57.5mm;
+  top: 2mm;
+  width: 1mm;
+  height: 91mm;
+  background-color: $color-main;
+  z-index: 99;
+}
+footer {
+  height: 13mm;
+  width: 116mm;
+  margin: 2mm;
+  background-color: $color-main;
+  color: $color-light;
+}
+span {
+  display: inline-block;
+  margin: .5mm 0;
+}
+.field {
+  color: $color-contrast;
+  background-color: $color-main;
+  font-family: $font-monospace;
+  text-align: center;
+  height: 6mm;
+  line-height: 6mm;
+}
+#address {
+  margin: 2mm 0 3mm 0;
+}
+#secondTrailer {
+  width: 54mm;
+  border-collapse: collapse;
+  & td {
+    background-color: $color-main;
+    text-align: center;
+    border: 1mm solid whitesmoke;
+  }
+  & ._01 {
+    width: 6mm;
+  }
+  & ._02, ._03, ._04 {
+    width: 11mm;
+  } 
+}
+
+#vin, #homologation {
+  width: 54mm;
+}
+
+.left .field {
+  width: 22mm;
+  &.kg {
+    width: 16mm;
+    position: relative;
+    &::after {
+      display: inline-block;
+      content: 'kg';
+      width: 6mm;
+      position: absolute;
+      right: -6mm;
+      color: $color-main;
+    }
+  }
+}
+.left .label {
+  width: 30mm;
+  margin-right: 2mm;
+  text-align: right;
+}
