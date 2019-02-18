@@ -1,0 +1,74 @@
+/********** STYLE RESET **********/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0; }
+
+/********** VARIABLES AND MIXINS ***********/
+/* MIXINS */
+/********* COMMON STYLES *********/
+a, p, h1, h2, h3, h4, h5, h6, blockquote {
+  font-size: 16px; }
+
+html {
+  font-size: 16px; }
+
+body {
+  background: #e9eaec url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAMAAABL52QCAAAABlBMVEXCw8Tp6uwFw7MwAAAAF0lEQVR4AWNgYAQCCMEAIoAQgkA8/LIABOwAKWIaZEkAAAAASUVORK5CYII=);
+  font-family: "Roboto", sans-serif;
+  color: #508154; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Infant", serif;
+  font-weight: bold;
+  line-height: 2em; }
+
+h2, h3 {
+  color: #127e9b; }
+
+h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  color: #002a35; }
+
+h1 {
+  font-size: 32px;
+  color: #f3B900; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
+
+p {
+  text-indent: 2rem;
+  text-align: left;
+  line-height: 24px; }
+
+blockquote {
+  color: #127e9b;
+  margin: 16px 48px;
+  padding: 8px 8px 8px 16px;
+  border-left: 4px solid #127e9b;
+  font-style: italic;
+  -webkit-border-radius: 0 16px 16px 0;
+          border-radius: 0 16px 16px 0; }
+
+a {
+  text-indent: 0;
+  color: #127e9b;
+  text-decoration: none; }
+  a:hover {
+    color: #f3B900; }
+
+/************ MAIN STYLES *************/
