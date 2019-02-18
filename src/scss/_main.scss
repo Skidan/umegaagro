@@ -13,7 +13,6 @@
   margin: 0 auto;
 }
 #maininfo {
-  outline: $test;
   margin: 2mm;
   width: 116mm;
   height: 93mm;
@@ -23,7 +22,6 @@
   margin: 4mm 1mm 3mm 0;
 }
 .left, .right {
-  outline: $test;
   width: 54mm;
   height: 91mm;
   display: inline-block;
@@ -41,6 +39,10 @@
   background-color: $color-main;
   z-index: 99;
 }
+
+
+
+
 footer {
   height: 13mm;
   width: 116mm;
@@ -63,26 +65,69 @@ span {
 #address {
   margin: 2mm 0 3mm 0;
 }
-#secondTrailer {
+
+.umeganame {
+  font-weight: 700;
+  font-size: 5.5mm;
+  text-transform: uppercase;
   width: 54mm;
-  border-collapse: collapse;
-  & td {
-    background-color: $color-main;
-    text-align: center;
-    border: 1mm solid whitesmoke;
-  }
-  & ._01 {
-    width: 6mm;
-  }
-  & ._02, ._03, ._04 {
-    width: 11mm;
-  } 
+  text-align: center;
 }
 
 #vin, #homologation {
   width: 54mm;
 }
+.leftins, .rightins {
+  width: 26mm;
+  height: 43mm;
+  display: inline-block;
+}
+.leftins {
+  margin-right: 1.5mm;
+}
 
+#country {
+  &::before {content:'('}
+  &::after {content:')'}
+}
+.country {
+  width: 26mm;
+}
+#rFullWeight, #fFullWeight {
+  width: 26mm; 
+  &.kg {
+    width: 20mm;
+    position: relative;
+    &::after {
+      display: inline-block;
+      content: 'kg';
+      width: 6mm;
+      position: absolute;
+      right: -6mm;
+      color: $color-main;
+    }
+  }
+}
+.prepoint {
+  display: inline-block;
+  width: 4mm;
+  font-weight: 700;
+}
+.point {
+  width: 22mm;
+  &.kg {
+    width: 16mm;
+    position: relative;
+    &::after {
+      display: inline-block;
+      content: 'kg';
+      width: 6mm;
+      position: absolute;
+      right: -6mm;
+      color: $color-main;
+    }
+  }
+}
 .left .field {
   width: 22mm;
   &.kg {
@@ -102,4 +147,31 @@ span {
   width: 30mm;
   margin-right: 2mm;
   text-align: right;
+}
+
+.secondTrailer {
+  & span {
+    height: 5mm;
+    line-height: 5mm;
+    margin: 0 0 .5mm 0;
+  }
+  & .heading {
+    width: 15mm;
+    text-align: center;
+  }
+  & .narrow {
+    width: 9mm;
+  }
+  & .field {
+    width: 14mm;
+    margin-left: 1mm;
+  }
+}
+.iso, .ec {
+  font-size: 8mm;
+  width: 50%;
+  text-align: center;
+  line-height: 12mm;
+  color: whitesmoke;
+  font-weight: 700;
 }
