@@ -4,14 +4,14 @@ $basic: 16px;
 
 // colors
 $color-main: #508154;
-$color-light: #127e9b;//////////////////
-$color-dark: #002a35;///////////////////
+$color-light: #979797;
+$color-dark: #1a1a1a;
 $color-contrast: #f3B900;
-$color-bg: #e9eaec;/////////////////////
-$color-bgdark: #808080;
+$color-bg: #808080;
+$color-bgdark: #4b4b4b;
 $gradient-main: linear-gradient(to bottom, $color-light, lighten($color-main, 10%) 48%, lighten($color-main, 5%) 52%, $color-dark);
 $gradient-bg: linear-gradient(to bottom, white , $color-bg 49%, lighten($color-bgdark, 10%) 51%, $color-bgdark);
-$bgimg: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAMAAABL52QCAAAABlBMVEXCw8Tp6uwFw7MwAAAAF0lEQVR4AWNgYAQCCMEAIoAQgkA8/LIABOwAKWIaZEkAAAAASUVORK5CYII=);
+$bgimg: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAMAAABL52QCAAAABlBMVEXCw8Tp6uwFw7MwAAAAF0lEQVR4AWNgYAQCCMEAIoAQgkA8/LIABOwAKWIaZEkAAAAASUVORK5CYII=);///////////////////////////////////
 
 // typography
 $font-heading: 'Cormorant Infant', serif;
