@@ -20,6 +20,7 @@ var trailerData = new Vue({
 	},
 	methods: {
 		//methods
+		//lt
 	},
 	computed: {
 		//computed methods
