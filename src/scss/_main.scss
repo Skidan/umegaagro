@@ -1,8 +1,53 @@
 /************ MAIN STYLES *************/
 #wrapper {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 180mm) {
+		flex-direction: row;
+		justify-content: space-around;
+	}
 }
+#input {
+	background-color: rgba(0,0,0,.5);
+	margin: 0 auto;
+	width: 120mm;
+	height: 80mm;
+	flex-grow: 0;
+	flex-shrink: 1;
+	border-bottom-left-radius: 3mm;
+	border-bottom-right-radius: 3mm;
+	@media screen and (min-width: 180mm) {
+		width: 60mm;
+		flex-basis: 60mm;
+		height: 110mm;
+		margin: 2mm auto;
+		border-top-right-radius: 3mm;
+		border-bottom-left-radius: 0;
+	}
+}
+#output {
+	width: 120mm;
+	height: 110mm;
+	flex-grow: 0;
+	flex-shrink: 1;
+	margin: 0 auto;
+	@media screen and (min-width: 180mm) {
+		
+		margin: 2mm auto;
+	}
+}
+.tarpas {
+	height: 2mm;
+	flex-grow: 1;
+	flex-shrink: 1;
+	@media screen and (min-width: 180mm) {
+		height: 110mm;
+	}
+}
+
+
 
 #statutory {
   width: 120mm;
@@ -10,10 +55,10 @@
   background: whitesmoke;
   box-shadow: 0 5mm 10mm rgba(0,0,0,.15);
   outline: 1px solid $color-light;
-  margin: 0 auto;
+  //margin: 0 auto;
 }
 #maininfo {
-  margin: 2mm;
+  margin: 0 2mm;
   width: 116mm;
   height: 93mm;
   position: relative;

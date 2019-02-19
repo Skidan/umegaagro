@@ -72,10 +72,91 @@ a {
   a:hover {
     color: #f3B900; }
 
+section {
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+
 /************ MAIN STYLES *************/
 #wrapper {
-  width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media screen and (min-width: 180mm) {
+    #wrapper {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; } }
+
+#input {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  width: 120mm;
+  height: 80mm;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+  -webkit-border-bottom-left-radius: 3mm;
+          border-bottom-left-radius: 3mm;
+  -webkit-border-bottom-right-radius: 3mm;
+          border-bottom-right-radius: 3mm; }
+  @media screen and (min-width: 180mm) {
+    #input {
+      width: 60mm;
+      -webkit-flex-basis: 60mm;
+          -ms-flex-preferred-size: 60mm;
+              flex-basis: 60mm;
+      height: 110mm;
+      margin: 2mm auto;
+      -webkit-border-top-right-radius: 3mm;
+              border-top-right-radius: 3mm;
+      -webkit-border-bottom-left-radius: 0;
+              border-bottom-left-radius: 0; } }
+
+#output {
+  width: 120mm;
+  height: 110mm;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
   margin: 0 auto; }
+  @media screen and (min-width: 180mm) {
+    #output {
+      margin: 2mm auto; } }
+
+.tarpas {
+  height: 2mm;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1; }
+  @media screen and (min-width: 180mm) {
+    .tarpas {
+      height: 110mm; } }
 
 #statutory {
   width: 120mm;
@@ -83,11 +164,10 @@ a {
   background: whitesmoke;
   -webkit-box-shadow: 0 5mm 10mm rgba(0, 0, 0, 0.15);
           box-shadow: 0 5mm 10mm rgba(0, 0, 0, 0.15);
-  outline: 1px solid #a9a9a9;
-  margin: 0 auto; }
+  outline: 1px solid #a9a9a9; }
 
 #maininfo {
-  margin: 2mm;
+  margin: 0 2mm;
   width: 116mm;
   height: 93mm;
   position: relative; }

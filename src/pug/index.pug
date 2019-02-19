@@ -3,13 +3,7 @@ html(lang="en")
 	include _header
 	body
 		#wrapper
-			h2 Write something...
-			section#input
-				//- #sertificate
-				//- select#trailer(name="trailer")
-				//- select#country(name="country")
-				//- select#wheels(name="wheels")
-
+			.tarpas
 			section#output
 				#statutory
 					#maininfo
@@ -92,4 +86,11 @@ html(lang="en")
 					footer
 						span.iso ISO 9001
 						span.ec EC
-				button#downloadpdf
+			section#input
+				select
+					option(
+						v-for="tip in trailerTypes"
+						v-bind:key="tip.id"
+						) {{tip.name}}
+			.tarpas
+		script(src="js/scripts.js")
