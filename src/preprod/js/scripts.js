@@ -19,9 +19,9 @@ var trailerData = new Vue({
 		],
 		// database with trailers
 		trailerDatabase: [
-			{umegaTrailerType: "SPC14"},
+			{umegaTrailerType: "SPC"},
 			{category: "R3a"},
-			{tradeName: "SPC14"},
+			{digits: 14},
 			{version: "-"},
 			{certName: "TIP14"},
 			{certVersion: "C"},
