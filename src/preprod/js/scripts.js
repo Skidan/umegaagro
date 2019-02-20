@@ -1,8 +1,3 @@
-Vue.component('trailers', {
-  props: ['tip'],
-  template: '<option>{{ tip.name }}</option>'
-})
-
 var trailerData = new Vue({
 	el: "#wrapper",
 	data: {
