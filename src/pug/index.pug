@@ -91,6 +91,7 @@ html(lang="en")
 					option(
 						v-for="tip in trailerTypes"
 						v-bind:key="tip.id"
+						@keyup
 						) {{tip.name}}
 			.tarpas
 		script(src="js/scripts.js")
