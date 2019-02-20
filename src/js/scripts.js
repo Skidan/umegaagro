@@ -17,6 +17,21 @@ var trailerData = new Vue({
 			{id: 6, name: "SPC30"},
 			{id: 7, name: "SPE16"}
 		],
+		// database with trailers
+		trailerDatabase: [
+			{umegaTrailerType: "SPC14"},
+			{category: "R3a"},
+			{tradeName: "SPC14"},
+			{version: "-"},
+			{certName: "TIP14"},
+			{certVersion: "C"},
+			{sertificated: true},
+			{homologation: "e32*167/2013*00024*00"},
+			{weight: 4100},
+			{techPayload: 14000},
+			{drawbar: 3000},
+			{axle: 9000}
+		],
 		currentTrailer: [
 			{name: "XXXXX"},
 			{category: "XXX"},
@@ -53,7 +68,9 @@ var trailerData = new Vue({
 		
 	},
 	methods: {
-		//methods
-		//lt
+		fillTrailer(){
+			// fill "currenttrailer" with selected info
+			alert("Trailer filled");
+		}
 	}
 });
