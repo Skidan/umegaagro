@@ -14,73 +14,73 @@ html(lang="en")
 							span#categoryl.label Category:
 							span#categoryf.field {{currentTrailer[1].category}}
 							span#typel.label Type:
-							span#typef.field SPC20
+							span#typef.field {{currentTrailer[0].name}}
 							span#variantl.label Variant:
-							span#variantf.field L
+							span#variantf.field {{currentTrailer[2].variant}}
 							span#versionl.label Version:
-							span#versionf.field -
+							span#versionf.field {{currentTrailer[3].version}}
 							span#productionl.label Manufactured:
-							span#productionf.field 2019
+							span#productionf.field {{currentTrailer[4].year}}
 							span#weightl.label Weight:
-							span#weightf.field.kg 7750
+							span#weightf.field.kg {{currentTrailer[5].mass}}
 							span#payloadl.label Payload:
-							span#payloadf.field.kg 14250
+							span#payloadf.field.kg {{currentTrailer[6].payload}}
 							span#techPayloadl.label Tech. payload:
-							span#techPayloadf.field.kg 19500
+							span#techPayloadf.field.kg {{currentTrailer[7].techPayload}}
 						.right
 							span.umeganame Umega Group, AB
-							span#homologation.field e32*167/2013*00021*00
-							span#vin.field UMESPC20CJ0004578
+							span#homologation.field {{currentTrailer[8].homologation}}
+							span#vin.field {{currentTrailer[9].vin}}
 							.columns
 								.leftins
-									span#country.field.country UA
-									span#rFullWeight.field.kg 22000
+									span#country.field.country {{currentTrailer[10].country}}
+									span#rFullWeight.field.kg {{currentTrailer[11].onroad[0].whole}}
 									.cont
 										span.prepoint 0:
-										span#rpoint0.point.field.kg 4000
+										span#rpoint0.point.field.kg {{currentTrailer[11].onroad[1].p0}}
 									.cont
 										span.prepoint 1:
-										span#rpoint1.point.field.kg 9000
+										span#rpoint1.point.field.kg {{currentTrailer[11].onroad[2].p1}}
 									.cont
 										span.prepoint 2:
-										span#rpoint2.point.field.kg 9000
+										span#rpoint2.point.field.kg {{currentTrailer[11].onroad[3].p2}}
 									.cont
 										span.prepoint 3:
-										span#rpoint3.point.field.kg -
+										span#rpoint3.point.field.kg {{currentTrailer[11].onroad[4].p3}}
 								.rightins
 									span.country.field &nbsp;
-									span#fFullWeight.field.kg 27250
+									span#fFullWeight.field.kg {{currentTrailer[12].offroad[0].whole}}
 									.cont
 										span.prepoint 0:
-										span#fpoint0.point.field.kg 4000
+										span#fpoint0.point.field.kg {{currentTrailer[12].offroad[1].p0}}
 									.cont
 										span.prepoint 1:
-										span#fpoint1.point.field.kg 11625
+										span#fpoint1.point.field.kg {{currentTrailer[12].offroad[2].p1}}
 									.cont
 										span.prepoint 2:
-										span#fpoint2.point.field.kg 11625
+										span#fpoint2.point.field.kg {{currentTrailer[12].offroad[3].p2}}
 									.cont
 										span.prepoint 3:
-										span#fpoint3.point.field.kg -
+										span#fpoint3.point.field.kg {{currentTrailer[12].offroad[4].p3}}
 							.secondTrailer
 								span.narrow.heading &nbsp;
 								span.heading T-1
 								span.heading T-2
 								span.heading T-3
 								span.narrow.heading B-1:
-								span#t1b1.field 1500
+								span#t1b1.field {{currentTrailer[13].secondTrailer[0].t1b1}}
 								span#t2b1.field -
 								span#t3b1.field -
 								span.narrow.heading B-2:
-								span#t1b2.field 8000
+								span#t1b2.field {{currentTrailer[13].secondTrailer[1].t1b2}}
 								span#t2b2.field -
 								span#t3b2.field -
 								span.narrow.heading B-3:
-								span#t1b3.field 18000
+								span#t1b3.field {{currentTrailer[13].secondTrailer[2].t1b3}}
 								span#t2b3.field -
 								span#t3b3.field -
 								span.narrow.heading B-4:
-								span#t1b4.field 18000
+								span#t1b4.field {{currentTrailer[13].secondTrailer[3].t1b4}}
 								span#t2b4.field -
 								span#t3b4.field -
 					footer
