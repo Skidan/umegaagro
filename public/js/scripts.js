@@ -1,8 +1,3 @@
-Vue.component('trailers', {
-  props: ['tip'],
-  template: '<option>{{ tip.name }}</option>'
-})
-
 var trailerData = new Vue({
 	el: "#wrapper",
 	data: {
@@ -16,6 +11,21 @@ var trailerData = new Vue({
 			{id: 5, name: "PI20"},
 			{id: 6, name: "SPC30"},
 			{id: 7, name: "SPE16"}
+		],
+		// database with trailers
+		trailerDatabase: [
+			{umegaTrailerType: "SPC"},
+			{category: "R3a"},
+			{digits: 14},
+			{version: "-"},
+			{certName: "TIP14"},
+			{certVersion: "C"},
+			{sertificated: true},
+			{homologation: "e32*167/2013*00024*00"},
+			{weight: 4100},
+			{techPayload: 14000},
+			{drawbar: 3000},
+			{axle: 9000}
 		],
 		currentTrailer: [
 			{name: "XXXXX"},
@@ -42,12 +52,20 @@ var trailerData = new Vue({
 				{p1: 14000},
 				{p2: 14000},
 				{p3: 14000}
+			]},
+			{secondTrailer: [
+				{t1b1: 1500},
+				{t1b2: 8000},
+				{t1b3: 18000},
+				{t1b4: 18000}
 			]}
 		]
 		
 	},
 	methods: {
-		//methods
-		//lt
+		fillTrailer(){
+			// fill "currenttrailer" with selected info
+			alert("Trailer filled");
+		}
 	}
 });
