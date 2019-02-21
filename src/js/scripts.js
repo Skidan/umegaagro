@@ -2,6 +2,7 @@ var trailerData = new Vue({
 	el: "#wrapper",
 	data: {
 		//variables
+		selected: "",
 		trailerTypes: [
 			{id: 0, name: "- select type -"},
 			{id: 1, name: "SPC14"},
@@ -65,7 +66,12 @@ var trailerData = new Vue({
 	methods: {
 		fillTrailer(){
 			// fill "currenttrailer" with selected info
-			alert("Trailer filled");
+			console.log(this.selected);
+			if(this.selected == "GPP23") {
+				this.currentTrailer[1].category = "S2a";
+			} else {
+				this.currentTrailer[1].category = "R3a";
+			}
 		}
 	}
 });

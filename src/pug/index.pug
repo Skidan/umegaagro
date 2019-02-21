@@ -14,7 +14,7 @@ html(lang="en")
 							span#categoryl.label Category:
 							span#categoryf.field {{currentTrailer[1].category}}
 							span#typel.label Type:
-							span#typef.field {{currentTrailer[0].name}}
+							span#typef.field {{selected}}
 							span#variantl.label Variant:
 							span#variantf.field {{currentTrailer[2].variant}}
 							span#versionl.label Version:
@@ -87,11 +87,7 @@ html(lang="en")
 						span.iso ISO 9001
 						span.ec EC
 			section#input
-				select
-					option(
-						v-for="tip in trailerTypes"
-						v-bind:key="tip.id"
-						@keyup
-						) {{tip.name}}
+				select(v-model="selected" v-on:input="fillTrailer()")
+					option(v-for="type in trailerTypes" v-bind:key="type.id") {{type.name}}
 			.tarpas
 		script(src="js/scripts.js")
