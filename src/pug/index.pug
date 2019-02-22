@@ -87,7 +87,9 @@ html(lang="en")
 						span.iso ISO 9001
 						span.ec EC
 			section#input
-				select(v-model="selected" v-on:input="fillTrailer()")
+				label(for="#selecttrailer") Select trailer type
+				select(v-model="selected")#selecttrailer
 					option(v-for="type in trailerTypes" v-bind:key="type.id") {{type.name}}
+				button(@click="fillTrailer()")#build build
 			.tarpas
 		script(src="js/scripts.js")

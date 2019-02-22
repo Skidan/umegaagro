@@ -220,3 +220,18 @@ span {
   color: whitesmoke;
   font-weight: 700;
 }
+
+#input label {
+  display: inline-block;
+  margin: 2mm;
+  color: whitesmoke;
+}
+#input select {
+  margin: 2mm;
+  display: inline-block;
+}
+button#build {
+  margin: 2mm;
+  padding: .3em;
+  border-radius: .3em;
+}
