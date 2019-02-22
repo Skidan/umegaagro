@@ -2,12 +2,13 @@ var trailerData = new Vue({
 	el: "#wrapper",
 	data: {
 		//variables
+		selected: "",
 		trailerTypes: [
-			{id: 0, name: "- select type -"},
+			{id: 0, name: "PI42"},
 			{id: 1, name: "SPC14"},
 			{id: 2, name: "SPC16"},
 			{id: 3, name: "GPP23"},
-			{id: 4, name: "GPP27"},
+			{id: 4, name: "GPP27L"},
 			{id: 5, name: "PI20"},
 			{id: 6, name: "SPC30"},
 			{id: 7, name: "SPE16"}
@@ -65,7 +66,16 @@ var trailerData = new Vue({
 	methods: {
 		fillTrailer(){
 			// fill "currenttrailer" with selected info
-			alert("Trailer filled");
+			switch (this.currentTrailer[1].category) {
+				case "": alert("Trailer not selected"); break;
+				case "GPP23":		this.currentTrailer[1].category = "S2a"; break;
+				case "GPP27L":	this.currentTrailer[1].category = "S2a"; break;
+				case "PI20":		this.currentTrailer[1].category = "S2a"; break;
+				case "PI42":		this.currentTrailer[1].category = "S2a"; break;
+				default:				this.currentTrailer[1].category = "R3a";
+			}
+			
+			console.log(this.selected + " built correctly" + typeof(this.selected));
 		}
 	}
 });
