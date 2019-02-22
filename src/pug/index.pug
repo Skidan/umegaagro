@@ -90,6 +90,6 @@ html(lang="en")
 				label(for="#selecttrailer") Select trailer type
 				select(v-model="selected")#selecttrailer
 					option(v-for="type in trailerTypes" v-bind:key="type.id") {{type.name}}
-				button(@click="fillTrailer()")#build build
+				button(@click="fillTrailer()")#build.button.btn-primary build
 			.tarpas
 		script(src="js/scripts.js")

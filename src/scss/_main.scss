@@ -229,9 +229,121 @@ span {
 #input select {
   margin: 2mm;
   display: inline-block;
+  line-height: 1.5;
+  padding: 1mm;
 }
-button#build {
-  margin: 2mm;
-  padding: .3em;
-  border-radius: .3em;
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  margin: $basic / 4;
+  background-color: rgba(233,234,236,.3);
+  color: $color-main;
+  padding: 0 $basic;
+  border-radius: $basic / 4;
+  border: 1px solid $color-bgdark;
+  line-height: $basic * 2;
+  box-shadow: 0 4px 4px rgba(0,0,0,.1);
+  transition: background-color .2s;
+  &:hover {
+    background-color: lighten($color-bgdark, 10%);
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+  }
+  &:active {
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    background-color: darken($color-bgdark, 10%);
+  }
+}
+.btn-primary {
+  background-color: rgb(31,57,72);
+  color: $color-bg;
+  box-shadow: 0 4px 4px rgba(31,57,72,.2);
+  border-color: whitesmoke;
+  &:hover {
+    background-color: $color-light;
+    color: $color-bg;
+    box-shadow: 0 4px 6px rgba(255,255,255,.4);
+  }
+  &:active {
+    background-color: darken($color-light, 10%);
+    color: $color-bg;
+    box-shadow: 0 2px 6px rgba(255,255,255,.4);
+  }
+}
+.btn-danger {
+  background-color: rgba(153,0,0,.3);
+  color: $color-contrast;
+  border-color: $color-contrast;
+  box-shadow: 0 4px 4px rgba(153,0,0,.2);
+  &:hover {
+    background-color: lighten($color-contrast, 10%);
+    color: $color-bg;
+    box-shadow: 0 4px 6px rgba(153,0,0,.4);
+  }
+  &:active {
+    background-color: darken($color-contrast, 10%);
+    color: $color-bg;
+    box-shadow: 0 2px 6px rgba(153,0,0,.4);
+  }
+}
+.btn-info {
+  background-color: rgba(18,126,155,.3);
+  color: $color-light;
+  border-color: $color-light;
+  box-shadow: 0 4px 4px rgba(18,126,155,.2);
+  cursor: help;
+  &:hover {
+    background-color: lighten($color-light, 10%);
+    color: $color-bg;
+    box-shadow: 0 4px 6px rgba(18,126,155,.4);
+  }
+  &:active {
+    background-color: darken($color-light, 10%);
+    color: $color-bg;
+    box-shadow: 0 2px 6px rgba(18,126,155,.4);
+  }
+}
+.btn-success {
+  background-color: rgba(0,132,15,.3);
+  color: rgb(0,132,15);
+  border-color: rgb(0,132,15);
+  box-shadow: 0 4px 4px rgba(0,132,15,.2);
+  &:hover {
+    background-color: lighten(rgb(0,132,15), 10%);
+    color: $color-bg;
+    box-shadow: 0 4px 6px rgba(0,132,15,.4);
+  }
+  &:active {
+    background-color: darken(rgb(0,132,15), 10%);
+    color: $color-bg;
+    box-shadow: 0 2px 6px rgba(0,132,15,.4);
+  }
+}
+.btn-attention {
+  background-color: rgba(220,140,0,.3);
+  color: rgb(220,140,0);
+  border-color: rgb(220,140,0);
+  box-shadow: 0 4px 4px rgba(220,140,0,.2);
+  &:hover {
+    background-color: lighten(rgb(220,140,0), 10%);
+    color: $color-bg;
+    box-shadow: 0 4px 6px rgba(220,140,0,.4);
+  }
+  &:active {
+    background-color: darken(rgb(220,140,0), 10%);
+    color: $color-bg;
+    box-shadow: 0 2px 6px rgba(220,140,0,.4);
+  }
+}
+.btn-disabled {
+  background-color: rgba(233,234,236,.5);
+  color: $color-bgdark;
+  box-shadow: 0 4px 4px rgba(0,0,0,.1);
+  cursor: not-allowed;
+  &:hover, &:active {
+    background-color: rgba(233,234,236,.5);
+    color: $color-bgdark;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    cursor: not-allowed;
+  }
 }
