@@ -3,93 +3,67 @@ html(lang="en")
 	include _header
 	body
 		#wrapper
-			.tarpas
-			section#output
-				#statutory
-					#maininfo
-						.left
-							.umegaagrologo
-								include _umegaagrologo
-							p#address Metalo str. 5, Utena,#[br] LT-28216, Lithuania #[br] www.umegaagro.com
-							span#categoryl.label Category:
-							span#categoryf.field {{currentTrailer[1].category}}
-							span#typel.label Type:
-							span#typef.field {{selected}}
-							span#variantl.label Variant:
-							span#variantf.field {{currentTrailer[2].variant}}
-							span#versionl.label Version:
-							span#versionf.field {{currentTrailer[3].version}}
-							span#productionl.label Manufactured:
-							span#productionf.field {{currentTrailer[4].year}}
-							span#weightl.label Weight:
-							span#weightf.field.kg {{currentTrailer[5].mass}}
-							span#payloadl.label Payload:
-							span#payloadf.field.kg {{currentTrailer[6].payload}}
-							span#techPayloadl.label Tech. payload:
-							span#techPayloadf.field.kg {{currentTrailer[7].techPayload}}
-						.right
-							span.umeganame Umega Group, AB
-							span#homologation.field {{currentTrailer[8].homologation}}
-							span#vin.field {{currentTrailer[9].vin}}
-							.columns
-								.leftins
-									span#country.field.country {{currentTrailer[10].country}}
-									span#rFullWeight.field.kg {{currentTrailer[11].onroad[0].whole}}
-									.cont
-										span.prepoint 0:
-										span#rpoint0.point.field.kg {{currentTrailer[11].onroad[1].p0}}
-									.cont
-										span.prepoint 1:
-										span#rpoint1.point.field.kg {{currentTrailer[11].onroad[2].p1}}
-									.cont
-										span.prepoint 2:
-										span#rpoint2.point.field.kg {{currentTrailer[11].onroad[3].p2}}
-									.cont
-										span.prepoint 3:
-										span#rpoint3.point.field.kg {{currentTrailer[11].onroad[4].p3}}
-								.rightins
-									span.country.field &nbsp;
-									span#fFullWeight.field.kg {{currentTrailer[12].offroad[0].whole}}
-									.cont
-										span.prepoint 0:
-										span#fpoint0.point.field.kg {{currentTrailer[12].offroad[1].p0}}
-									.cont
-										span.prepoint 1:
-										span#fpoint1.point.field.kg {{currentTrailer[12].offroad[2].p1}}
-									.cont
-										span.prepoint 2:
-										span#fpoint2.point.field.kg {{currentTrailer[12].offroad[3].p2}}
-									.cont
-										span.prepoint 3:
-										span#fpoint3.point.field.kg {{currentTrailer[12].offroad[4].p3}}
-							.secondTrailer
-								span.narrow.heading &nbsp;
-								span.heading T-1
-								span.heading T-2
-								span.heading T-3
-								span.narrow.heading B-1:
-								span#t1b1.field {{currentTrailer[13].secondTrailer[0].t1b1}}
-								span#t2b1.field -
-								span#t3b1.field -
-								span.narrow.heading B-2:
-								span#t1b2.field {{currentTrailer[13].secondTrailer[1].t1b2}}
-								span#t2b2.field -
-								span#t3b2.field -
-								span.narrow.heading B-3:
-								span#t1b3.field {{currentTrailer[13].secondTrailer[2].t1b3}}
-								span#t2b3.field -
-								span#t3b3.field -
-								span.narrow.heading B-4:
-								span#t1b4.field {{currentTrailer[13].secondTrailer[3].t1b4}}
-								span#t2b4.field -
-								span#t3b4.field -
-					footer
-						span.iso ISO 9001
-						span.ec EC
-			section#input
-				label(for="#selecttrailer") Select trailer type
-				select(v-model="selected")#selecttrailer
-					option(v-for="type in trailerTypes" v-bind:key="type.id") {{type.name}}
-				button(@click="fillTrailer()")#build.button.btn-primary build
-			.tarpas
+			#input
+				
+			#output
+				#plate.uniform
+					.logoAgro
+						include _umegaagrologo
+					.logoUmega
+					.logoGroup
+					p.address Metalo str. 5, Utena, #[br] LT-28216, Lithuania #[br] www.umegaagro.com
+					span#category.field S2a
+					span#type.field GPP
+					span#variant.field 27L
+					span#version.field 1M4C
+					span#year.field 2019
+					span#weight.field.kg 8800
+					span#roadLoad.field.kg 15200
+					span#maxLoad.field.kg 24800
+					.divider
+					span#certificate.field.full e32*167/2013*00015*00
+					span#pin.field.full UMEGPP27JJ0004578
+					span#country.field.half LV
+					span#placeholder.field.half &nbsp;
+					span#road.field.half.kg 24000
+					span#full.field.half.kg 33600
+					span#drawbar.field.half.before.kg 3000
+					span#axle1.field.half.before.kg 10000
+					span#axle2.field.half.before.kg 10000 
+					span#axle3.field.half.before.kg 10000
+					span#roadDrawbar.field.half.before.kg 3000
+					span#roadAxle1.field.half.before.kg 14800
+					span#roadAxle2.field.half.before.kg 14800
+					span#roadAxle3.field.half.before.kg 14800
+					#drawbarLoad
+					#axleLoad
+					.b0.t0
+					.b0.t1
+					.b0.t2
+					.b0.t3
+					.b1.t0
+					#b1t1.b1.t1
+					#b1t2.b1.t2
+					#b1t3.b1.t3
+					.b2.t0
+					#b2t1.b2.t1
+					#b2t2.b2.t2
+					#b2t3.b2.t3
+					.b3.t0
+					#b3t1.b3.t1
+					#b3t2.b3.t2
+					#b3t3.b3.t3
+					.b4.t0
+					#b4t1.b4.t1
+					#b4t2.b4.t2
+					#b4t3.b4.t3
+					.underlay
+					.iso
+					.eac
+					.eu
+					.rivet.lt
+					.rivet.rt
+					.rivet.rb
+					.rivet.lb
+
 		script(src="js/scripts.js")

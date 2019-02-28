@@ -1,349 +1,335 @@
 /************ MAIN STYLES *************/
 #wrapper {
   width: 100%;
-  margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	@media screen and (min-width: 180mm) {
-		flex-direction: row;
-		justify-content: space-around;
-	}
+  height: 100%;
 }
 #input {
-	background-color: rgba(0,0,0,.5);
-	margin: 0 auto;
-	width: 120mm;
-	height: 80mm;
-	flex-grow: 0;
-	flex-shrink: 1;
-	border-bottom-left-radius: 3mm;
-	border-bottom-right-radius: 3mm;
-	@media screen and (min-width: 180mm) {
-		width: 60mm;
-		flex-basis: 60mm;
-		height: 110mm;
-		margin: 2mm auto;
-		border-top-right-radius: 3mm;
-		border-bottom-left-radius: 0;
-	}
+	
 }
 #output {
-	width: 120mm;
-	height: 110mm;
-	flex-grow: 0;
-	flex-shrink: 1;
-	margin: 0 auto;
-	@media screen and (min-width: 180mm) {
-		
-		margin: 2mm auto;
-	}
+	overflow: hidden;
 }
-.tarpas {
-	height: 2mm;
-	flex-grow: 1;
-	flex-shrink: 1;
-	@media screen and (min-width: 180mm) {
-		height: 110mm;
-	}
-}
-
-
-
-#statutory {
-  width: 120mm;
-  height: 110mm;
-  background: whitesmoke;
-  box-shadow: 0 5mm 10mm rgba(0,0,0,.15);
-  outline: 1px solid $color-light;
-  //margin: 0 auto;
-}
-#maininfo {
-  margin: 0 2mm;
-  width: 116mm;
-  height: 93mm;
+#plate {
+  margin: 15mm auto;
+  display: block;
   position: relative;
-}
-.umegaagrologo {
-  margin: 4mm 1mm 3mm 0;
-}
-.left, .right {
-  width: 54mm;
-  height: 91mm;
-  display: inline-block;
-  margin: 2mm;
-  overflow: hidden;
-}
-.left::after {
-  content:'';
-  display: inline-block;
-  position: absolute;
-  left: 57.5mm;
-  top: 2mm;
-  width: 1mm;
-  height: 91mm;
-  background-color: $color-main;
-  z-index: 99;
-}
-
-
-
-
-footer {
-  height: 13mm;
-  width: 116mm;
-  margin: 2mm;
-  background-color: $color-main;
-  color: $color-light;
-}
-span {
-  display: inline-block;
-  margin: .5mm 0;
-}
-.field {
-  color: $color-contrast;
-  background-color: $color-main;
-  font-family: $font-monospace;
-  text-align: center;
-  height: 6mm;
-  line-height: 6mm;
-}
-#address {
-  margin: 2mm 0 3mm 0;
-}
-
-.umeganame {
-  font-weight: 700;
-  font-size: 5.5mm;
-  text-transform: uppercase;
-  width: 54mm;
-  text-align: center;
-}
-
-#vin, #homologation {
-  width: 54mm;
-}
-.leftins, .rightins {
-  width: 26mm;
-  height: 43mm;
-  display: inline-block;
-}
-.leftins {
-  margin-right: 1.5mm;
-}
-
-#country {
-  &::before {content:'('}
-  &::after {content:')'}
-}
-.country {
-  width: 26mm;
-}
-#rFullWeight, #fFullWeight {
-  width: 26mm; 
-  &.kg {
-    width: 20mm;
-    position: relative;
-    &::after {
-      display: inline-block;
-      content: 'kg';
-      width: 6mm;
-      position: absolute;
-      right: -6mm;
-      color: $color-main;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 0 3mm 10mm rgba(0,0,0,.3);
+  & * {
+    position: absolute;
+  }
+  & .rivet {
+    width: 2mm;
+    height: 2mm;
+    background-color: $color-bgdark;
+    border-radius: 6mm;
+    border-color: whitesmoke;
+    border-width: 2mm;
+    border-style: solid;
+    box-shadow: .2mm .3mm .5mm rgba(0,0,0,.5);
+  }
+  & .lt {
+    top:  1mm;
+    left: 1mm;
+  }
+  & .rt {
+    top:   1mm;
+    right: 1mm;
+  }
+  & .rb {
+    bottom: 1mm;
+    right:  1mm;
+  }
+  & .lb {
+    bottom: 1mm;
+    left:   1mm;
+  }
+  & .underlay {
+    width: calc(100% - 4mm);
+    bottom: 2mm;
+    right: 2mm;
+  }
+  & .logoAgro {
+    width: 52mm;
+    height: 12mm;
+  }
+  & .address {
+    line-height: 1.2;
+  }
+  & .divider {
+    width: 1mm;
+    height: 88mm;
+    background-color: $color-main;
+    top: 5mm;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+  & #category {
+    &::before {
+      content: 'Category: ';
     }
   }
-}
-.prepoint {
-  display: inline-block;
-  width: 4mm;
-  font-weight: 700;
-}
-.point {
-  width: 22mm;
-  &.kg {
-    width: 16mm;
-    position: relative;
-    &::after {
-      display: inline-block;
-      content: 'kg';
-      width: 6mm;
-      position: absolute;
-      right: -6mm;
-      color: $color-main;
+  & #type {
+    &::before {
+      content: 'Type:';
     }
   }
-}
-.left .field {
-  width: 22mm;
-  &.kg {
-    width: 16mm;
-    position: relative;
-    &::after {
-      display: inline-block;
-      content: 'kg';
-      width: 6mm;
-      position: absolute;
-      right: -6mm;
-      color: $color-main;
+  & #variant {
+    &::before {
+      content: 'Variant:';
     }
   }
-}
-.left .label {
-  width: 30mm;
-  margin-right: 2mm;
-  text-align: right;
-}
-
-.secondTrailer {
-  & span {
-    height: 5mm;
-    line-height: 5mm;
-    margin: 0 0 .5mm 0;
+  & #version {
+    &::before {
+      content: 'Version:';
+    }
   }
-  & .heading {
-    width: 15mm;
-    text-align: center;
+  & #year {
+    &::before {
+      content: 'Manufactured:';
+    }
   }
-  & .narrow {
-    width: 9mm;
+  & #weight {
+    &::before {
+      content: 'Weight:';
+    }
+  }
+  & #roadLoad {
+    &::before {
+      content: 'Payload:';
+    }
+  }
+  & #maxLoad {
+    &::before {
+      content: 'Tech. payload:';
+    }
   }
   & .field {
-    width: 14mm;
-    margin-left: 1mm;
+    font-size: 4mm;
+    line-height: 6mm;
+    height: 6mm;
+    font-family: $font-monospace;
+    &::before, ::after {
+      font-family: $font-regular;
+    }
   }
-}
-.iso, .ec {
-  font-size: 8mm;
-  width: 50%;
-  text-align: center;
-  line-height: 12mm;
-  color: whitesmoke;
-  font-weight: 700;
 }
 
-#input label {
-  display: inline-block;
-  margin: 2mm;
-  color: whitesmoke;
-}
-#input select {
-  margin: 2mm;
-  display: inline-block;
-  line-height: 1.5;
-  padding: 1mm;
+// Different types of plates
+// according to country/certification
+
+// UNDEFINED
+.undefined {
+  width: 100mm;
+  height: 110mm;
+  background: $color-light;
+  outline-color: $color-bgdark;
+  transition: width .3s;
+  & .logoAgro {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & .underlay, .address, .divider {
+    display: none;
+  }
 }
 
-.button {
-  display: inline-block;
-  vertical-align: top;
-  margin: $basic / 4;
-  background-color: rgba(233,234,236,.3);
-  color: $color-main;
-  padding: 0 $basic;
-  border-radius: $basic / 4;
-  border: 1px solid $color-bgdark;
-  line-height: $basic * 2;
-  box-shadow: 0 4px 4px rgba(0,0,0,.1);
-  transition: background-color .2s;
-  &:hover {
-    background-color: lighten($color-bgdark, 10%);
-    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+// UNIFORM
+.uniform {
+  width: 120mm;
+  height: 110mm;
+  background: $color-bg;
+  outline-color: $color-light;
+  & .underlay {
+    background-color: $color-main;
+    height: 13mm;
   }
-  &:active {
-    box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    background-color: darken($color-bgdark, 10%);
+  & .logoAgro {
+    top: 7mm;
+    left: 25%;
+    transform: translateX(-50%);
   }
-}
-.btn-primary {
-  background-color: rgb(31,57,72);
-  color: $color-bg;
-  box-shadow: 0 4px 4px rgba(31,57,72,.2);
-  border-color: whitesmoke;
-  &:hover {
-    background-color: $color-light;
-    color: $color-bg;
-    box-shadow: 0 4px 6px rgba(255,255,255,.4);
+  & .logoGroup {
+    // nera svg
   }
-  &:active {
-    background-color: darken($color-light, 10%);
-    color: $color-bg;
-    box-shadow: 0 2px 6px rgba(255,255,255,.4);
+  & .address {
+    top: 20mm;
+    left: 5mm;
   }
-}
-.btn-danger {
-  background-color: rgba(153,0,0,.3);
-  color: $color-contrast;
-  border-color: $color-contrast;
-  box-shadow: 0 4px 4px rgba(153,0,0,.2);
-  &:hover {
-    background-color: lighten($color-contrast, 10%);
-    color: $color-bg;
-    box-shadow: 0 4px 6px rgba(153,0,0,.4);
+  & .field {
+    width: 20mm;
+    left: 33mm;
+    padding: 0 0 0 1mm;
+    background-color: $color-main;
+    color: yellow;
+    &::before {
+      color: $color-main;
+      padding: 0 2mm;
+      width: 30mm;
+      text-align: right;
+      display: inline-block;
+      position: absolute;
+      transform: translateX(-100%);
+    }
   }
-  &:active {
-    background-color: darken($color-contrast, 10%);
-    color: $color-bg;
-    box-shadow: 0 2px 6px rgba(153,0,0,.4);
+  & .kg {
+    width: 15mm;
+    &::after {
+      content: 'kg';
+      display: inline-block;
+      position: absolute;
+      left: 17mm;
+      font-size: 4mm;
+      line-height: 6mm;
+      color: $color-main;
+    }
   }
-}
-.btn-info {
-  background-color: rgba(18,126,155,.3);
-  color: $color-light;
-  border-color: $color-light;
-  box-shadow: 0 4px 4px rgba(18,126,155,.2);
-  cursor: help;
-  &:hover {
-    background-color: lighten($color-light, 10%);
-    color: $color-bg;
-    box-shadow: 0 4px 6px rgba(18,126,155,.4);
+  & .full {
+    width: 51mm;
+    &::before {
+      display: none;
+    }
   }
-  &:active {
-    background-color: darken($color-light, 10%);
-    color: $color-bg;
-    box-shadow: 0 2px 6px rgba(18,126,155,.4);
+  & .half {
+    width: 25mm;
   }
-}
-.btn-success {
-  background-color: rgba(0,132,15,.3);
-  color: rgb(0,132,15);
-  border-color: rgb(0,132,15);
-  box-shadow: 0 4px 4px rgba(0,132,15,.2);
-  &:hover {
-    background-color: lighten(rgb(0,132,15), 10%);
-    color: $color-bg;
-    box-shadow: 0 4px 6px rgba(0,132,15,.4);
+  & .half.kg {
+    width: 19mm;
+    &::after {
+      left: 21mm;
+    }
   }
-  &:active {
-    background-color: darken(rgb(0,132,15), 10%);
-    color: $color-bg;
-    box-shadow: 0 2px 6px rgba(0,132,15,.4);
+  & .half.before.kg {
+    width: 15mm;
+    //transform: translateX(5mm);
+    &::before {
+      left: 5mm;
+    }
+    &::after {
+      left: 17mm;
+    }
   }
-}
-.btn-attention {
-  background-color: rgba(220,140,0,.3);
-  color: rgb(220,140,0);
-  border-color: rgb(220,140,0);
-  box-shadow: 0 4px 4px rgba(220,140,0,.2);
-  &:hover {
-    background-color: lighten(rgb(220,140,0), 10%);
-    color: $color-bg;
-    box-shadow: 0 4px 6px rgba(220,140,0,.4);
+
+  & #category {
+    top: 39mm;
   }
-  &:active {
-    background-color: darken(rgb(220,140,0), 10%);
-    color: $color-bg;
-    box-shadow: 0 2px 6px rgba(220,140,0,.4);
+  & #type {
+    top: 46mm;
   }
-}
-.btn-disabled {
-  background-color: rgba(233,234,236,.5);
-  color: $color-bgdark;
-  box-shadow: 0 4px 4px rgba(0,0,0,.1);
-  cursor: not-allowed;
-  &:hover, &:active {
-    background-color: rgba(233,234,236,.5);
-    color: $color-bgdark;
-    box-shadow: 0 4px 4px rgba(0,0,0,.1);
-    cursor: not-allowed;
+  & #variant {
+    top: 53mm;
   }
+  & #version {
+    top: 60mm;
+  }
+  & #year {
+    top: 67mm;
+  }
+  & #weight {
+    top: 74mm;
+  }
+  & #roadLoad {
+    top: 81mm;
+  }
+  & #maxLoad {
+    top: 88mm;
+  }
+  & #certificate {
+    top: 11mm;
+    left: 75%;
+    transform: translateX(-50%);
+  }
+  & #pin {
+    top: 18mm;
+    left: 75%;
+    transform: translateX(-50%);
+  }
+  & #country {
+    width: 25mm;
+    top: 25mm;
+    left: 75%;
+    transform: translateX(-26mm);
+    text-align: center;
+    &::before, ::after {
+      content:'(';
+      display: inline;
+      color: yellow;
+      font-family: $font-monospace;
+      padding: 0;
+    }
+    &::after {
+      content: ')';
+    }
+  }
+  & #placeholder {
+    width: 25mm;
+    top: 25mm;
+    left: 75%;
+    padding: 0;
+    transform: translateX(1mm);
+  }
+  & #road {
+    top: 32mm;
+    left: 75%;
+    transform: translateX(-26mm);
+  }
+  & #full {
+    top: 32mm;
+    left: 75%;
+    transform: translateX(1mm);
+  }
+  & #drawbar, #roadDrawbar, #axle1, #roadAxle1, #axle2, #roadAxle2, #axle3, #roadAxle3 {
+    top: 39mm;
+    left: 75%;
+    transform: translateX(-22mm);
+    &::before {
+      content: '0:';
+      left: 1mm;
+      font-weight: 700;
+    }
+  }
+
+  & #axle1, #roadAxle1 {
+    top: 46mm;
+    &::before {
+      content: '1:';
+    }
+  }
+  & #axle2, #roadAxle2 {
+    top: 53mm;
+    &::before {
+      content: '2:';
+    }
+  }
+  & #axle3, #roadAxle3 {
+    top: 60mm;
+    &::before {
+      content: '3:';
+    }
+  }  
+  & #roadDrawbar{
+    transform: translateX(5mm);
+  }
+  & #roadAxle1{
+    transform: translateX(5mm);
+  }
+  & #roadAxle2{
+    transform: translateX(5mm);
+  }
+  & #roadAxle3{
+    transform: translateX(5mm);
+  }
+  
+  .b0 {}
+  .b1 {}
+  .b2 {}
+  .b3 {}
+  .b4 {}
+
+  .t0 {}
+  .t1 {}
+  .t2 {}
+  .t3 {}
 }

@@ -8,7 +8,7 @@ html {
   font-size: $basic;
 }
 body {
-  background: $color-bg;
+  background: $color-bg $bgimg;
   font-family: $font-regular;
   color: $color-main;
   box-sizing: border-box;
