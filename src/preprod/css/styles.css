@@ -339,3 +339,43 @@ section {
     -webkit-transform: translateX(5mm);
         -ms-transform: translateX(5mm);
             transform: translateX(5mm); }
+  .uniform .b1 {
+    top: 72.5mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .b2 {
+    top: 78mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .b3 {
+    top: 83.5mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .b4 {
+    top: 89mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .t0 {
+    text-align: center;
+    width: 10mm;
+    right: 50mm;
+    background: none; }
+  .uniform .t1 {
+    text-align: center;
+    right: 34mm;
+    width: 15mm;
+    background: #004455; }
+  .uniform .t2 {
+    text-align: center;
+    right: 18mm;
+    width: 15mm;
+    background: #004455; }
+  .uniform .t3 {
+    text-align: center;
+    right: 2mm;
+    width: 15mm;
+    background: #004455; }
+  .uniform .b0 {
+    top: 67mm;
+    background: none;
+    height: 5mm; }

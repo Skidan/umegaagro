@@ -322,14 +322,55 @@
     transform: translateX(5mm);
   }
   
-  .b0 {}
-  .b1 {}
-  .b2 {}
-  .b3 {}
-  .b4 {}
+  
+  .b1 {
+    top: 72.5mm;
+    height: 5mm;
+    background: $color-main;
+  }
+  .b2 {
+    top: 78mm;
+    height: 5mm;
+    background: $color-main;
+  }
+  .b3 {
+    top: 83.5mm;
+    height: 5mm;
+    background: $color-main;
+  }
+  .b4 {
+    top: 89mm;
+    height: 5mm;
+    background: $color-main;
+  }
 
-  .t0 {}
-  .t1 {}
-  .t2 {}
-  .t3 {}
+  .t0 {
+    text-align: center;
+    width: 10mm;
+    right: 50mm;
+    background: none;
+  }
+  .t1 {
+    text-align: center;
+    right: 34mm;
+    width: 15mm;
+    background: $color-main;
+  }
+  .t2 {
+    text-align: center;
+    right: 18mm;
+    width: 15mm;
+    background: $color-main;
+  }
+  .t3 {
+    text-align: center;
+    right: 2mm;
+    width: 15mm;
+    background: $color-main;
+  }
+  .b0 {
+    top: 67mm;
+    background: none;
+    height: 5mm;
+  }
 }
