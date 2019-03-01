@@ -137,22 +137,6 @@ section {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-  #plate #category::before {
-    content: 'Category: '; }
-  #plate #type::before {
-    content: 'Type:'; }
-  #plate #variant::before {
-    content: 'Variant:'; }
-  #plate #version::before {
-    content: 'Version:'; }
-  #plate #year::before {
-    content: 'Manufactured:'; }
-  #plate #weight::before {
-    content: 'Weight:'; }
-  #plate #roadLoad::before {
-    content: 'Payload:'; }
-  #plate #maxLoad::before {
-    content: 'Tech. payload:'; }
   #plate .field {
     font-size: 4mm;
     line-height: 6mm;
@@ -175,7 +159,41 @@ section {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  .undefined .underlay, .undefined .address, .undefined .divider {
+  .undefined .address,
+  .undefined .divider,
+  .undefined .logoUmega,
+  .undefined .logoGroup,
+  .undefined .address,
+  .undefined #category,
+  .undefined #type,
+  .undefined #variant,
+  .undefined #version,
+  .undefined #year,
+  .undefined #weight,
+  .undefined #roadLoad,
+  .undefined #maxLoad,
+  .undefined #certificate,
+  .undefined #pin,
+  .undefined #country,
+  .undefined #placeholder,
+  .undefined #road,
+  .undefined #full,
+  .undefined #drawbar,
+  .undefined #axle1,
+  .undefined #axle2,
+  .undefined #axle3,
+  .undefined #roadDrawbar,
+  .undefined #roadAxle1,
+  .undefined #roadAxle2,
+  .undefined #roadAxle3,
+  .undefined #drawbarLoad,
+  .undefined #axleLoad,
+  .undefined .b0, .undefined .b1, .undefined .b2, .undefined .b3, .undefined .b4,
+  .undefined .t0, .undefined .t1, .undefined .t2, .undefined .t3,
+  .undefined .underlay,
+  .undefined .iso,
+  .undefined .eac,
+  .undefined .eu {
     display: none; }
 
 .uniform {
@@ -273,7 +291,10 @@ section {
     left: 75%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+            transform: translateX(-50%);
+    width: 51mm; }
+    .uniform #pin::before {
+      display: none; }
   .uniform #country {
     width: 25mm;
     top: 25mm;
@@ -408,6 +429,141 @@ section {
         -ms-transform: translatex(-50%);
             transform: translatex(-50%); }
   .uniform .eu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 75%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+  .uniform #category::before {
+    content: 'Category: '; }
+  .uniform #type::before {
+    content: 'Type:'; }
+  .uniform #variant::before {
+    content: 'Variant:'; }
+  .uniform #version::before {
+    content: 'Version:'; }
+  .uniform #year::before {
+    content: 'Manufactured:'; }
+  .uniform #weight::before {
+    content: 'Weight:'; }
+  .uniform #roadLoad::before {
+    content: 'Payload:'; }
+  .uniform #maxLoad::before {
+    content: 'Tech. payload:'; }
+
+.nocertOld {
+  width: 103mm;
+  height: 110mm;
+  background: #004455;
+  outline-color: #a9a9a9; }
+  .nocertOld .logoUmega,
+  .nocertOld .logoGroup,
+  .nocertOld #category,
+  .nocertOld #variant,
+  .nocertOld #version,
+  .nocertOld .divider,
+  .nocertOld #country,
+  .nocertOld #placeholder,
+  .nocertOld #axle2,
+  .nocertOld #axle3,
+  .nocertOld #roadDrawbar,
+  .nocertOld #roadAxle1,
+  .nocertOld #roadAxle2,
+  .nocertOld #roadAxle3,
+  .nocertOld #drawbarLoad,
+  .nocertOld #axleLoad,
+  .nocertOld #full,
+  .nocertOld .b0, .nocertOld .b1, .nocertOld .b2, .nocertOld .b3, .nocertOld .b4,
+  .nocertOld .t0, .nocertOld .t1, .nocertOld .t2, .nocertOld .t3,
+  .nocertOld .eac {
+    display: none; }
+  .nocertOld .field {
+    display: inline-block;
+    height: 5mm !important;
+    width: 37mm;
+    left: 59mm;
+    background: whitesmoke;
+    color: blue;
+    text-align: center;
+    line-height: 5mm;
+    font-size: 4mm; }
+    .nocertOld .field::before {
+      display: inline-block;
+      position: absolute;
+      height: 5mm;
+      width: 49mm;
+      padding-left: 1mm;
+      left: -52mm;
+      background: whitesmoke;
+      text-align: left;
+      color: #004455;
+      font-weight: 700;
+      line-height: 5mm; }
+  .nocertOld .full {
+    width: 89mm; }
+  .nocertOld .logoAgro {
+    top: 7mm;
+    left: 5mm; }
+  .nocertOld .address {
+    color: whitesmoke;
+    top: 6mm;
+    left: 60mm; }
+  .nocertOld #certificate {
+    top: 23mm;
+    left: 7mm; }
+  .nocertOld #type {
+    top: 30mm; }
+    .nocertOld #type::before {
+      content: 'Type:'; }
+  .nocertOld #pin {
+    top: 36mm; }
+    .nocertOld #pin::before {
+      content: 'Serial No.:'; }
+  .nocertOld #year {
+    top: 42mm; }
+    .nocertOld #year::before {
+      content: 'Year of manufacture:'; }
+  .nocertOld #road {
+    top: 48mm; }
+    .nocertOld #road::before {
+      content: 'Gross weight (kg):'; }
+  .nocertOld #weight {
+    top: 54mm; }
+    .nocertOld #weight::before {
+      content: 'Weight (kg):'; }
+  .nocertOld #drawbar {
+    top: 60mm; }
+    .nocertOld #drawbar::before {
+      content: 'Max load on drawbar (kg):'; }
+  .nocertOld #axle1 {
+    top: 66mm; }
+    .nocertOld #axle1::before {
+      content: 'Total axles load (kg):'; }
+  .nocertOld #roadLoad {
+    top: 72mm; }
+    .nocertOld #roadLoad::before {
+      content: 'Netto weight (kg):'; }
+  .nocertOld #maxLoad {
+    top: 78mm; }
+    .nocertOld #maxLoad::before {
+      content: 'Constr. gross weight (kg):'; }
+  .nocertOld .iso {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 35%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+  .nocertOld .eu {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 9mm;
