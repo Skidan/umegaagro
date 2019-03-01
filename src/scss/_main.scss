@@ -208,7 +208,6 @@
   }
   & .half.before.kg {
     width: 15mm;
-    //transform: translateX(5mm);
     &::before {
       left: 5mm;
     }
@@ -593,5 +592,268 @@
     color: whitesmoke;
     left: 75%;
     transform: translatex(-50%);
+  }
+}
+
+// Polish
+.witam {
+  width: 100mm;
+  height: 80mm;
+  background: $color-main;
+  outline-color: $color-light;
+  & .divider,
+    .logoAgro,
+    .logoGroup,
+    #category,
+    #variant,
+    #version,
+    #country,
+    #placeholder,
+    #road,
+    #maxLoad,
+    #roadLoad,
+    #drawbar,
+    #axle1,
+    #axle2,
+    #axle3,
+    #roadDrawbar,
+    #roadAxle1,
+    #roadAxle2,
+    #roadAxle3,
+    .b0, .b1, .b2, .b3, .b4,
+    .t0, .t1, .t2, .t3,
+    .eac, .iso, .eu
+  {display: none;}
+  & .field {
+    display: inline-block;
+    width: 37mm;
+    left: 55mm;
+    background: whitesmoke;
+    color: blue;
+    text-align: left;
+    line-height: 6mm;
+    font-size: 4mm;
+    padding-left: 1mm;
+    &::before {
+      position: absolute;
+      width: 51mm;
+      padding-left: 1mm;
+      left: -55mm;
+      text-align: left;
+      color: whitesmoke;
+      font-weight: 400;
+      line-height: 6mm;
+      text-align: right;
+      font-size: 3.5mm !important;
+    }
+  }
+  & .logoUmega {
+    top: 5mm;
+    left: 7mm;
+  }
+  & .address {
+    top: 5mm;
+    left: 55mm;
+    color: whitesmoke;
+  }
+  & #type {
+    top: 21mm;
+    &::before {
+      content: 'Typ';
+    }
+  }
+  & #certificate {
+    top: 28mm;
+    &::before {
+      content: 'Nr świadectwa homologacji';
+    }
+  }
+  & #pin {
+    top: 35mm;
+    &::before {
+      content: 'Nr identyfikacyjny';
+    }
+  }
+  & #year {
+    top: 42mm;
+    &::before {
+      content: 'Rok produkcji';
+    }
+  }
+  & #weight {
+    top: 49mm;
+    &::before {
+      content: 'Masa własna';
+    }
+  }
+  & #full {
+    top: 56mm;
+    &::before {
+      content: 'Dopuszczalna masa całkowita';
+    }
+  }
+  & #axleLoad {
+    top: 63mm;
+    &::before {
+      content: 'Maksymalny nacisk na oś';
+    }
+  }
+  & #drawbarLoad {
+    top: 70mm;
+    &::before {
+      content: 'Maksymalny nacisk na sprzęg';
+    }
+  }
+}
+
+// Rusische (uncertified)
+.rus {
+  width: 103mm;
+  height: 110mm;
+  background: $color-main;
+  outline-color: $color-light;
+  & .logoUmega,
+    #category,
+    #variant,
+    #version,
+    .divider,
+    #country,
+    #placeholder,
+    #axle2,
+    #axle3,
+    #roadDrawbar,
+    #roadAxle1,
+    #roadAxle2,
+    #roadAxle3,
+    #drawbarLoad,
+    #axleLoad,
+    #full,
+    #maxLoad,
+    .b0, .b1, .b2, .b3, .b4,
+    .t0, .t1, .t2, .t3,
+    .logoAgro
+  {display: none;}
+  & .field {
+    display: inline-block;
+    height: 5mm !important;
+    width: 37mm;
+    left: 59mm;
+    background: whitesmoke;
+    color: blue;
+    text-align: center;
+    line-height: 5mm;
+    font-size: 4mm;
+    &::before {
+      display: inline-block;
+      position: absolute;
+      height: 5mm;
+      width: 49mm;
+      padding-left: 1mm;
+      left: -52mm;
+      background: whitesmoke;
+      text-align: left;
+      color: $color-main;
+      font-weight: 400;
+      font-size: 3.5mm;
+      line-height: 5mm;
+      //outline: $test;
+    }
+  }
+  & .full {
+    width: 89mm;
+  }
+  & .logoGroup {
+    // temp instead svg
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 5mm;
+    font-weight: 700;
+    width: 55mm;
+    left: 10mm;
+    top: 10mm;
+  }
+  & .address {
+    color: whitesmoke;
+    top: 6mm;
+    left: 60mm;
+  }
+  & #certificate {
+    top: 23mm;
+    left: 7mm;
+  }
+  & #type {
+    top: 30mm;
+    &::before {
+      content: 'Тип:';
+    }
+  }
+  & #pin {
+    top: 36mm;
+    &::before {
+      content: 'Серийный номер:';
+    }
+  }
+  & #year {
+    top: 42mm;
+    &::before {
+      content: 'Год производства:'
+    }
+  }
+  & #road {
+    top: 48mm;
+    &::before {
+      content: 'Полная масса (кг):'
+    }
+  }
+  & #weight {
+    top: 54mm;
+    &::before {
+      content: 'Масса (кг):'
+    }
+  }
+  & #drawbar {
+    top: 60mm;
+    &::before {
+      content: 'Макс. нагр. на дышло (кг):'
+    }
+  }
+  & #axle1 {
+    top: 66mm;
+    &::before {
+      content: 'Общая нагр. на оси (кг):'
+    }
+  }
+  & #roadLoad {
+    top: 72mm;
+    &::before {
+      content: 'Масса нетто (кг):'
+    }
+  }
+  & .iso {
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 10mm;
+  }
+  & .eu {
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 78mm;
+  }
+  & .eac {
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 55mm;
   }
 }
