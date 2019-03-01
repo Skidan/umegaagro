@@ -142,6 +142,9 @@
   height: 110mm;
   background: $color-bg;
   outline-color: $color-light;
+  & .eac, #drawbarLoad, #axleLoad, .logoUmega {
+    display: none;
+  }
   & .underlay {
     background-color: $color-main;
     height: 13mm;
@@ -152,7 +155,13 @@
     transform: translateX(-50%);
   }
   & .logoGroup {
-    // nera svg
+    // temp instead svg
+    text-transform: uppercase;
+    font-size: 5mm;
+    font-weight: 700;
+    width: 55mm;
+    left: 67mm;
+    top: 3mm;
   }
   & .address {
     top: 20mm;
@@ -352,25 +361,53 @@
   }
   .t1 {
     text-align: center;
+    color: yellow;
+    font-family: $font-monospace;
     right: 34mm;
     width: 15mm;
     background: $color-main;
   }
   .t2 {
     text-align: center;
+    color: yellow;
+    font-family: $font-monospace;
     right: 18mm;
     width: 15mm;
     background: $color-main;
   }
   .t3 {
     text-align: center;
+    color: yellow;
+    font-family: $font-monospace;
     right: 2mm;
     width: 15mm;
     background: $color-main;
   }
   .b0 {
+    color: $color-main;
+    font-family: $font-regular;
     top: 67mm;
     background: none;
     height: 5mm;
+  }
+  .iso {
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 25%;
+    transform: translatex(-50%);
+  }
+  .eu {
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 75%;
+    transform: translatex(-50%);
   }
 }

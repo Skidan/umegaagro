@@ -183,6 +183,8 @@ section {
   height: 110mm;
   background: #fafafa;
   outline-color: #a9a9a9; }
+  .uniform .eac, .uniform #drawbarLoad, .uniform #axleLoad, .uniform .logoUmega {
+    display: none; }
   .uniform .underlay {
     background-color: #004455;
     height: 13mm; }
@@ -192,6 +194,13 @@ section {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
+  .uniform .logoGroup {
+    text-transform: uppercase;
+    font-size: 5mm;
+    font-weight: 700;
+    width: 55mm;
+    left: 67mm;
+    top: 3mm; }
   .uniform .address {
     top: 20mm;
     left: 5mm; }
@@ -362,20 +371,50 @@ section {
     background: none; }
   .uniform .t1 {
     text-align: center;
+    color: yellow;
+    font-family: "Ubuntu Mono", monospace;
     right: 34mm;
     width: 15mm;
     background: #004455; }
   .uniform .t2 {
     text-align: center;
+    color: yellow;
+    font-family: "Ubuntu Mono", monospace;
     right: 18mm;
     width: 15mm;
     background: #004455; }
   .uniform .t3 {
     text-align: center;
+    color: yellow;
+    font-family: "Ubuntu Mono", monospace;
     right: 2mm;
     width: 15mm;
     background: #004455; }
   .uniform .b0 {
+    color: #004455;
+    font-family: "Roboto", sans-serif;
     top: 67mm;
     background: none;
     height: 5mm; }
+  .uniform .iso {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 25%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+  .uniform .eu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 75%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
