@@ -48,6 +48,7 @@ var trailers = {
     variant: "C",
     version: "-",
     year: "XXXX",
+    weight: 5500,
     type: {
       eu: "TIP14",
       pl: "SP1/SPC14",

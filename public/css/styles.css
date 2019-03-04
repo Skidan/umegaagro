@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********** STYLE RESET **********/
 * {
   margin: 0;
@@ -137,22 +138,6 @@ section {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
-  #plate #category::before {
-    content: 'Category: '; }
-  #plate #type::before {
-    content: 'Type:'; }
-  #plate #variant::before {
-    content: 'Variant:'; }
-  #plate #version::before {
-    content: 'Version:'; }
-  #plate #year::before {
-    content: 'Manufactured:'; }
-  #plate #weight::before {
-    content: 'Weight:'; }
-  #plate #roadLoad::before {
-    content: 'Payload:'; }
-  #plate #maxLoad::before {
-    content: 'Tech. payload:'; }
   #plate .field {
     font-size: 4mm;
     line-height: 6mm;
@@ -175,7 +160,41 @@ section {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  .undefined .underlay, .undefined .address, .undefined .divider {
+  .undefined .address,
+  .undefined .divider,
+  .undefined .logoUmega,
+  .undefined .logoGroup,
+  .undefined .address,
+  .undefined #category,
+  .undefined #type,
+  .undefined #variant,
+  .undefined #version,
+  .undefined #year,
+  .undefined #weight,
+  .undefined #roadLoad,
+  .undefined #maxLoad,
+  .undefined #certificate,
+  .undefined #pin,
+  .undefined #country,
+  .undefined #placeholder,
+  .undefined #road,
+  .undefined #full,
+  .undefined #drawbar,
+  .undefined #axle1,
+  .undefined #axle2,
+  .undefined #axle3,
+  .undefined #roadDrawbar,
+  .undefined #roadAxle1,
+  .undefined #roadAxle2,
+  .undefined #roadAxle3,
+  .undefined #drawbarLoad,
+  .undefined #axleLoad,
+  .undefined .b0, .undefined .b1, .undefined .b2, .undefined .b3, .undefined .b4,
+  .undefined .t0, .undefined .t1, .undefined .t2, .undefined .t3,
+  .undefined .underlay,
+  .undefined .iso,
+  .undefined .eac,
+  .undefined .eu {
     display: none; }
 
 .uniform {
@@ -183,6 +202,8 @@ section {
   height: 110mm;
   background: #fafafa;
   outline-color: #a9a9a9; }
+  .uniform .eac, .uniform #drawbarLoad, .uniform #axleLoad, .uniform .logoUmega {
+    display: none; }
   .uniform .underlay {
     background-color: #004455;
     height: 13mm; }
@@ -192,6 +213,13 @@ section {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
+  .uniform .logoGroup {
+    text-transform: uppercase;
+    font-size: 5mm;
+    font-weight: 700;
+    width: 55mm;
+    left: 67mm;
+    top: 3mm; }
   .uniform .address {
     top: 20mm;
     left: 5mm; }
@@ -264,7 +292,10 @@ section {
     left: 75%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
+            transform: translateX(-50%);
+    width: 51mm; }
+    .uniform #pin::before {
+      display: none; }
   .uniform #country {
     width: 25mm;
     top: 25mm;
@@ -339,3 +370,420 @@ section {
     -webkit-transform: translateX(5mm);
         -ms-transform: translateX(5mm);
             transform: translateX(5mm); }
+  .uniform .b1 {
+    top: 72.5mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .b2 {
+    top: 78mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .b3 {
+    top: 83.5mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .b4 {
+    top: 89mm;
+    height: 5mm;
+    background: #004455; }
+  .uniform .t0 {
+    text-align: center;
+    width: 10mm;
+    right: 50mm;
+    background: none; }
+  .uniform .t1 {
+    text-align: center;
+    color: yellow;
+    font-family: "Ubuntu Mono", monospace;
+    right: 34mm;
+    width: 15mm;
+    background: #004455; }
+  .uniform .t2 {
+    text-align: center;
+    color: yellow;
+    font-family: "Ubuntu Mono", monospace;
+    right: 18mm;
+    width: 15mm;
+    background: #004455; }
+  .uniform .t3 {
+    text-align: center;
+    color: yellow;
+    font-family: "Ubuntu Mono", monospace;
+    right: 2mm;
+    width: 15mm;
+    background: #004455; }
+  .uniform .b0 {
+    color: #004455;
+    font-family: "Roboto", sans-serif;
+    top: 67mm;
+    background: none;
+    height: 5mm; }
+  .uniform .iso {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 25%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+  .uniform .eu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 75%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+  .uniform #category::before {
+    content: 'Category: '; }
+  .uniform #type::before {
+    content: 'Type:'; }
+  .uniform #variant::before {
+    content: 'Variant:'; }
+  .uniform #version::before {
+    content: 'Version:'; }
+  .uniform #year::before {
+    content: 'Manufactured:'; }
+  .uniform #weight::before {
+    content: 'Weight:'; }
+  .uniform #roadLoad::before {
+    content: 'Payload:'; }
+  .uniform #maxLoad::before {
+    content: 'Tech. payload:'; }
+
+.nocertOld {
+  width: 103mm;
+  height: 110mm;
+  background: #004455;
+  outline-color: #a9a9a9; }
+  .nocertOld .logoUmega,
+  .nocertOld .logoGroup,
+  .nocertOld #category,
+  .nocertOld #variant,
+  .nocertOld #version,
+  .nocertOld .divider,
+  .nocertOld #country,
+  .nocertOld #placeholder,
+  .nocertOld #axle2,
+  .nocertOld #axle3,
+  .nocertOld #roadDrawbar,
+  .nocertOld #roadAxle1,
+  .nocertOld #roadAxle2,
+  .nocertOld #roadAxle3,
+  .nocertOld #drawbarLoad,
+  .nocertOld #axleLoad,
+  .nocertOld #full,
+  .nocertOld .b0, .nocertOld .b1, .nocertOld .b2, .nocertOld .b3, .nocertOld .b4,
+  .nocertOld .t0, .nocertOld .t1, .nocertOld .t2, .nocertOld .t3,
+  .nocertOld .eac {
+    display: none; }
+  .nocertOld .field {
+    display: inline-block;
+    height: 5mm !important;
+    width: 37mm;
+    left: 59mm;
+    background: whitesmoke;
+    color: blue;
+    text-align: center;
+    line-height: 5mm;
+    font-size: 4mm; }
+    .nocertOld .field::before {
+      display: inline-block;
+      position: absolute;
+      height: 5mm;
+      width: 49mm;
+      padding-left: 1mm;
+      left: -52mm;
+      background: whitesmoke;
+      text-align: left;
+      color: #004455;
+      font-weight: 700;
+      line-height: 5mm; }
+  .nocertOld .full {
+    width: 89mm; }
+  .nocertOld .logoAgro {
+    top: 7mm;
+    left: 5mm; }
+  .nocertOld .address {
+    color: whitesmoke;
+    top: 6mm;
+    left: 60mm; }
+  .nocertOld #certificate {
+    top: 23mm;
+    left: 7mm; }
+  .nocertOld #type {
+    top: 30mm; }
+    .nocertOld #type::before {
+      content: 'Type:'; }
+  .nocertOld #pin {
+    top: 36mm; }
+    .nocertOld #pin::before {
+      content: 'Serial No.:'; }
+  .nocertOld #year {
+    top: 42mm; }
+    .nocertOld #year::before {
+      content: 'Year of manufacture:'; }
+  .nocertOld #road {
+    top: 48mm; }
+    .nocertOld #road::before {
+      content: 'Gross weight (kg):'; }
+  .nocertOld #weight {
+    top: 54mm; }
+    .nocertOld #weight::before {
+      content: 'Weight (kg):'; }
+  .nocertOld #drawbar {
+    top: 60mm; }
+    .nocertOld #drawbar::before {
+      content: 'Max load on drawbar (kg):'; }
+  .nocertOld #axle1 {
+    top: 66mm; }
+    .nocertOld #axle1::before {
+      content: 'Total axles load (kg):'; }
+  .nocertOld #roadLoad {
+    top: 72mm; }
+    .nocertOld #roadLoad::before {
+      content: 'Netto weight (kg):'; }
+  .nocertOld #maxLoad {
+    top: 78mm; }
+    .nocertOld #maxLoad::before {
+      content: 'Constr. gross weight (kg):'; }
+  .nocertOld .iso {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 35%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+  .nocertOld .eu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 75%;
+    -webkit-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+            transform: translatex(-50%); }
+
+.witam {
+  width: 100mm;
+  height: 80mm;
+  background: #004455;
+  outline-color: #a9a9a9; }
+  .witam .divider,
+  .witam .logoAgro,
+  .witam .logoGroup,
+  .witam #category,
+  .witam #variant,
+  .witam #version,
+  .witam #country,
+  .witam #placeholder,
+  .witam #road,
+  .witam #maxLoad,
+  .witam #roadLoad,
+  .witam #drawbar,
+  .witam #axle1,
+  .witam #axle2,
+  .witam #axle3,
+  .witam #roadDrawbar,
+  .witam #roadAxle1,
+  .witam #roadAxle2,
+  .witam #roadAxle3,
+  .witam .b0, .witam .b1, .witam .b2, .witam .b3, .witam .b4,
+  .witam .t0, .witam .t1, .witam .t2, .witam .t3,
+  .witam .eac, .witam .iso, .witam .eu {
+    display: none; }
+  .witam .field {
+    display: inline-block;
+    width: 37mm;
+    left: 55mm;
+    background: whitesmoke;
+    color: blue;
+    text-align: left;
+    line-height: 6mm;
+    font-size: 4mm;
+    padding-left: 1mm; }
+    .witam .field::before {
+      position: absolute;
+      width: 51mm;
+      padding-left: 1mm;
+      left: -55mm;
+      text-align: left;
+      color: whitesmoke;
+      font-weight: 400;
+      line-height: 6mm;
+      text-align: right;
+      font-size: 3.5mm !important; }
+  .witam .logoUmega {
+    top: 5mm;
+    left: 7mm; }
+  .witam .address {
+    top: 5mm;
+    left: 55mm;
+    color: whitesmoke; }
+  .witam #type {
+    top: 21mm; }
+    .witam #type::before {
+      content: 'Typ'; }
+  .witam #certificate {
+    top: 28mm; }
+    .witam #certificate::before {
+      content: 'Nr świadectwa homologacji'; }
+  .witam #pin {
+    top: 35mm; }
+    .witam #pin::before {
+      content: 'Nr identyfikacyjny'; }
+  .witam #year {
+    top: 42mm; }
+    .witam #year::before {
+      content: 'Rok produkcji'; }
+  .witam #weight {
+    top: 49mm; }
+    .witam #weight::before {
+      content: 'Masa własna'; }
+  .witam #full {
+    top: 56mm; }
+    .witam #full::before {
+      content: 'Dopuszczalna masa całkowita'; }
+  .witam #axleLoad {
+    top: 63mm; }
+    .witam #axleLoad::before {
+      content: 'Maksymalny nacisk na oś'; }
+  .witam #drawbarLoad {
+    top: 70mm; }
+    .witam #drawbarLoad::before {
+      content: 'Maksymalny nacisk na sprzęg'; }
+
+.rus {
+  width: 103mm;
+  height: 110mm;
+  background: #004455;
+  outline-color: #a9a9a9; }
+  .rus .logoUmega,
+  .rus #category,
+  .rus #variant,
+  .rus #version,
+  .rus .divider,
+  .rus #country,
+  .rus #placeholder,
+  .rus #axle2,
+  .rus #axle3,
+  .rus #roadDrawbar,
+  .rus #roadAxle1,
+  .rus #roadAxle2,
+  .rus #roadAxle3,
+  .rus #drawbarLoad,
+  .rus #axleLoad,
+  .rus #full,
+  .rus #maxLoad,
+  .rus .b0, .rus .b1, .rus .b2, .rus .b3, .rus .b4,
+  .rus .t0, .rus .t1, .rus .t2, .rus .t3,
+  .rus .logoAgro {
+    display: none; }
+  .rus .field {
+    display: inline-block;
+    height: 5mm !important;
+    width: 37mm;
+    left: 59mm;
+    background: whitesmoke;
+    color: blue;
+    text-align: center;
+    line-height: 5mm;
+    font-size: 4mm; }
+    .rus .field::before {
+      display: inline-block;
+      position: absolute;
+      height: 5mm;
+      width: 49mm;
+      padding-left: 1mm;
+      left: -52mm;
+      background: whitesmoke;
+      text-align: left;
+      color: #004455;
+      font-weight: 400;
+      font-size: 3.5mm;
+      line-height: 5mm; }
+  .rus .full {
+    width: 89mm; }
+  .rus .logoGroup {
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 5mm;
+    font-weight: 700;
+    width: 55mm;
+    left: 10mm;
+    top: 10mm; }
+  .rus .address {
+    color: whitesmoke;
+    top: 6mm;
+    left: 60mm; }
+  .rus #certificate {
+    top: 23mm;
+    left: 7mm; }
+  .rus #type {
+    top: 30mm; }
+    .rus #type::before {
+      content: 'Тип:'; }
+  .rus #pin {
+    top: 36mm; }
+    .rus #pin::before {
+      content: 'Серийный номер:'; }
+  .rus #year {
+    top: 42mm; }
+    .rus #year::before {
+      content: 'Год производства:'; }
+  .rus #road {
+    top: 48mm; }
+    .rus #road::before {
+      content: 'Полная масса (кг):'; }
+  .rus #weight {
+    top: 54mm; }
+    .rus #weight::before {
+      content: 'Масса (кг):'; }
+  .rus #drawbar {
+    top: 60mm; }
+    .rus #drawbar::before {
+      content: 'Макс. нагр. на дышло (кг):'; }
+  .rus #axle1 {
+    top: 66mm; }
+    .rus #axle1::before {
+      content: 'Общая нагр. на оси (кг):'; }
+  .rus #roadLoad {
+    top: 72mm; }
+    .rus #roadLoad::before {
+      content: 'Масса нетто (кг):'; }
+  .rus .iso {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 10mm; }
+  .rus .eu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 78mm; }
+  .rus .eac {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 9mm;
+    line-height: 15mm;
+    top: 95mm;
+    color: whitesmoke;
+    left: 55mm; }
