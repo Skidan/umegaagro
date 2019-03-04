@@ -42,7 +42,26 @@ b4t3  =       document.getElementById("b4t3");
 
 //////////// Database /////////////
 var trailers = {
-  pi20:   {},
+  spc14:   {
+    name: "SPC14",
+    category: "S2a",
+    variant: "C",
+    version: "-",
+    year: "XXXX",
+    type: {
+      eu: "TIP14",
+      pl: "SP1/SPC14",
+      lt: "SPC14",
+      lv: "SPC14",
+      dk: "SPC16"
+    },
+    certificate: {
+      eu: "e36*167/2013*00023*00",
+      pl: "SP1/SPC14",
+      no: ""
+    },
+
+  },
   gpp23:  {},
   spc16:  {},
   spp14:  {}
@@ -87,4 +106,51 @@ var resetData = function () {
   b4t3.innerText = "-";
 }
 
+var assign = function (trailerType) {
+  if (trailers.hasOwnProperty(trailerType)) {
+    console.log("We found a trailer " + trailerType + " in database.");
+    var currentTrailer = trailers[trailerType];
+    category.innerText = currentTrailer.category;
+    type.innerText = currentTrailer.type;
+    //variant.innerText = currentTrailer.variant;
+    //version.innerText = currentTrailer.version;
+    year.innerText = currentTrailer.year;
+    weight.innerText = currentTrailer.weight;
+    // roadLoad.innerText = currentTrailer.;
+    // maxLoad.innerText = currentTrailer.;
+    // certificate.innerText = currentTrailer.;
+    // pin.innerText = currentTrailer.;
+    // country.innerText = currentTrailer.;
+    // road.innerText = currentTrailer.;
+    // full.innerText = currentTrailer.;
+    // drawbar.innerText = currentTrailer.;
+    // axle1.innerText = currentTrailer.;
+    // axle2.innerText = currentTrailer.;
+    // axle3.innerText = currentTrailer.;
+    // roadDrawbar.innerText = currentTrailer.;
+    // roadAxle1.innerText = currentTrailer.;
+    // roadAxle2.innerText = currentTrailer.;
+    // roadAxle3.innerText = currentTrailer.;
+    // drawbarLoad.innerText = currentTrailer.;
+    // axleLoad.innerText = currentTrailer.;
+    // b1t1.innerText = currentTrailer.;
+    // b1t2.innerText = currentTrailer.;
+    // b1t3.innerText = currentTrailer.;
+    // b2t1.innerText = currentTrailer.;
+    // b2t2.innerText = currentTrailer.;
+    // b2t3.innerText = currentTrailer.;
+    // b3t1.innerText = currentTrailer.;
+    // b3t2.innerText = currentTrailer.;
+    // b3t3.innerText = currentTrailer.;
+    // b4t1.innerText = currentTrailer.;
+    // b4t2.innerText = currentTrailer.;
+    // b4t3.innerText = currentTrailer.;
+    //console.log(currentTrailer);
+  } else {
+    console.log("Trailer \"" + trailerType + "\" not found in database.");
+
+  }
+}
+
 resetData();
+assign("spc14");
