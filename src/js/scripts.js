@@ -168,3 +168,13 @@ var assign = function (trailerType) {
 
 resetData();
 assign("spc14");
+
+function initialize () {
+  // 1) get trailers list => fill trailer select with options;
+  // 2) according to selected trailer, choose a country;
+  // 3) according to the country selected in the dropdown, 
+  //    get the list of possible certification options for that country;
+  // 4) choose the year of production;
+  // 5) input the PIN according to the regular expression "/UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g"
+  // 6) if OK then activate domPDF generation.
+}

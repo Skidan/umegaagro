@@ -859,7 +859,9 @@
 }
 
 #input {
-  outline: $test;
+  //outline: $test;
+  width: 120mm;
+  margin: 0 auto;
   & input[type="text"] {
     color: $color-main;
     height: 6mm;
@@ -869,16 +871,21 @@
     font-family: $font-monospace;
     margin: 1mm;
     padding: .5mm;
-    border: 1px solid $color-main;
+    border: 1px solid $color-light;
   }
   & #pdfbuild {
     display: block;
     margin: 2mm auto;
     color: $color-main;
-    &::before {
-      content: '\f019';
+    font-size: 6mm;
+    padding: 2mm 10mm;
+    border: 1px solid $color-main;
+    border-radius: 2mm;
+    &::after {
+      content: '\f1c1';
       font-family: 'FontAwesome';
-      padding: 0 1mm;
+      font-size: 8mm;
+      padding: 0 2mm;
     }
   }
 }

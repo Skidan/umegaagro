@@ -796,7 +796,8 @@ select {
     left: 55mm; }
 
 #input {
-  outline: 1px dotted #f3B900; }
+  width: 120mm;
+  margin: 0 auto; }
   #input input[type="text"] {
     color: #004455;
     height: 6mm;
@@ -806,12 +807,18 @@ select {
     font-family: "Ubuntu Mono", monospace;
     margin: 1mm;
     padding: .5mm;
-    border: 1px solid #004455; }
+    border: 1px solid #a9a9a9; }
   #input #pdfbuild {
     display: block;
     margin: 2mm auto;
-    color: #004455; }
-    #input #pdfbuild::before {
-      content: '\f019';
+    color: #004455;
+    font-size: 6mm;
+    padding: 2mm 10mm;
+    border: 1px solid #004455;
+    -webkit-border-radius: 2mm;
+            border-radius: 2mm; }
+    #input #pdfbuild::after {
+      content: '\f1c1';
       font-family: 'FontAwesome';
-      padding: 0 1mm; }
+      font-size: 8mm;
+      padding: 0 2mm; }

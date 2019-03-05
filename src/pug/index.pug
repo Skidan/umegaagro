@@ -3,8 +3,6 @@ html(lang="en")
 	include _header
 	body
 		#wrapper
-			#input
-				
 			#output
 				#plate.uniform
 					.logoAgro
@@ -87,6 +85,6 @@ html(lang="en")
 					option 2027
 					option 2028
 					option 2029
-				input(type="text" minlength="17" maxlength="17" size="19" placeholder="UMEXXX00XX0000000" pattern="UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}" required)#inputPin
-				button(name="pdf")#pdfbuild.button Download PDF
+				input(type="text" minlength="17" maxlength="17" size="19" placeholder="UMEXXX00XX0000000" required)#inputPin
+				button(name="pdf")#pdfbuild.button Download
 		script(src="js/scripts.js")
