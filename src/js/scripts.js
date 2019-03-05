@@ -82,7 +82,7 @@ var trailers = {
 };
 
 ////////// Methods //////////
-var resetData = function () {
+function resetData () {
   category.innerText = "-";
   type.innerText = "-";
   variant.innerText = "-";
@@ -120,7 +120,7 @@ var resetData = function () {
   b4t3.innerText = "-";
 }
 
-var assign = function (trailerType) {
+function assign (trailerType) {
   if (trailers.hasOwnProperty(trailerType)) {
     console.log("We found a trailer " + trailerType + " in database.");
     var currentTrailer = trailers[trailerType];
@@ -166,9 +166,6 @@ var assign = function (trailerType) {
   }
 }
 
-resetData();
-assign("spc14");
-
 function initialize () {
   // 1) get trailers list => fill trailer select with options;
   // 2) according to selected trailer, choose a country;
@@ -177,4 +174,9 @@ function initialize () {
   // 4) choose the year of production;
   // 5) input the PIN according to the regular expression "/UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g"
   // 6) if OK then activate domPDF generation.
+  resetData();
 }
+
+//// WORKFLOW ///////
+initialize();
+assign("spc14");
