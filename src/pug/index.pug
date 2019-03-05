@@ -65,4 +65,28 @@ html(lang="en")
 					.rivet.rt
 					.rivet.rb
 					.rivet.lb
+			#input
+				select#chooseTrailer
+					option#choose_a_trailer(selected) -- choose a trailer --
+				select#chooseCountry
+					option#choose_a_country(selected) -- choose a country --
+				.certificationOptions
+				.complectationOptions
+				select#inputYear
+					option 2016
+					option 2017
+					option 2018
+					option 2019
+					option 2020
+					option 2021
+					option 2022
+					option 2023
+					option 2024
+					option 2025
+					option 2026
+					option 2027
+					option 2028
+					option 2029
+				input(type="text" minlength="17" maxlength="17" size="19" placeholder="UMEXXX00XX0000000" pattern="UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}" required)#inputPin
+				button(name="pdf")#pdfbuild.button Download PDF
 		script(src="js/scripts.js")

@@ -857,3 +857,28 @@
     left: 55mm;
   }
 }
+
+#input {
+  outline: $test;
+  & input[type="text"] {
+    color: $color-main;
+    height: 6mm;
+    font-size: 4mm;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $font-monospace;
+    margin: 1mm;
+    padding: .5mm;
+    border: 1px solid $color-main;
+  }
+  & #pdfbuild {
+    display: block;
+    margin: 2mm auto;
+    color: $color-main;
+    &::before {
+      content: '\f019';
+      font-family: 'FontAwesome';
+      padding: 0 1mm;
+    }
+  }
+}

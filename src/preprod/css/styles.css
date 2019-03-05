@@ -78,6 +78,13 @@ section {
   margin: 0;
   padding: 0; }
 
+select {
+  display: block;
+  margin: 1mm;
+  height: 8mm;
+  font-size: 4mm;
+  color: #004455; }
+
 /************ MAIN STYLES *************/
 #wrapper {
   width: 100%;
@@ -787,3 +794,24 @@ section {
     top: 95mm;
     color: whitesmoke;
     left: 55mm; }
+
+#input {
+  outline: 1px dotted #f3B900; }
+  #input input[type="text"] {
+    color: #004455;
+    height: 6mm;
+    font-size: 4mm;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
+    margin: 1mm;
+    padding: .5mm;
+    border: 1px solid #004455; }
+  #input #pdfbuild {
+    display: block;
+    margin: 2mm auto;
+    color: #004455; }
+    #input #pdfbuild::before {
+      content: '\f019';
+      font-family: 'FontAwesome';
+      padding: 0 1mm; }

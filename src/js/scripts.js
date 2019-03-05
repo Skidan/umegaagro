@@ -61,6 +61,19 @@ var trailers = {
       pl: "SP1/SPC14",
       no: ""
     },
+    country: [
+      "eu", 
+      "uni", 
+      "lt", 
+      "lv", 
+      "ee", 
+      "pl", 
+      "dk", 
+      "rs", 
+      "bg", 
+      "ua", 
+      "ru"
+    ]
 
   },
   gpp23:  {},

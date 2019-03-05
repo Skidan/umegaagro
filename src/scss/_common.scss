@@ -70,3 +70,12 @@ section {
 	margin: 0;
 	padding: 0;
 }
+select {
+  display: block;
+  margin: 1mm;
+  height: 8mm;
+  font-size: 4mm;
+  //padding: 1mm;
+  //line-height: 6mm;
+  color: $color-main;
+}
