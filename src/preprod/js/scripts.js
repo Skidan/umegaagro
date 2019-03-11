@@ -44,6 +44,39 @@ b4t3  =       document.getElementById("b4t3");
 var trailers = {
   spc14:   {
     name: "SPC14",
+    category: "R3a",
+    variant: "C",
+    version: "-",
+    year: "XXXX",
+    weight: 5500,
+    type: {
+      eu: "TIP14",
+      pl: "SP1/SPC14",
+      lt: "SPC14",
+      lv: "SPC14",
+      dk: "SPC16"
+    },
+    certificate: {
+      eu: "e36*167/2013*00023*00",
+      pl: "SP1/SPC14",
+      no: ""
+    },
+    country: [
+      "eu", 
+      "uni", 
+      "lt", 
+      "lv", 
+      "ee", 
+      "pl", 
+      "dk", 
+      "rs", 
+      "bg", 
+      "ua", 
+      "ru"
+    ]
+  },
+  gpp23:  {
+    name: "GPP23",
     category: "S2a",
     variant: "C",
     version: "-",
@@ -74,11 +107,70 @@ var trailers = {
       "ua", 
       "ru"
     ]
-
   },
-  gpp23:  {},
-  spc16:  {},
-  spp14:  {}
+  spc16:  {
+    name: "SPC16",
+    category: "R3a",
+    variant: "16",
+    version: "-",
+    year: "XXXX",
+    weight: 5800,
+    type: {
+      eu: "TIP16",
+      pl: "SP1/SPC16",
+      lt: "SPC16",
+      lv: "SPC16",
+      dk: "SPC18"
+    },
+    certificate: {
+      eu: "e36*167/2013*00015*00",
+      pl: "SP1/SPC16",
+      no: ""
+    },
+    country: [
+      "eu", 
+      "uni", 
+      "lt", 
+      "lv", 
+      "ee", 
+      "pl", 
+      "dk", 
+      "rs", 
+      "bg", 
+      "ua", 
+      "ru"
+    ]
+  },
+  spp14:  {
+    name: "SPP14",
+    category: "R3a",
+    variant: "14P",
+    version: "-",
+    year: "XXXX",
+    weight: 4200,
+    type: {
+      eu: "SPP",
+      pl: "SP1/SPP14",
+      lt: "SPP14",
+      lv: "SPP14",
+      dk: "SPP16"
+    },
+    certificate: {
+      pl: "SP1/SPC14",
+      no: ""
+    },
+    country: [
+      "eu", 
+      "uni", 
+      "lt", 
+      "lv", 
+      "ee", 
+      "pl", 
+      "dk", 
+      "rs", 
+      "bg"
+    ]
+  }
 };
 
 ////////// Methods //////////
