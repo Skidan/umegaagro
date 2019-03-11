@@ -57,7 +57,6 @@ plateVar = {
 };
 currentTrailer = {
   // current trailer object model
-  // state variables (is choosed, is correct, etc)
   // METHODS:
   // buildTrailer() - write to the DOM;
 
@@ -194,14 +193,19 @@ umegaTrailers = {
     ]
   }
 };
-activator = {};
-
-
-
-
-
-
-
+//// Logic for plates builder /////
+activator = {
+  // state variables (is choosed, is correct, etc)
+  // Initialization();
+  //    resetData();
+  //    readTrailers();
+  // listenTrailer();
+  // listenCountry();
+  // listenYear();
+  // listenCertificate();
+  // listenPIN();
+  // checkup();
+};
 
 ////////// Methods //////////
 function resetData () {
