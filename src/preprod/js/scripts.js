@@ -57,9 +57,9 @@ plateVar = {
 };
 currentTrailer = {
   // current trailer object model
+  
   // METHODS:
   // buildTrailer() - write to the DOM;
-
 };
 //////////// Database /////////////
 umegaTrailers = {
@@ -196,6 +196,11 @@ umegaTrailers = {
 //// Logic for plates builder /////
 activator = {
   // state variables (is choosed, is correct, etc)
+  model:        "mooodel",
+  country:      "cooontr",
+  certificate:  "yeeeeah",
+  manufacture:  "yahrenn",
+  numOfTrailers:  0
   // Initialization();
   //    resetData();
   //    readTrailers();
@@ -208,45 +213,6 @@ activator = {
 };
 
 ////////// Methods //////////
-function resetData () {
-  plateVar.plate.classList.remove("uniform", "rus", "witam", "noCertOld", "undefined");
-  plateVar.plate.classList.add("undefined");
-  plateVar.category.innerText = "-";
-  plateVar.type.innerText = "-";
-  plateVar.variant.innerText = "-";
-  plateVar.version.innerText = "-";
-  plateVar.year.innerText = "-";
-  plateVar.weight.innerText = "-";
-  plateVar.roadLoad.innerText = "-";
-  plateVar.maxLoad.innerText = "-";
-  plateVar.certificate.innerText = "-";
-  plateVar.pin.innerText = "-";
-  plateVar.country.innerText = "-";
-  plateVar.road.innerText = "-";
-  plateVar.full.innerText = "-";
-  plateVar.drawbar.innerText = "-";
-  plateVar.axle1.innerText = "-";
-  plateVar.axle2.innerText = "-";
-  plateVar.axle3.innerText = "-";
-  plateVar.roadDrawbar.innerText = "-";
-  plateVar.roadAxle1.innerText = "-";
-  plateVar.roadAxle2.innerText = "-";
-  plateVar.roadAxle3.innerText = "-";
-  plateVar.drawbarLoad.innerText = "-";
-  plateVar.axleLoad.innerText = "-";
-  plateVar.b1t1.innerText = "-";
-  plateVar.b1t2.innerText = "-";
-  plateVar.b1t3.innerText = "-";
-  plateVar.b2t1.innerText = "-";
-  plateVar.b2t2.innerText = "-";
-  plateVar.b2t3.innerText = "-";
-  plateVar.b3t1.innerText = "-";
-  plateVar.b3t2.innerText = "-";
-  plateVar.b3t3.innerText = "-";
-  plateVar.b4t1.innerText = "-";
-  plateVar.b4t2.innerText = "-";
-  plateVar.b4t3.innerText = "-";
-}
 
 // function assign (trailerType) {
 //   if (umegaTrailers.hasOwnProperty(trailerType)) {
@@ -294,15 +260,120 @@ function resetData () {
 //   }
 // }
 
-function initialize () {
+function resetData () {
+  plateVar.plate.classList.remove("uniform", "rus", "witam", "noCertOld", "undefined");
+  plateVar.plate.classList.add("undefined");
+  plateVar.category.innerText = "-";
+  plateVar.type.innerText = "-";
+  plateVar.variant.innerText = "-";
+  plateVar.version.innerText = "-";
+  plateVar.year.innerText = "-";
+  plateVar.weight.innerText = "-";
+  plateVar.roadLoad.innerText = "-";
+  plateVar.maxLoad.innerText = "-";
+  plateVar.certificate.innerText = "-";
+  plateVar.pin.innerText = "-";
+  plateVar.country.innerText = "-";
+  plateVar.road.innerText = "-";
+  plateVar.full.innerText = "-";
+  plateVar.drawbar.innerText = "-";
+  plateVar.axle1.innerText = "-";
+  plateVar.axle2.innerText = "-";
+  plateVar.axle3.innerText = "-";
+  plateVar.roadDrawbar.innerText = "-";
+  plateVar.roadAxle1.innerText = "-";
+  plateVar.roadAxle2.innerText = "-";
+  plateVar.roadAxle3.innerText = "-";
+  plateVar.drawbarLoad.innerText = "-";
+  plateVar.axleLoad.innerText = "-";
+  plateVar.b1t1.innerText = "-";
+  plateVar.b1t2.innerText = "-";
+  plateVar.b1t3.innerText = "-";
+  plateVar.b2t1.innerText = "-";
+  plateVar.b2t2.innerText = "-";
+  plateVar.b2t3.innerText = "-";
+  plateVar.b3t1.innerText = "-";
+  plateVar.b3t2.innerText = "-";
+  plateVar.b3t3.innerText = "-";
+  plateVar.b4t1.innerText = "-";
+  plateVar.b4t2.innerText = "-";
+  plateVar.b4t3.innerText = "-";
+}
+
+
+
+function readTrailers() {
   for (var trailer in umegaTrailers) {
     var nodeDOM = document.createElement("option");
     var nodeText = document.createTextNode(umegaTrailers[trailer].name);
     nodeDOM.appendChild(nodeText);
     domVar.trailerChooser.appendChild(nodeDOM);
-    //console.log(umegaTrailers[trailer].name);
+    activator.numOfTrailers ++;
   }
+}
+function clearTrailers () {
+  //
+}
+function selectTrailer () {
+  activator.model = umegaTrailers[domVar.trailerChooser.options[domVar.trailerChooser.selectedIndex].text.toLowerCase()];
+  readCountry();
+}
+
+
+function readCountry () {
+  //console.log(activator.model.country.length);
+  for (i = 0; i < activator.model.country.length; i++) {
+    var nodeDOM = document.createElement("option");
+    var nodeText = document.createTextNode(activator.model.country[i]);
+    nodeDOM.appendChild(nodeText);
+    domVar.countryChooser.appendChild(nodeDOM);
+  }
+}
+function clearCountry () {
+  //select default element in country dropdown
+  while (domVar.countryChooser.length > 1) {
+    domVar.countryChooser.removeChild(domVar.countryChooser.lastChild);
+  }
+  //defaults state variable
+}
+function selectCountry () {
+  //write country to the state variable
+  activator.country = domVar.countryChooser.options[domVar.countryChooser.selectedIndex].text.toLowerCase();
+  console.log(activator.country);
+  // readCertification();
+}
+
+function readCertification () {
+  //
+}
+function clearCertification () {
+  //
+}
+function selectCertification () {
+  //
+}
+
+function trailerChange () {
+  clearCountry();
+  selectTrailer();
+}
+function countryChange () {
+  clearCertification();
+  selectCountry();
+}
+function certificateChange () {
+  console.log("Certificate changes");
+}
+function yearChange () {
+  console.log("year changes");
+}
+function VINChange () {
+  console.log("VIN changes");
+}
+
+function initialize () {
   // 1) get trailers list => fill trailer select with options;
+  readTrailers();
   // 2) according to selected trailer, choose a country;
   // 3) according to the country selected in the dropdown, 
   //    get the list of possible certification options for that country;
@@ -311,7 +382,10 @@ function initialize () {
   // 6) if OK then activate domPDF generation.
   resetData();
 }
-
 //// WORKFLOW ///////
 initialize();
-//assign("spc14");
+domVar.trailerChooser.addEventListener('change', trailerChange);
+domVar.countryChooser.addEventListener('change', countryChange);
+domVar.certificateChooser.addEventListener('change', certificateChange);
+domVar.inputYear.addEventListener('change', yearChange);
+domVar.inputPIN.addEventListener('change', VINChange);
