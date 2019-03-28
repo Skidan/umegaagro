@@ -77,11 +77,20 @@ umegaTrailers = {
       lv: "SPC14",
       dk: "SPC16"
     },
-    certificate: {
-      eu: "e36*167/2013*00023*00",
-      pl: "SP1/SPC14",
-      no: ""
-    },
+    certificate: [
+      {
+        name: "European 167/2013",
+        number: "e36*167/2013*00023*00"
+      },
+      {
+        name: "pl",
+        number: "SP1/SPC14"
+      },
+      {
+        name: "No certification",
+        number: ""
+      }
+    ],
     country: [
       "eu", 
       "uni", 
@@ -104,17 +113,19 @@ umegaTrailers = {
     year: "XXXX",
     weight: 5500,
     type: {
-      eu: "TIP14",
-      pl: "SP1/SPC14",
-      lt: "SPC14",
-      lv: "SPC14",
-      dk: "SPC16"
+      eu: "GPP23",
+      lt: "GPP23"
     },
-    certificate: {
-      eu: "e36*167/2013*00023*00",
-      pl: "SP1/SPC14",
-      no: ""
-    },
+    certificate: [
+      {
+        name: "European 167/2013",
+        number: "e32*167/2013*00021*00"
+      },
+      {
+        name: "No certification",
+        number: ""
+      }
+    ],
     country: [
       "eu", 
       "uni", 
@@ -143,11 +154,20 @@ umegaTrailers = {
       lv: "SPC16",
       dk: "SPC18"
     },
-    certificate: {
-      eu: "e36*167/2013*00015*00",
-      pl: "SP1/SPC16",
-      no: ""
-    },
+    certificate: [
+      {
+        name: "European 167/2013",
+        number: "e32*167/2013*00015*00"
+      },
+      {
+        name: "pl",
+        number: "SP1/SPC16"
+      },
+      {
+        name: "No certification",
+        number: ""
+      }
+    ],
     country: [
       "eu", 
       "uni", 
@@ -196,10 +216,12 @@ umegaTrailers = {
 //// Logic for plates builder /////
 activator = {
   // state variables (is choosed, is correct, etc)
-  model:        "mooodel",
-  country:      "cooontr",
-  certificate:  "yeeeeah",
-  manufacture:  "yahrenn",
+  model:          {},
+  country:        "",
+  certificates:    [],
+  certName:       "-*-",
+  certType:       "-*-",
+  manufacture:    0,
   numOfTrailers:  0
   // Initialization();
   //    resetData();
@@ -312,7 +334,7 @@ function readTrailers() {
   }
 }
 function clearTrailers () {
-  //
+  activator.model = "";
 }
 function selectTrailer () {
   activator.model = umegaTrailers[domVar.trailerChooser.options[domVar.trailerChooser.selectedIndex].text.toLowerCase()];
@@ -334,23 +356,44 @@ function clearCountry () {
   while (domVar.countryChooser.length > 1) {
     domVar.countryChooser.removeChild(domVar.countryChooser.lastChild);
   }
+  clearCertification();
   //defaults state variable
+  activator.country = "";
 }
 function selectCountry () {
   //write country to the state variable
   activator.country = domVar.countryChooser.options[domVar.countryChooser.selectedIndex].text.toLowerCase();
   console.log(activator.country);
-  // readCertification();
+  readCertification();
 }
 
 function readCertification () {
-  //
+
+  for (i = 0; i < activator.model.certificate.length; i++) {
+    var currentCert = activator.model.certificate[i];
+    if ( currentCert.name === "No certification" || currentCert.name === "European 167/2013" || currentCert.name === activator.country) {
+      activator.certificates.push(currentCert);
+      var nodeDOM = document.createElement("option");
+      var nodeText = document.createTextNode(activator.model.certificate[i].name);
+      nodeDOM.appendChild(nodeText);
+      domVar.certificateChooser.appendChild(nodeDOM);
+    }
+  }
+  console.log(activator.certificates);
 }
+
 function clearCertification () {
-  //
+  while (domVar.certificateChooser.length > 1) {
+    domVar.certificateChooser.removeChild(domVar.certificateChooser.lastChild);
+  }
+  activator.certificates = [];
+  activator.certName = "";
+  activator.certType = "";
 }
 function selectCertification () {
-  //
+  console.log(activator.certName);
+  var selected = domVar.certificateChooser.options[domVar.certificateChooser.selectedIndex].text;
+  console.log(selected);
 }
 
 function trailerChange () {
@@ -362,7 +405,8 @@ function countryChange () {
   selectCountry();
 }
 function certificateChange () {
-  console.log("Certificate changes");
+  //clearCertification();
+  selectCertification();
 }
 function yearChange () {
   console.log("year changes");
