@@ -217,8 +217,9 @@ umegaTrailers = {
 activator = {
   // state variables (is choosed, is correct, etc)
   model:          {},
-  country:        "",
-  certificates:    [],
+  certificates:   [],
+  countries:      [],
+  country:        "undef",
   certName:       "-*-",
   certType:       "-*-",
   manufacture:    0,
@@ -381,7 +382,6 @@ function readCertification () {
   }
   console.log(activator.certificates);
 }
-
 function clearCertification () {
   while (domVar.certificateChooser.length > 1) {
     domVar.certificateChooser.removeChild(domVar.certificateChooser.lastChild);
@@ -389,11 +389,44 @@ function clearCertification () {
   activator.certificates = [];
   activator.certName = "";
   activator.certType = "";
+  setForm ("undefined");
 }
 function selectCertification () {
-  console.log(activator.certName);
   var selected = domVar.certificateChooser.options[domVar.certificateChooser.selectedIndex].text;
-  console.log(selected);
+  for (i = 0; i < activator.certificates.length; i++) {
+    if (selected === activator.certificates[i].name) {
+      activator.certName = activator.certificates[i].name;
+      activator.certType = activator.certificates[i].number;
+    }
+  }
+}
+
+// setup table form
+function setForm (tableType) {
+  plateVar.plate.classList.remove("uniform", "rus", "witam", "nocertOld", "undefined");
+  plateVar.plate.classList.add(tableType);
+}
+function chooseForm () {
+  if (activator.certName === "European 167/2013") {
+    setForm("uniform");
+  } else {
+    switch (activator.country) {
+      case 'pl': 
+        setForm("witam"); 
+        break;
+      case 'ru': 
+        setForm("rus"); 
+        break;
+      case 'dk': 
+        setForm("nocertOld"); 
+        break;
+      case '':
+        setForm("undefined");
+        break;
+      default: 
+        setForm("uniform");
+    }
+  }
 }
 
 function trailerChange () {
@@ -405,8 +438,9 @@ function countryChange () {
   selectCountry();
 }
 function certificateChange () {
-  //clearCertification();
   selectCertification();
+  setForm ("undefined");
+  chooseForm();
 }
 function yearChange () {
   console.log("year changes");
