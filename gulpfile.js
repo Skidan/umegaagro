@@ -114,7 +114,8 @@ gulp.task('build', ['clean', 'img', 'sass', 'pug', 'jayass'/*, 'scripts'*/], fun
  
     var buildCss = gulp.src([ // Переносим библиотеки в продакшн
 			/*'src/preprod/css/libs.min.css'*/,
-			'src/preprod/css/styles.css'			
+			'src/preprod/css/styles.css',
+			'src/preprod/css/svg.css'
 		])
 		/*.pipe(concat('styles.css'))*/
     .pipe(gulp.dest('public/css'));
