@@ -326,7 +326,8 @@ activator = {
   certName:       "",
   certType:       "",
   manufacture:    0,
-  numOfTrailers:  0
+  numOfTrailers:  0,
+  VINcode:        ""
 };
 
 ////////// Methods //////////
@@ -528,6 +529,14 @@ function chooseForm () {
   }
 }
 
+function getVIN () {
+  //
+}
+
+function validateVIN () {
+  //
+}
+
 function trailerChange () {
   clearCountry();
   selectTrailer();
@@ -546,14 +555,13 @@ function yearChange () {
 }
 function VINChange () {
   console.log("VIN has changed");
+  activator.VINcode = domVar.inputPIN.value.toUpperCase();
+  console.log(activator.VINcode);
+  // input validation on-the-fly with regular expression (depending on length)
 }
 
 function initialize () {
-  // 1) get trailers list => fill trailer select with options;
   readTrailers();
-  // 2) according to selected trailer, choose a country;
-  // 3) according to the country selected in the dropdown, 
-  //    get the list of possible certification options for that country;
   // 4) choose the year of production;
   // 5) input the PIN according to the regular expression "/UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g"
   // 6) if OK then activate domPDF generation.
@@ -565,4 +573,4 @@ domVar.trailerChooser.addEventListener('change', trailerChange);
 domVar.countryChooser.addEventListener('change', countryChange);
 domVar.certificateChooser.addEventListener('change', certificateChange);
 domVar.inputYear.addEventListener('change', yearChange);
-domVar.inputPIN.addEventListener('change', VINChange);
+domVar.inputPIN.addEventListener('input', VINChange);
