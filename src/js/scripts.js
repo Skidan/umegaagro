@@ -92,17 +92,42 @@ umegaTrailers = {
       }
     ],
     country: [
-      "eu", 
-      "uni", 
-      "lt", 
-      "lv", 
-      "ee", 
-      "pl", 
-      "dk", 
-      "rs", 
-      "bg", 
-      "ua", 
-      "ru"
+      {
+        name: "no matter",
+        locale: "undef"
+      },
+      {
+        name: "Lithuania",
+        locale: "lt"
+      },
+      {
+        name: "Latvia",
+        locale: "lv"
+      },
+      {
+        name: "Estonia",
+        locale: "ee"
+      },
+      {
+        name: "Poland",
+        locale: "pl"
+      },
+      {
+        name: "Danmark",
+        locale: "dk"
+      },
+      {
+        name: "Russia",
+        locale: "ru"
+      },
+      {
+        name: "Serbia",
+        locale: "rs"
+      },
+      {
+        name: "Ukraine",
+        locale: "ua"
+      }
     ]
   },
   gpp23:  {
@@ -127,17 +152,42 @@ umegaTrailers = {
       }
     ],
     country: [
-      "eu", 
-      "uni", 
-      "lt", 
-      "lv", 
-      "ee", 
-      "pl", 
-      "dk", 
-      "rs", 
-      "bg", 
-      "ua", 
-      "ru"
+      {
+        name: "no matter",
+        locale: "undef"
+      },
+      {
+        name: "Lithuania",
+        locale: "lt"
+      },
+      {
+        name: "Latvia",
+        locale: "lv"
+      },
+      {
+        name: "Estonia",
+        locale: "ee"
+      },
+      {
+        name: "Poland",
+        locale: "pl"
+      },
+      {
+        name: "Danmark",
+        locale: "dk"
+      },
+      {
+        name: "Russia",
+        locale: "ru"
+      },
+      {
+        name: "Serbia",
+        locale: "rs"
+      },
+      {
+        name: "Ukraine",
+        locale: "ua"
+      }
     ]
   },
   spc16:  {
@@ -169,17 +219,42 @@ umegaTrailers = {
       }
     ],
     country: [
-      "eu", 
-      "uni", 
-      "lt", 
-      "lv", 
-      "ee", 
-      "pl", 
-      "dk", 
-      "rs", 
-      "bg", 
-      "ua", 
-      "ru"
+      {
+        name: "no matter",
+        locale: "undef"
+      },
+      {
+        name: "Lithuania",
+        locale: "lt"
+      },
+      {
+        name: "Latvia",
+        locale: "lv"
+      },
+      {
+        name: "Estonia",
+        locale: "ee"
+      },
+      {
+        name: "Poland",
+        locale: "pl"
+      },
+      {
+        name: "Danmark",
+        locale: "dk"
+      },
+      {
+        name: "Russia",
+        locale: "ru"
+      },
+      {
+        name: "Serbia",
+        locale: "rs"
+      },
+      {
+        name: "Ukraine",
+        locale: "ua"
+      }
     ]
   },
   spp14:  {
@@ -201,15 +276,42 @@ umegaTrailers = {
       no: ""
     },
     country: [
-      "eu", 
-      "uni", 
-      "lt", 
-      "lv", 
-      "ee", 
-      "pl", 
-      "dk", 
-      "rs", 
-      "bg"
+      {
+        name: "no matter",
+        locale: "undef"
+      },
+      {
+        name: "Lithuania",
+        locale: "lt"
+      },
+      {
+        name: "Latvia",
+        locale: "lv"
+      },
+      {
+        name: "Estonia",
+        locale: "ee"
+      },
+      {
+        name: "Poland",
+        locale: "pl"
+      },
+      {
+        name: "Danmark",
+        locale: "dk"
+      },
+      {
+        name: "Russia",
+        locale: "ru"
+      },
+      {
+        name: "Serbia",
+        locale: "rs"
+      },
+      {
+        name: "Ukraine",
+        locale: "ua"
+      }
     ]
   }
 };
@@ -218,21 +320,13 @@ activator = {
   // state variables (is choosed, is correct, etc)
   model:          {},
   certificates:   [],
-  countries:      [],
-  country:        "undef",
-  certName:       "-*-",
-  certType:       "-*-",
+  country:        [],
+  countryName:    "",
+  countryLocale:  "",
+  certName:       "",
+  certType:       "",
   manufacture:    0,
   numOfTrailers:  0
-  // Initialization();
-  //    resetData();
-  //    readTrailers();
-  // listenTrailer();
-  // listenCountry();
-  // listenYear();
-  // listenCertificate();
-  // listenPIN();
-  // checkup();
 };
 
 ////////// Methods //////////
@@ -323,8 +417,6 @@ function resetData () {
   plateVar.b4t3.innerText = "-";
 }
 
-
-
 function readTrailers() {
   for (var trailer in umegaTrailers) {
     var nodeDOM = document.createElement("option");
@@ -342,37 +434,40 @@ function selectTrailer () {
   readCountry();
 }
 
-
 function readCountry () {
-  //console.log(activator.model.country.length);
-  for (i = 0; i < activator.model.country.length; i++) {
+  for (var i = 0; i < activator.model.country.length; i++) {
     var nodeDOM = document.createElement("option");
-    var nodeText = document.createTextNode(activator.model.country[i]);
+    var nodeText = document.createTextNode(activator.model.country[i].name);
     nodeDOM.appendChild(nodeText);
     domVar.countryChooser.appendChild(nodeDOM);
   }
 }
 function clearCountry () {
-  //select default element in country dropdown
   while (domVar.countryChooser.length > 1) {
     domVar.countryChooser.removeChild(domVar.countryChooser.lastChild);
   }
   clearCertification();
-  //defaults state variable
-  activator.country = "";
+  activator.country = [];
+  activator.countryName = "";
+  activator.countryLocale = "";
 }
 function selectCountry () {
-  //write country to the state variable
-  activator.country = domVar.countryChooser.options[domVar.countryChooser.selectedIndex].text.toLowerCase();
-  console.log(activator.country);
+  var selection = domVar.countryChooser.options[domVar.countryChooser.selectedIndex].text;
+  for (var i = 0; i < activator.model.country.length; i++) {
+    var currentCountry = activator.model.country[i];
+    if (currentCountry.name === selection) {
+      activator.country = activator.model.country[i];
+      activator.countryName = activator.model.country[i].name;
+      activator.countryLocale = activator.model.country[i].locale;
+    }
+  }
   readCertification();
 }
 
 function readCertification () {
-
-  for (i = 0; i < activator.model.certificate.length; i++) {
+  for (var i = 0; i < activator.model.certificate.length; i++) {
     var currentCert = activator.model.certificate[i];
-    if ( currentCert.name === "No certification" || currentCert.name === "European 167/2013" || currentCert.name === activator.country) {
+    if ( currentCert.name === "No certification" || currentCert.name === "European 167/2013" || currentCert.name === activator.country.locale) {
       activator.certificates.push(currentCert);
       var nodeDOM = document.createElement("option");
       var nodeText = document.createTextNode(activator.model.certificate[i].name);
@@ -380,7 +475,6 @@ function readCertification () {
       domVar.certificateChooser.appendChild(nodeDOM);
     }
   }
-  console.log(activator.certificates);
 }
 function clearCertification () {
   while (domVar.certificateChooser.length > 1) {
@@ -393,7 +487,7 @@ function clearCertification () {
 }
 function selectCertification () {
   var selected = domVar.certificateChooser.options[domVar.certificateChooser.selectedIndex].text;
-  for (i = 0; i < activator.certificates.length; i++) {
+  for (var i = 0; i < activator.certificates.length; i++) {
     if (selected === activator.certificates[i].name) {
       activator.certName = activator.certificates[i].name;
       activator.certType = activator.certificates[i].number;
@@ -406,26 +500,31 @@ function setForm (tableType) {
   plateVar.plate.classList.remove("uniform", "rus", "witam", "nocertOld", "undefined");
   plateVar.plate.classList.add(tableType);
 }
+
 function chooseForm () {
-  if (activator.certName === "European 167/2013") {
-    setForm("uniform");
-  } else {
-    switch (activator.country) {
-      case 'pl': 
-        setForm("witam"); 
-        break;
-      case 'ru': 
-        setForm("rus"); 
-        break;
-      case 'dk': 
-        setForm("nocertOld"); 
-        break;
-      case '':
-        setForm("undefined");
-        break;
-      default: 
+  switch (activator.country.locale) {
+    case 'ru':
+      setForm("rus");
+      break;
+    case 'dk':
+      if (activator.certName === "European 167/2013") {
         setForm("uniform");
-    }
+      } else {
+        setForm("nocertOld")
+      }
+      break;
+    case 'undef':
+      setForm("undefined");
+      break;
+    case 'pl':
+      if (activator.certName === "European 167/2013") {
+        setForm("uniform");
+      } else {
+        setForm("witam")
+      }
+      break;
+    default:
+      setForm("uniform");
   }
 }
 
@@ -443,10 +542,10 @@ function certificateChange () {
   chooseForm();
 }
 function yearChange () {
-  console.log("year changes");
+  console.log("year has changed");
 }
 function VINChange () {
-  console.log("VIN changes");
+  console.log("VIN has changed");
 }
 
 function initialize () {
