@@ -658,6 +658,7 @@ function certificateChange () {
 }
 function yearChange () {
   console.log("year has changed");
+  setForm ("undefined");
   activator.checkup();
 }
 function VINChange () {
@@ -665,6 +666,7 @@ function VINChange () {
   if (activator.VINcode.length) {
     validateVIN();
   } else {
+    activator.okVIN = false;
     reactVIN("noPin");
     deactivateElement("pdfButton");
   }

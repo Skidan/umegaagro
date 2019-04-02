@@ -133,12 +133,12 @@ umegaTrailers = {
     ]
   },
   gpp23:  {
-    name: "GPP23",
+    name:     "GPP23",
     category: "S2a",
-    variant: "C",
-    version: "-",
-    year: "XXXX",
-    weight: 5500,
+    variant:  "C",
+    version:  "-",
+    year:     0,
+    weight:   5500,
     type: {
       eu: "GPP23",
       lt: "GPP23"
@@ -346,50 +346,13 @@ activator = {
       console.log("Button DE-activated");
     }
   }
-
 };
 
 ////////// Methods //////////
 
 function buildTrailer (trailerType) {
-  console.log("We found a trailer " + trailerType + " in database.");
-  var currentTrailer = umegaTrailers[trailerType];
-  category.innerText = currentTrailer.category;
-  type.innerText = currentTrailer.type;
-  //variant.innerText = currentTrailer.variant;
-  //version.innerText = currentTrailer.version;
-  year.innerText = currentTrailer.year;
-  weight.innerText = currentTrailer.weight;
-  // roadLoad.innerText = currentTrailer.;
-  // maxLoad.innerText = currentTrailer.;
-  // certificate.innerText = currentTrailer.;
-  // pin.innerText = currentTrailer.;
-  // country.innerText = currentTrailer.;
-  // road.innerText = currentTrailer.;
-  // full.innerText = currentTrailer.;
-  // drawbar.innerText = currentTrailer.;
-  // axle1.innerText = currentTrailer.;
-  // axle2.innerText = currentTrailer.;
-  // axle3.innerText = currentTrailer.;
-  // roadDrawbar.innerText = currentTrailer.;
-  // roadAxle1.innerText = currentTrailer.;
-  // roadAxle2.innerText = currentTrailer.;
-  // roadAxle3.innerText = currentTrailer.;
-  // drawbarLoad.innerText = currentTrailer.;
-  // axleLoad.innerText = currentTrailer.;
-  // b1t1.innerText = currentTrailer.;
-  // b1t2.innerText = currentTrailer.;
-  // b1t3.innerText = currentTrailer.;
-  // b2t1.innerText = currentTrailer.;
-  // b2t2.innerText = currentTrailer.;
-  // b2t3.innerText = currentTrailer.;
-  // b3t1.innerText = currentTrailer.;
-  // b3t2.innerText = currentTrailer.;
-  // b3t3.innerText = currentTrailer.;
-  // b4t1.innerText = currentTrailer.;
-  // b4t2.innerText = currentTrailer.;
-  // b4t3.innerText = currentTrailer.;
-  //console.log(currentTrailer);
+  console.log("We found a trailer in database.");
+  
 }
 
 function resetData () {
@@ -695,6 +658,7 @@ function certificateChange () {
 }
 function yearChange () {
   console.log("year has changed");
+  setForm ("undefined");
   activator.checkup();
 }
 function VINChange () {
@@ -702,6 +666,7 @@ function VINChange () {
   if (activator.VINcode.length) {
     validateVIN();
   } else {
+    activator.okVIN = false;
     reactVIN("noPin");
     deactivateElement("pdfButton");
   }
