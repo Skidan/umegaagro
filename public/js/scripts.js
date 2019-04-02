@@ -70,13 +70,6 @@ umegaTrailers = {
     version: "-",
     year: "XXXX",
     weight: 5500,
-    type: {
-      eu: "TIP14",
-      pl: "SP1/SPC14",
-      lt: "SPC14",
-      lv: "SPC14",
-      dk: "SPC16"
-    },
     certificate: [
       {
         name: "European 167/2013",
@@ -94,39 +87,48 @@ umegaTrailers = {
     country: [
       {
         name: "no matter",
-        locale: "undef"
+        locale: "undef",
+        type:   "SPC14"
       },
       {
         name: "Lithuania",
-        locale: "lt"
+        locale: "lt",
+        type:   "SPC14"
       },
       {
         name: "Latvia",
-        locale: "lv"
+        locale: "lv",
+        type:   "SPC14"
       },
       {
         name: "Estonia",
-        locale: "ee"
+        locale: "ee",
+        type:   "SPC14"
       },
       {
         name: "Poland",
-        locale: "pl"
+        locale: "pl",
+        type:   "SPC14"
       },
       {
         name: "Danmark",
-        locale: "dk"
+        locale: "dk",
+        type:   "SPC14"
       },
       {
         name: "Russia",
-        locale: "ru"
+        locale: "ru",
+        type:   "SPC14"
       },
       {
         name: "Serbia",
-        locale: "rs"
+        locale: "rs",
+        type:   "SPC14"
       },
       {
         name: "Ukraine",
-        locale: "ua"
+        locale: "ua",
+        type:   "SPC14"
       }
     ]
   },
@@ -321,62 +323,74 @@ activator = {
   model:          {},
   certificates:   [],
   country:        [],
+  modelName:      "", // according to country!!!
   countryName:    "",
   countryLocale:  "",
   certName:       "",
   certType:       "",
   manufacture:    0,
   numOfTrailers:  0,
-  VINcode:        ""
+  VINcode:        "",
+  //
+  okVIN:          false,
+  okCert:         false,
+  // METHODS //
+  checkup: function () {
+    console.log("Trailer check-up");
+    if (this.okVIN && this.okCert) {
+      // buildTrailer();
+      activateElement("pdfButton");
+      console.log("Button activated");
+    } else {
+      deactivateElement("pdfButton");
+      console.log("Button DE-activated");
+    }
+  }
+
 };
 
 ////////// Methods //////////
 
-// function assign (trailerType) {
-//   if (umegaTrailers.hasOwnProperty(trailerType)) {
-//     console.log("We found a trailer " + trailerType + " in database.");
-//     var currentTrailer = umegaTrailers[trailerType];
-//     category.innerText = currentTrailer.category;
-//     type.innerText = currentTrailer.type;
-//     //variant.innerText = currentTrailer.variant;
-//     //version.innerText = currentTrailer.version;
-//     year.innerText = currentTrailer.year;
-//     weight.innerText = currentTrailer.weight;
-//     // roadLoad.innerText = currentTrailer.;
-//     // maxLoad.innerText = currentTrailer.;
-//     // certificate.innerText = currentTrailer.;
-//     // pin.innerText = currentTrailer.;
-//     // country.innerText = currentTrailer.;
-//     // road.innerText = currentTrailer.;
-//     // full.innerText = currentTrailer.;
-//     // drawbar.innerText = currentTrailer.;
-//     // axle1.innerText = currentTrailer.;
-//     // axle2.innerText = currentTrailer.;
-//     // axle3.innerText = currentTrailer.;
-//     // roadDrawbar.innerText = currentTrailer.;
-//     // roadAxle1.innerText = currentTrailer.;
-//     // roadAxle2.innerText = currentTrailer.;
-//     // roadAxle3.innerText = currentTrailer.;
-//     // drawbarLoad.innerText = currentTrailer.;
-//     // axleLoad.innerText = currentTrailer.;
-//     // b1t1.innerText = currentTrailer.;
-//     // b1t2.innerText = currentTrailer.;
-//     // b1t3.innerText = currentTrailer.;
-//     // b2t1.innerText = currentTrailer.;
-//     // b2t2.innerText = currentTrailer.;
-//     // b2t3.innerText = currentTrailer.;
-//     // b3t1.innerText = currentTrailer.;
-//     // b3t2.innerText = currentTrailer.;
-//     // b3t3.innerText = currentTrailer.;
-//     // b4t1.innerText = currentTrailer.;
-//     // b4t2.innerText = currentTrailer.;
-//     // b4t3.innerText = currentTrailer.;
-//     //console.log(currentTrailer);
-//   } else {
-//     console.log("Trailer \"" + trailerType + "\" not found in database.");
-
-//   }
-// }
+function buildTrailer (trailerType) {
+  console.log("We found a trailer " + trailerType + " in database.");
+  var currentTrailer = umegaTrailers[trailerType];
+  category.innerText = currentTrailer.category;
+  type.innerText = currentTrailer.type;
+  //variant.innerText = currentTrailer.variant;
+  //version.innerText = currentTrailer.version;
+  year.innerText = currentTrailer.year;
+  weight.innerText = currentTrailer.weight;
+  // roadLoad.innerText = currentTrailer.;
+  // maxLoad.innerText = currentTrailer.;
+  // certificate.innerText = currentTrailer.;
+  // pin.innerText = currentTrailer.;
+  // country.innerText = currentTrailer.;
+  // road.innerText = currentTrailer.;
+  // full.innerText = currentTrailer.;
+  // drawbar.innerText = currentTrailer.;
+  // axle1.innerText = currentTrailer.;
+  // axle2.innerText = currentTrailer.;
+  // axle3.innerText = currentTrailer.;
+  // roadDrawbar.innerText = currentTrailer.;
+  // roadAxle1.innerText = currentTrailer.;
+  // roadAxle2.innerText = currentTrailer.;
+  // roadAxle3.innerText = currentTrailer.;
+  // drawbarLoad.innerText = currentTrailer.;
+  // axleLoad.innerText = currentTrailer.;
+  // b1t1.innerText = currentTrailer.;
+  // b1t2.innerText = currentTrailer.;
+  // b1t3.innerText = currentTrailer.;
+  // b2t1.innerText = currentTrailer.;
+  // b2t2.innerText = currentTrailer.;
+  // b2t3.innerText = currentTrailer.;
+  // b3t1.innerText = currentTrailer.;
+  // b3t2.innerText = currentTrailer.;
+  // b3t3.innerText = currentTrailer.;
+  // b4t1.innerText = currentTrailer.;
+  // b4t2.innerText = currentTrailer.;
+  // b4t3.innerText = currentTrailer.;
+  //console.log(currentTrailer);
+}
 
 function resetData () {
   plateVar.plate.classList.remove("uniform", "rus", "witam", "noCertOld", "undefined");
@@ -417,6 +431,28 @@ function resetData () {
   plateVar.b4t2.innerText = "-";
   plateVar.b4t3.innerText = "-";
 }
+
+function readYears() {
+  // declaring an array of years for the dropdown
+  var years = [];
+  // filling an array with years from 1984 until now
+  for (var i = new Date().getFullYear(); i >= 1984; i--) {
+    years.push(i);
+  }
+  // creating and appending nodes to year dropdown (as options in select)
+  for (var year in years) {
+    var nodeDOM = document.createElement("option");
+    var nodeText = document.createTextNode(years[year]);
+    nodeDOM.appendChild(nodeText);
+    domVar.inputYear.appendChild(nodeDOM);
+  }
+  // setting current year as a default
+  setYear();
+}
+function setYear() {
+  activator.manufacture = domVar.inputYear.options[domVar.inputYear.selectedIndex].text;
+}
+
 
 function readTrailers() {
   for (var trailer in umegaTrailers) {
@@ -492,6 +528,7 @@ function selectCertification () {
     if (selected === activator.certificates[i].name) {
       activator.certName = activator.certificates[i].name;
       activator.certType = activator.certificates[i].number;
+      activator.okCert = true;
     }
   }
 }
@@ -542,118 +579,123 @@ function getVIN () {
   activator.VINcode = domVar.inputPIN.value.toUpperCase();
   //console.log(activator.VINcode);
 }
-
 function reactVIN (cssClass) {
   domVar.inputPIN.classList.remove("noPin", "pendingPin", "validPin", "invalidPin");
   domVar.inputPIN.classList.add(cssClass);
 }
-
 function validateVIN () {
   var vinValid = false;
   switch (activator.VINcode.length) {
     case 1:   
       vinValid =  /U/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 2:   
       vinValid =  /UM/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 3:   
       vinValid =  /UME/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 4:   
       vinValid =  /UME[\dA-Z]/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 5:   
       vinValid =  /UME[\dA-Z][A-Z]/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 6:   
       vinValid =  /UME[\dA-Z][A-Z]{2}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 7:   
       vinValid =  /UME[\dA-Z][A-Z]{2}\d/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 8:   
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 9:   
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 10:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 11:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 12:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{2}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 13:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{3}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 14:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{4}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton");
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 15:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{5}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton"); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     case 16:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{6}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
-      deactivateElement("pdfButton"); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin");
+      activator.okVIN = false;
       break;
     default:  
       vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("validPin") : reactVIN("invalidPin"); 
-      activateElement("pdfButton");
+      vinValid ? reactVIN("validPin") : reactVIN("invalidPin");
+      // add VIN to the cookies?
+      activator.okVIN = true;
   }
-  return vinValid;
+  activator.checkup();
 }
 
 function trailerChange () {
   clearCountry();
+  activator.okCert = false;
   selectTrailer();
+  activator.checkup();
 }
 function countryChange () {
   clearCertification();
+  activator.okCert = false;
   selectCountry();
+  activator.checkup();
 }
 function certificateChange () {
   selectCertification();
   setForm ("undefined");
   chooseForm();
+  activator.checkup();
 }
 function yearChange () {
   console.log("year has changed");
+  activator.checkup();
 }
 function VINChange () {
   getVIN();
@@ -667,11 +709,14 @@ function VINChange () {
 
 function initialize () {
   readTrailers();
+  deactivateElement("pdfButton");
+  readYears();
   // 4) choose the year of production;
   // 5) input the PIN according to the regular expression "/UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g"
   // 6) if OK then activate domPDF generation.
   resetData();
 }
+
 //// WORKFLOW ///////
 initialize();
 domVar.trailerChooser.addEventListener('change', trailerChange);
