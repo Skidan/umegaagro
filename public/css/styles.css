@@ -806,19 +806,67 @@ select {
     text-align: center;
     font-family: "Ubuntu Mono", monospace;
     margin: 1mm;
-    padding: .5mm;
-    border: 1px solid #a9a9a9; }
-  #input #pdfbuild {
+    padding: .5mm; }
+  #input #pdfBuild {
     display: block;
     margin: 2mm auto;
-    color: #004455;
     font-size: 6mm;
     padding: 2mm 10mm;
-    border: 1px solid #004455;
     -webkit-border-radius: 2mm;
-            border-radius: 2mm; }
-    #input #pdfbuild::after {
+            border-radius: 2mm;
+    -webkit-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+    border-width: 1px;
+    border-style: solid; }
+    #input #pdfBuild::after {
       content: '\f1c1';
       font-family: 'FontAwesome';
       font-size: 8mm;
       padding: 0 2mm; }
+  #input .activated {
+    background-color: #1f3948;
+    color: #fafafa;
+    -webkit-box-shadow: 0 4px 4px rgba(31, 57, 72, 0.2);
+            box-shadow: 0 4px 4px rgba(31, 57, 72, 0.2);
+    border-color: #1a1a1a;
+    cursor: pointer; }
+    #input .activated:hover {
+      background-color: #3e718f;
+      color: #fafafa;
+      -webkit-box-shadow: 0 4px 6px rgba(18, 126, 155, 0.4);
+              box-shadow: 0 4px 6px rgba(18, 126, 155, 0.4);
+      border-color: #1a1a1a; }
+    #input .activated:active {
+      background-color: #101d24;
+      color: #fafafa;
+      -webkit-box-shadow: 0 2px 6px rgba(18, 126, 155, 0.4);
+              box-shadow: 0 2px 6px rgba(18, 126, 155, 0.4);
+      border-color: #1a1a1a; }
+  #input .deactivated {
+    background-color: rgba(233, 234, 236, 0.5);
+    color: #a9a9a9;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #a9a9a9;
+    cursor: not-allowed; }
+
+.noPin {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #a9a9a9; }
+
+.pendingPin {
+  -webkit-box-shadow: 0 1px 4px rgba(255, 200, 0, 0.6);
+          box-shadow: 0 1px 4px rgba(255, 200, 0, 0.6);
+  border: 1px solid #96b400; }
+
+.validPin {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 200, 0, 0.6);
+          box-shadow: 0 1px 4px rgba(0, 200, 0, 0.6);
+  border: 1px solid #009600; }
+
+.invalidPin {
+  -webkit-box-shadow: 0 1px 4px rgba(255, 0, 0, 0.6);
+          box-shadow: 0 1px 4px rgba(255, 0, 0, 0.6);
+  border: 1px solid #960000; }

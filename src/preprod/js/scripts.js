@@ -9,12 +9,12 @@ var
   activator;
 // Inputed data
 domVar = {
-  trailerChooser: document.getElementById("chooseTrailer"),
-  countryChooser: document.getElementById("chooseCountry"),
+  trailerChooser:     document.getElementById("chooseTrailer"),
+  countryChooser:     document.getElementById("chooseCountry"),
   certificateChooser: document.getElementById("chooseCertificate"),
-  inputYear: document.getElementById("inputYear"),
-  inputPIN: document.getElementById("inputPin"),
-  pdfButton: document.getElementById("pdfBuild")
+  inputYear:          document.getElementById("inputYear"),
+  inputPIN:           document.getElementById("inputPin"),
+  pdfButton:          document.getElementById("pdfBuild")
 };
 // Plate hooks
 plateVar = {
@@ -529,12 +529,114 @@ function chooseForm () {
   }
 }
 
+function activateElement(domNode) {
+  domVar[domNode].classList.remove("deactivated", "activated");
+  domVar[domNode].classList.add("activated");
+}
+function deactivateElement(domNode) {
+  domVar[domNode].classList.remove("deactivated", "activated");
+  domVar[domNode].classList.add("deactivated");
+}
+
 function getVIN () {
-  //
+  activator.VINcode = domVar.inputPIN.value.toUpperCase();
+  //console.log(activator.VINcode);
+}
+
+function reactVIN (cssClass) {
+  domVar.inputPIN.classList.remove("noPin", "pendingPin", "validPin", "invalidPin");
+  domVar.inputPIN.classList.add(cssClass);
 }
 
 function validateVIN () {
-  //
+  var vinValid = false;
+  switch (activator.VINcode.length) {
+    case 1:   
+      vinValid =  /U/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 2:   
+      vinValid =  /UM/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 3:   
+      vinValid =  /UME/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 4:   
+      vinValid =  /UME[\dA-Z]/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 5:   
+      vinValid =  /UME[\dA-Z][A-Z]/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 6:   
+      vinValid =  /UME[\dA-Z][A-Z]{2}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 7:   
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 8:   
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 9:   
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 10:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 11:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 12:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{2}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 13:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{3}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 14:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{4}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton");
+      break;
+    case 15:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{5}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton"); 
+      break;
+    case 16:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{6}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("pendingPin") : reactVIN("invalidPin"); 
+      deactivateElement("pdfButton"); 
+      break;
+    default:  
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g.test(activator.VINcode); 
+      vinValid ? reactVIN("validPin") : reactVIN("invalidPin"); 
+      activateElement("pdfButton");
+  }
+  return vinValid;
 }
 
 function trailerChange () {
@@ -554,10 +656,13 @@ function yearChange () {
   console.log("year has changed");
 }
 function VINChange () {
-  console.log("VIN has changed");
-  activator.VINcode = domVar.inputPIN.value.toUpperCase();
-  console.log(activator.VINcode);
-  // input validation on-the-fly with regular expression (depending on length)
+  getVIN();
+  if (activator.VINcode.length) {
+    validateVIN();
+  } else {
+    reactVIN("noPin");
+    deactivateElement("pdfButton");
+  }
 }
 
 function initialize () {

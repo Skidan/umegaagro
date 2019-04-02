@@ -871,16 +871,17 @@
     font-family: $font-monospace;
     margin: 1mm;
     padding: .5mm;
-    border: 1px solid $color-light;
+    //border: 1px solid $color-light;
   }
-  & #pdfbuild {
+  & #pdfBuild {
     display: block;
     margin: 2mm auto;
-    color: $color-main;
     font-size: 6mm;
     padding: 2mm 10mm;
-    border: 1px solid $color-main;
     border-radius: 2mm;
+    transition: background-color .2s;
+    border-width: 1px;
+    border-style: solid;
     &::after {
       content: '\f1c1';
       font-family: 'FontAwesome';
@@ -888,4 +889,47 @@
       padding: 0 2mm;
     }
   }
+  & .activated {
+    background-color: rgb(31,57,72);
+    color: $color-bg;
+    box-shadow: 0 4px 4px rgba(31,57,72,.2);
+    border-color: $color-dark;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(rgb(31,57,72),20%);
+      color: $color-bg;
+      box-shadow: 0 4px 6px rgba(18,126,155,.4);
+      border-color: $color-dark;
+    }
+    &:active {
+      background-color: darken(rgb(31,57,72), 10%);
+      color: $color-bg;
+      box-shadow: 0 2px 6px rgba(18,126,155,.4);
+      border-color: $color-dark;
+    }
+  }
+  & .deactivated {
+    background-color: rgba(233,234,236,.5);
+    color: $color-light;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    border: 1px solid $color-light;
+    cursor: not-allowed;
+  }
+}
+
+.noPin {
+  box-shadow: none;
+  border: 1px solid $color-light;
+}
+.pendingPin {
+  box-shadow: 0 1px 4px rgba(255,200,0,0.6);
+  border: 1px solid rgb(150,180,0);
+}
+.validPin {
+  box-shadow: 0 1px 4px rgba(0,200,0,0.6);
+  border: 1px solid rgb(0,150,0);
+}
+.invalidPin {
+  box-shadow: 0 1px 4px rgba(255,0,0,0.6);
+  border: 1px solid rgb(150,0,0);
 }
