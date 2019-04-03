@@ -847,10 +847,15 @@ function validateVIN () {
       activator.okVIN = false;
       break;
     default:  
-      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g.test(activator.VINcode); 
-      vinValid ? reactVIN("validPin") : reactVIN("invalidPin");
+      vinValid =  /UME[\dA-Z][A-Z]{2}\d{2}[A-Z]{2}\d{7}/g.test(activator.VINcode);
+      if (vinValid) {
+        reactVIN("validPin");
+        activator.okVIN = true;
+      } else {
+        reactVIN("invalidPin");
+        activator.okVIN = false;
+      }
       // add VIN to the cookies?
-      activator.okVIN = true;
   }
   activator.checkup();
 }
