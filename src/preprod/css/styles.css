@@ -485,7 +485,7 @@ select {
   .nocertOld #roadAxle3,
   .nocertOld #drawbarLoad,
   .nocertOld #axleLoad,
-  .nocertOld #full,
+  .nocertOld #maxLoad,
   .nocertOld .b0, .nocertOld .b1, .nocertOld .b2, .nocertOld .b3, .nocertOld .b4,
   .nocertOld .t0, .nocertOld .t1, .nocertOld .t2, .nocertOld .t3,
   .nocertOld .eac {
@@ -556,9 +556,9 @@ select {
     top: 72mm; }
     .nocertOld #roadLoad::before {
       content: 'Netto weight (kg):'; }
-  .nocertOld #maxLoad {
+  .nocertOld #full {
     top: 78mm; }
-    .nocertOld #maxLoad::before {
+    .nocertOld #full::before {
       content: 'Constr. gross weight (kg):'; }
   .nocertOld .iso {
     font-family: "Roboto", sans-serif;

@@ -56,28 +56,44 @@ plateVar = {
   plate:        document.getElementById("plate")
 };
 currentTrailer = {
-  // current trailer object model
-  
-  // METHODS:
-  // buildTrailer() - write to the DOM;
+  category:     "",
+  type:         "",
+  variant:      "",
+  version:      "-",
+  manufactured: 0,
+  weight:       0,
+  payload:      0,
+  techPayload:  0,
+  homologation: "-",
+  vinCode:      "",
+  country:      "",
+  roadWeight:   0,
+  couplingLoad: 0,
+  couplingDval: 0,
+  axleNumber:   0
 };
 //////////// Database /////////////
 umegaTrailers = {
   spc14:   {
-    name: "SPC14",
-    category: "R3a",
-    variant: "C",
-    version: "-",
-    year: "XXXX",
-    weight: 5500,
+    name:         "SPC14",
+    category:     "R3a",
+    variant:      "C",
+    typeEC:       "TIP14",
+    weight:       4100,
+    payload:      14000,
+    techPayload:  14000,
+    roadWeight:   21000,
+    axleNum:      2,
+    couplingLoad: 3000,
+    couplingDval: 30000,
     certificate: [
       {
         name: "European 167/2013",
-        number: "e36*167/2013*00023*00"
+        number: "e32*167/2013*00023*00"
       },
       {
-        name: "pl",
-        number: "SP1/SPC14"
+        name: "Poland",
+        number: "PL*4404*00"
       },
       {
         name: "No certification",
@@ -86,67 +102,203 @@ umegaTrailers = {
     ],
     country: [
       {
-        name: "no matter",
-        locale: "undef",
+        name:   "Albania",
+        locale: "al",
         type:   "SPC14"
       },
       {
-        name: "Lithuania",
+        name:   "Austria",
+        locale: "at",
+        type:   "SPC14"
+      },
+      {
+        name:   "Belgium",
+        locale: "be",
+        type:   "SPC14"
+      },
+      {
+        name:   "Bosnia and Herzegovina",
+        locale: "ba",
+        type:   "SPC14"
+      },
+      {
+        name:   "Bulgaria",
+        locale: "bg",
+        type:   "SPC14"
+      },
+      {
+        name:   "Croatia",
+        locale: "hr",
+        type:   "SPC14"
+      },
+      {
+        name:   "Czech Rep.",
+        locale: "cz",
+        type:   "SPC14"
+      },
+      {
+        name:   "Denmark",
+        locale: "dk",
+        type:   "SPC16"
+      },
+      {
+        name:   "Estonia",
+        locale: "ee",
+        type:   "SPC16"
+      },
+      {
+        name:   "Finland",
+        locale: "fi",
+        type:   "SPC14"
+      },
+      {
+        name:   "France",
+        locale: "fr",
+        type:   "SPC14"
+      },
+      {
+        name:   "Germany",
+        locale: "de",
+        type:   "TW19"
+      },
+      {
+        name:   "Greece",
+        locale: "gr",
+        type:   "SPC14"
+      },
+      {
+        name:   "Hungary",
+        locale: "hu",
+        type:   "SPC14"
+      },
+      {
+        name:   "Ireland",
+        locale: "ie",
+        type:   "SPC14"
+      },
+      {
+        name:   "Italy",
+        locale: "it",
+        type:   "SPC14"
+      },
+      {
+        name:   "Latvia",
+        locale: "lv",
+        type:   "SPC16"
+      },
+      {
+        name:   "Lithuania",
         locale: "lt",
         type:   "SPC14"
       },
       {
-        name: "Latvia",
-        locale: "lv",
+        name:   "Macedonia",
+        locale: "mk",
         type:   "SPC14"
       },
       {
-        name: "Estonia",
-        locale: "ee",
+        name:   "Moldova",
+        locale: "md",
         type:   "SPC14"
       },
       {
-        name: "Poland",
+        name:   "Montenegro",
+        locale: "me",
+        type:   "SPC14"
+      },
+      {
+        name:   "Netherlands",
+        locale: "nl",
+        type:   "SPC14"
+      },
+      {
+        name:   "Norway",
+        locale: "no",
+        type:   "SPC14"
+      },
+      {
+        name:   "Poland",
         locale: "pl",
+        type:   "SP1/SPC14"
+      },
+      {
+        name:   "Portugal",
+        locale: "pt",
         type:   "SPC14"
       },
       {
-        name: "Danmark",
-        locale: "dk",
+        name:   "Romania",
+        locale: "ro",
         type:   "SPC14"
       },
       {
-        name: "Russia",
+        name:   "Russia",
         locale: "ru",
         type:   "SPC14"
       },
       {
-        name: "Serbia",
+        name:   "Serbia",
         locale: "rs",
         type:   "SPC14"
       },
       {
-        name: "Ukraine",
+        name:   "Slovakia",
+        locale: "sk",
+        type:   "SPC14"
+      },
+      {
+        name:   "Slovenia",
+        locale: "si",
+        type:   "SPC14"
+      },
+      {
+        name:   "Spain",
+        locale: "es",
+        type:   "SPC14"
+      },
+      {
+        name:   "Sweden",
+        locale: "se",
+        type:   "SPC16"
+      },
+      {
+        name:   "Switzerland",
+        locale: "ch",
+        type:   "SPC14"
+      },
+      {
+        name:   "Ukraine",
         locale: "ua",
+        type:   "SPC14"
+      },
+      {
+        name:   "United Kingdom",
+        locale: "gb",
+        type:   "SPC14"
+      },
+      {
+        name:   "Other",
+        locale: "univ",
         type:   "SPC14"
       }
     ]
   },
-  gpp23:  {
-    name:     "GPP23",
-    category: "S2a",
-    variant:  "C",
-    version:  "-",
-    year:     0,
-    weight:   5500,
-    type: {
-      eu: "GPP23",
-      lt: "GPP23"
-    },
+  gpp23:   {
+    name:         "GPP23",
+    category:     "S2a",
+    variant:      "23",
+    typeEC:       "GPP",
+    weight:       7140,
+    payload:      13860,
+    techPayload:  18000,
+    roadWeight:   21000,
+    axleNum:      2,
+    couplingLoad: 3000,
+    couplingDval: 35000,
     certificate: [
       {
         name: "European 167/2013",
-        number: "e32*167/2013*00021*00"
+        number: "e32*167/2013*00029*00"
       },
       {
         name: "No certification",
@@ -155,164 +307,184 @@ umegaTrailers = {
     ],
     country: [
       {
-        name: "no matter",
-        locale: "undef"
+        name:   "Albania",
+        locale: "al",
+        type:   "GPP23"
       },
       {
-        name: "Lithuania",
-        locale: "lt"
+        name:   "Austria",
+        locale: "at",
+        type:   "GPP23"
       },
       {
-        name: "Latvia",
-        locale: "lv"
+        name:   "Belgium",
+        locale: "be",
+        type:   "GPP23"
       },
       {
-        name: "Estonia",
-        locale: "ee"
+        name:   "Bosnia and Herzegovina",
+        locale: "ba",
+        type:   "GPP23"
       },
       {
-        name: "Poland",
-        locale: "pl"
+        name:   "Bulgaria",
+        locale: "bg",
+        type:   "GPP23"
       },
       {
-        name: "Danmark",
-        locale: "dk"
+        name:   "Croatia",
+        locale: "hr",
+        type:   "GPP23"
       },
       {
-        name: "Russia",
-        locale: "ru"
+        name:   "Czech Rep.",
+        locale: "cz",
+        type:   "GPP23"
       },
       {
-        name: "Serbia",
-        locale: "rs"
+        name:   "Denmark",
+        locale: "dk",
+        type:   "GPP23"
       },
       {
-        name: "Ukraine",
-        locale: "ua"
-      }
-    ]
-  },
-  spc16:  {
-    name: "SPC16",
-    category: "R3a",
-    variant: "16",
-    version: "-",
-    year: "XXXX",
-    weight: 5800,
-    type: {
-      eu: "TIP16",
-      pl: "SP1/SPC16",
-      lt: "SPC16",
-      lv: "SPC16",
-      dk: "SPC18"
-    },
-    certificate: [
-      {
-        name: "European 167/2013",
-        number: "e32*167/2013*00015*00"
+        name:   "Estonia",
+        locale: "ee",
+        type:   "GPP23"
       },
       {
-        name: "pl",
-        number: "SP1/SPC16"
+        name:   "Finland",
+        locale: "fi",
+        type:   "GPP23"
       },
       {
-        name: "No certification",
-        number: ""
-      }
-    ],
-    country: [
-      {
-        name: "no matter",
-        locale: "undef"
+        name:   "France",
+        locale: "fr",
+        type:   "GPP23"
       },
       {
-        name: "Lithuania",
-        locale: "lt"
+        name:   "Germany",
+        locale: "de",
+        type:   "ASW23"
       },
       {
-        name: "Latvia",
-        locale: "lv"
+        name:   "Greece",
+        locale: "gr",
+        type:   "GPP23"
       },
       {
-        name: "Estonia",
-        locale: "ee"
+        name:   "Hungary",
+        locale: "hu",
+        type:   "GPP23"
       },
       {
-        name: "Poland",
-        locale: "pl"
+        name:   "Ireland",
+        locale: "ie",
+        type:   "GPP23"
       },
       {
-        name: "Danmark",
-        locale: "dk"
+        name:   "Italy",
+        locale: "it",
+        type:   "GPP23"
       },
       {
-        name: "Russia",
-        locale: "ru"
+        name:   "Latvia",
+        locale: "lv",
+        type:   "GPP23"
       },
       {
-        name: "Serbia",
-        locale: "rs"
+        name:   "Lithuania",
+        locale: "lt",
+        type:   "GPP23"
       },
       {
-        name: "Ukraine",
-        locale: "ua"
-      }
-    ]
-  },
-  spp14:  {
-    name: "SPP14",
-    category: "R3a",
-    variant: "14P",
-    version: "-",
-    year: "XXXX",
-    weight: 4200,
-    type: {
-      eu: "SPP",
-      pl: "SP1/SPP14",
-      lt: "SPP14",
-      lv: "SPP14",
-      dk: "SPP16"
-    },
-    certificate: {
-      pl: "SP1/SPC14",
-      no: ""
-    },
-    country: [
-      {
-        name: "no matter",
-        locale: "undef"
+        name:   "Macedonia",
+        locale: "mk",
+        type:   "GPP23"
       },
       {
-        name: "Lithuania",
-        locale: "lt"
+        name:   "Moldova",
+        locale: "md",
+        type:   "GPP23"
       },
       {
-        name: "Latvia",
-        locale: "lv"
+        name:   "Montenegro",
+        locale: "me",
+        type:   "GPP23"
       },
       {
-        name: "Estonia",
-        locale: "ee"
+        name:   "Netherlands",
+        locale: "nl",
+        type:   "GPP23"
       },
       {
-        name: "Poland",
-        locale: "pl"
+        name:   "Norway",
+        locale: "no",
+        type:   "GPP23"
       },
       {
-        name: "Danmark",
-        locale: "dk"
+        name:   "Poland",
+        locale: "pl",
+        type:   "GPP23"
       },
       {
-        name: "Russia",
-        locale: "ru"
+        name:   "Portugal",
+        locale: "pt",
+        type:   "GPP23"
       },
       {
-        name: "Serbia",
-        locale: "rs"
+        name:   "Romania",
+        locale: "ro",
+        type:   "GPP23"
       },
       {
-        name: "Ukraine",
-        locale: "ua"
+        name:   "Russia",
+        locale: "ru",
+        type:   "GPP23"
+      },
+      {
+        name:   "Serbia",
+        locale: "rs",
+        type:   "GPP23"
+      },
+      {
+        name:   "Slovakia",
+        locale: "sk",
+        type:   "GPP23"
+      },
+      {
+        name:   "Slovenia",
+        locale: "si",
+        type:   "GPP23"
+      },
+      {
+        name:   "Spain",
+        locale: "es",
+        type:   "GPP23"
+      },
+      {
+        name:   "Sweden",
+        locale: "se",
+        type:   "GPP23"
+      },
+      {
+        name:   "Switzerland",
+        locale: "ch",
+        type:   "GPP23"
+      },
+      {
+        name:   "Ukraine",
+        locale: "ua",
+        type:   "GPP23"
+      },
+      {
+        name:   "United Kingdom",
+        locale: "gb",
+        type:   "GPP23"
+      },
+      {
+        name:   "Other",
+        locale: "univ",
+        type:   "GPP23"
       }
     ]
   }
@@ -323,7 +495,6 @@ activator = {
   model:          {},
   certificates:   [],
   country:        [],
-  modelName:      "", // according to country!!!
   countryName:    "",
   countryLocale:  "",
   certName:       "",
@@ -331,28 +502,75 @@ activator = {
   manufacture:    0,
   numOfTrailers:  0,
   VINcode:        "",
-  //
   okVIN:          false,
   okCert:         false,
   // METHODS //
   checkup: function () {
-    console.log("Trailer check-up");
     if (this.okVIN && this.okCert) {
-      // buildTrailer();
+      buildTrailer();
       activateElement("pdfButton");
-      console.log("Button activated");
     } else {
       deactivateElement("pdfButton");
-      console.log("Button DE-activated");
     }
   }
 };
 
-////////// Methods //////////
 
-function buildTrailer (trailerType) {
-  console.log("We found a trailer in database.");
+function buildTrailer () {
+  currentTrailer.category       = activator.model.category;
+  currentTrailer.type           = activator.certName === "European 167/2013" ? activator.model.typeEC : activator.country.type;
+  currentTrailer.variant        = activator.model.variant;
+  currentTrailer.version        = "-";
+  currentTrailer.manufactured   = activator.manufacture;
+  currentTrailer.weight         = activator.model.weight;
+  currentTrailer.techPayload    = activator.model.techPayload;
+  currentTrailer.payload        = activator.model.payload;
+  currentTrailer.homologation   = activator.certType;
+  currentTrailer.vinCode        = activator.VINcode;
+  currentTrailer.country        = activator.countryLocale;
+  currentTrailer.roadWeight     = activator.model.roadWeight;
+  currentTrailer.couplingLoad   = activator.model.couplingLoad;
+  currentTrailer.couplingDval   = activator.model.couplingDval;
+  currentTrailer.axleNumber     = activator.model.axleNum;
+
+  plateVar.category.innerText     = currentTrailer.category;
+  plateVar.type.innerText         = currentTrailer.type;
+  plateVar.variant.innerText      = currentTrailer.variant;
+  plateVar.version.innerText      = currentTrailer.version;
+  plateVar.year.innerText         = currentTrailer.manufactured;
+  plateVar.weight.innerText       = currentTrailer.weight;
+  plateVar.roadLoad.innerText     = currentTrailer.payload;
+  plateVar.maxLoad.innerText      = currentTrailer.techPayload;
+  plateVar.certificate.innerText  = currentTrailer.homologation;
+  plateVar.pin.innerText          = currentTrailer.vinCode;
+  plateVar.country.innerText      = currentTrailer.country.toUpperCase();
+  plateVar.road.innerText         = currentTrailer.roadWeight;
+  plateVar.full.innerText         = currentTrailer.weight + currentTrailer.techPayload;
+  plateVar.drawbar.innerText      = currentTrailer.couplingLoad;
+  plateVar.axle1.innerText        = currentTrailer.country === "ru" || "dk" ? currentTrailer.roadWeight - currentTrailer.couplingLoad : (currentTrailer.roadWeight - currentTrailer.couplingLoad) / currentTrailer.axleNumber;
+  plateVar.axle2.innerText        = currentTrailer.axleNumber > 1 ? plateVar.axle1.innerText : "-" ;
+  plateVar.axle3.innerText        = currentTrailer.axleNumber > 2 ? plateVar.axle1.innerText : "-" ;
+  plateVar.roadDrawbar.innerText  = currentTrailer.couplingLoad;
+  plateVar.roadAxle1.innerText    = ((currentTrailer.weight + currentTrailer.techPayload)-currentTrailer.couplingLoad)/currentTrailer.axleNumber;
+  plateVar.roadAxle2.innerText    = currentTrailer.axleNumber > 1 ? plateVar.roadAxle1.innerText : "-" ;
+  plateVar.roadAxle3.innerText    = currentTrailer.axleNumber > 2 ? plateVar.roadAxle1.innerText : "-" ;
+  plateVar.drawbarLoad.innerText  = currentTrailer.couplingLoad * 0.0098 + " kN";
+  plateVar.axleLoad.innerText     = (((currentTrailer.weight + currentTrailer.techPayload)-currentTrailer.couplingLoad)/currentTrailer.axleNumber)*0.0098 + " kN";
   
+  plateVar.b1t1.innerText         = currentTrailer.category === "S2a" ? "-" : currentTrailer.couplingDval - currentTrailer.roadWeight > 1500 ? 1500 : currentTrailer.couplingDval - currentTrailer.roadWeight ;
+  plateVar.b2t1.innerText         = currentTrailer.category === "S2a" ? "-" : currentTrailer.couplingDval - currentTrailer.roadWeight > 8000 ? 8000 : currentTrailer.couplingDval - currentTrailer.roadWeight ;
+  plateVar.b3t1.innerText         = currentTrailer.category === "S2a" ? "-" : currentTrailer.couplingDval - currentTrailer.roadWeight > 18000 ? 18000 : currentTrailer.couplingDval - currentTrailer.roadWeight ;
+  plateVar.b4t1.innerText         = currentTrailer.category === "S2a" ? "-" : currentTrailer.couplingDval - currentTrailer.roadWeight > 18000 ? 18000 : currentTrailer.couplingDval - currentTrailer.roadWeight ;
+
+  plateVar.b1t2.innerText         = "-";
+  plateVar.b2t2.innerText         = "-";
+  plateVar.b3t2.innerText         = "-";
+  plateVar.b4t2.innerText         = "-";
+  
+  plateVar.b1t3.innerText         = "-";
+  plateVar.b2t3.innerText         = "-";  
+  plateVar.b3t3.innerText         = "-";
+  plateVar.b4t3.innerText         = "-";
 }
 
 function resetData () {
@@ -467,7 +685,7 @@ function selectCountry () {
 function readCertification () {
   for (var i = 0; i < activator.model.certificate.length; i++) {
     var currentCert = activator.model.certificate[i];
-    if ( currentCert.name === "No certification" || currentCert.name === "European 167/2013" || currentCert.name === activator.country.locale) {
+    if ( currentCert.name === "No certification" || currentCert.name === "European 167/2013" || currentCert.name === activator.countryName) {
       activator.certificates.push(currentCert);
       var nodeDOM = document.createElement("option");
       var nodeText = document.createTextNode(activator.model.certificate[i].name);
@@ -501,7 +719,6 @@ function setForm (tableType) {
   plateVar.plate.classList.remove("uniform", "rus", "witam", "nocertOld", "undefined");
   plateVar.plate.classList.add(tableType);
 }
-
 function chooseForm () {
   switch (activator.country.locale) {
     case 'ru':

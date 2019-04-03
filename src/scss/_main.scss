@@ -473,7 +473,7 @@
     #roadAxle3,
     #drawbarLoad,
     #axleLoad,
-    #full,
+    #maxLoad,
     .b0, .b1, .b2, .b3, .b4,
     .t0, .t1, .t2, .t3,
     .eac
@@ -567,7 +567,7 @@
       content: 'Netto weight (kg):'
     }
   }
-  & #maxLoad {
+  & #full {
     top: 78mm;
     &::before {
       content: 'Constr. gross weight (kg):'
