@@ -2438,8 +2438,8 @@ function buildTrailer () {
   plateVar.roadAxle2.innerText    = currentTrailer.axleNumber > 1 ? plateVar.roadAxle1.innerText : "-" ;
   plateVar.roadAxle3.innerText    = currentTrailer.axleNumber > 2 ? plateVar.roadAxle1.innerText : "-" ;
 
-  plateVar.drawbarLoad.innerText  = currentTrailer.couplingLoad * 0.0098 + " kN";
-  plateVar.axleLoad.innerText     = (((currentTrailer.weight + currentTrailer.techPayload)-currentTrailer.couplingLoad)/currentTrailer.axleNumber)*0.0098 + " kN";
+  plateVar.drawbarLoad.innerText  = Math.round(parseFloat(currentTrailer.couplingLoad * 0.0098) * 100) / 100  + " kN";
+  plateVar.axleLoad.innerText     = Math.round(parseFloat(currentTrailer.singleAxleRoad * 0.0098) * 100) / 100  + " kN";
   
   plateVar.b1t1.innerText         = currentTrailer.category === "S2a" ? "-" : currentTrailer.couplingDval - currentTrailer.roadWeight > 1500 ? 1500 : currentTrailer.couplingDval - currentTrailer.roadWeight ;
   plateVar.b2t1.innerText         = currentTrailer.category === "S2a" ? "-" : currentTrailer.couplingDval - currentTrailer.roadWeight > 8000 ? 8000 : currentTrailer.couplingDval - currentTrailer.roadWeight ;
