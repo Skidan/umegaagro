@@ -16,6 +16,9 @@
   outline-width: 1px;
   outline-style: solid;
   box-shadow: 0 3mm 10mm rgba(0,0,0,.3);
+  @media print {
+    box-shadow: none;
+  }
   & * {
     position: absolute;
   }
@@ -28,6 +31,9 @@
     border-width: 2mm;
     border-style: solid;
     box-shadow: .2mm .3mm .5mm rgba(0,0,0,.5);
+    @media print {
+      display: none;
+    }
   }
   & .lt {
     top:  1mm;
@@ -862,6 +868,9 @@
   //outline: $test;
   width: 120mm;
   margin: 0 auto;
+  @media print {
+    display: none;
+  }
   & input[type="text"] {
     color: $color-main;
     height: 6mm;

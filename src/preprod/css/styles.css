@@ -21,6 +21,9 @@ body {
   color: #004455;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  @media print {
+    body {
+      background: transparent; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
@@ -101,6 +104,10 @@ select {
   outline-style: solid;
   -webkit-box-shadow: 0 3mm 10mm rgba(0, 0, 0, 0.3);
           box-shadow: 0 3mm 10mm rgba(0, 0, 0, 0.3); }
+  @media print {
+    #plate {
+      -webkit-box-shadow: none;
+              box-shadow: none; } }
   #plate * {
     position: absolute; }
   #plate .rivet {
@@ -114,6 +121,9 @@ select {
     border-style: solid;
     -webkit-box-shadow: 0.2mm 0.3mm 0.5mm rgba(0, 0, 0, 0.5);
             box-shadow: 0.2mm 0.3mm 0.5mm rgba(0, 0, 0, 0.5); }
+    @media print {
+      #plate .rivet {
+        display: none; } }
   #plate .lt {
     top: 1mm;
     left: 1mm; }
@@ -798,6 +808,9 @@ select {
 #input {
   width: 120mm;
   margin: 0 auto; }
+  @media print {
+    #input {
+      display: none; } }
   #input input[type="text"] {
     color: #004455;
     height: 6mm;
