@@ -2787,6 +2787,9 @@ function initialize () {
   // 6) if OK then activate domPDF generation.
   resetData();
 }
+// function exportPDF () {
+//   doc.save('a4.pdf');
+// }
 
 //// WORKFLOW ///////
 initialize();
@@ -2795,3 +2798,4 @@ domVar.countryChooser.addEventListener('change', countryChange);
 domVar.certificateChooser.addEventListener('change', certificateChange);
 domVar.inputYear.addEventListener('change', yearChange);
 domVar.inputPIN.addEventListener('input', VINChange);
+// domVar.pdfButton.addEventListener('click', exportPDF);
