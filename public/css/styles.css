@@ -447,13 +447,9 @@ select {
         -ms-transform: translatex(-50%);
             transform: translatex(-50%); }
   .uniform .eu {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 9mm;
-    line-height: 15mm;
-    top: 95mm;
+    top: 97mm;
     color: whitesmoke;
-    left: 75%;
+    left: 65%;
     -webkit-transform: translatex(-50%);
         -ms-transform: translatex(-50%);
             transform: translatex(-50%); }
@@ -582,13 +578,9 @@ select {
         -ms-transform: translatex(-50%);
             transform: translatex(-50%); }
   .nocertOld .eu {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 9mm;
-    line-height: 15mm;
-    top: 95mm;
+    top: 97mm;
     color: whitesmoke;
-    left: 75%;
+    left: 65%;
     -webkit-transform: translatex(-50%);
         -ms-transform: translatex(-50%);
             transform: translatex(-50%); }
@@ -643,8 +635,8 @@ select {
       text-align: right;
       font-size: 3.5mm !important; }
   .witam .logoUmega {
-    top: 5mm;
-    left: 7mm; }
+    top: 7mm;
+    left: 9mm; }
   .witam .address {
     top: 5mm;
     left: 55mm;
@@ -736,10 +728,10 @@ select {
   .rus .logoGroup {
     color: whitesmoke;
     text-transform: uppercase;
-    font-size: 5mm;
+    font-size: 6mm;
     font-weight: 700;
     width: 55mm;
-    left: 10mm;
+    left: 6mm;
     top: 10mm; }
   .rus .address {
     color: whitesmoke;
@@ -789,19 +781,11 @@ select {
     color: whitesmoke;
     left: 10mm; }
   .rus .eu {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 9mm;
-    line-height: 15mm;
-    top: 95mm;
+    top: 97mm;
     color: whitesmoke;
-    left: 78mm; }
+    left: 75mm; }
   .rus .eac {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 9mm;
-    line-height: 15mm;
-    top: 95mm;
+    top: 97mm;
     color: whitesmoke;
     left: 55mm; }
 
