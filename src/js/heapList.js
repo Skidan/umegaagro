@@ -1,11 +1,11 @@
-spp10p:   {
-  name:         "SPP10P",
+sps14:   {
+  name:         "SPS14",
   category:     "R3a",
-  variant:      "10P",
-  typeEC:       "SPP10",
-  weight:       3500,
-  payload:      14500,
-  techPayload:  10000,
+  variant:      "14",
+  typeEC:       "SPS",
+  weight:       4200,
+  payload:      13800,
+  techPayload:  14000,
   roadWeight:   18000,
   axleNum:      2,
   couplingLoad: 0,
@@ -14,196 +14,196 @@ spp10p:   {
     {
       name: "No certification",
       number: ""
-    },
-    /*{
+    }/*,
+    {
       name: "European 167/2013",
-      number: "e32*167/2013*00000*00"
-    },*/
+      number: "e32*167/2013*00023*00"
+    },
     {
       name: "Poland",
       number: "PL*44810*00"
-    }
+    }*/
   ],
   country: [
     {
       name:   "Albania",
       locale: "al",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Austria",
       locale: "at",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Belgium",
       locale: "be",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Bosnia and Herzegovina",
       locale: "ba",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Bulgaria",
       locale: "bg",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Croatia",
       locale: "hr",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Czech Rep.",
       locale: "cz",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Denmark",
       locale: "dk",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Estonia",
       locale: "ee",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Finland",
       locale: "fi",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "France",
       locale: "fr",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Germany",
       locale: "de",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Greece",
       locale: "gr",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Hungary",
       locale: "hu",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Ireland",
       locale: "ie",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Italy",
       locale: "it",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Latvia",
       locale: "lv",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Lithuania",
       locale: "lt",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Macedonia",
       locale: "mk",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Moldova",
       locale: "md",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Montenegro",
       locale: "me",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Netherlands",
       locale: "nl",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Norway",
       locale: "no",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Poland",
       locale: "pl",
-      type:   "SP2/SPP10"
+      type:   "SPS14"
     },
     {
       name:   "Portugal",
       locale: "pt",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Romania",
       locale: "ro",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Russia",
       locale: "ru",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Serbia",
       locale: "rs",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Slovakia",
       locale: "sk",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Slovenia",
       locale: "si",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Spain",
       locale: "es",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Sweden",
       locale: "se",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Switzerland",
       locale: "ch",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Ukraine",
       locale: "ua",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "United Kingdom",
       locale: "gb",
-      type:   "SPP10P"
+      type:   "SPS14"
     },
     {
       name:   "Other",
       locale: "univ",
-      type:   "SPP10P"
+      type:   "SPS14"
     }
   ]
 }
