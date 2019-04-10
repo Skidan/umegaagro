@@ -2155,7 +2155,7 @@ umegaTrailers = {
     category:     "R3a",
     variant:      "C",
     typeEC:       "TIP14",
-    weight:       4100,
+    weight:       4500,
     payload:      14000,
     techPayload:  14000,
     roadWeight:   21000,
