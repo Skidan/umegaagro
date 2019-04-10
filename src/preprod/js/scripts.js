@@ -701,7 +701,7 @@ umegaTrailers = {
     techPayload:  20000,
     roadWeight:   24000,
     axleNum:      2,
-    couplingLoad: 4000,
+    couplingLoad: 3000,
     couplingDval: 31500,
     certificate: [
       {
@@ -2155,7 +2155,7 @@ umegaTrailers = {
     category:     "R3a",
     variant:      "C",
     typeEC:       "TIP14",
-    weight:       4500,
+    weight:       4500, // 4100!
     payload:      14000,
     techPayload:  14000,
     roadWeight:   21000,
@@ -8049,7 +8049,7 @@ function buildTrailer () {
   currentTrailer.axleNumber     = activator.model.axleNum;
   currentTrailer.axleLoadRoad   = currentTrailer.roadWeight - currentTrailer.couplingLoad;
   currentTrailer.axleLoadFull   = currentTrailer.techPayload + currentTrailer.weight - currentTrailer.couplingLoad;
-  if (currentTrailer.country === "ru" || currentTrailer.country === "dk") {
+  if (currentTrailer.country === "dk") {
     if (currentTrailer.axleNumber === 1) {
       currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad;
     } else if (currentTrailer.axleNumber === 2) {
@@ -8057,6 +8057,14 @@ function buildTrailer () {
     } else if (currentTrailer.axleNumber === 3) {
       currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad/3) + " / " + Math.round(currentTrailer.axleLoadRoad/3) + " / " + Math.round(currentTrailer.axleLoadRoad/3);
     }
+  } else if(currentTrailer.country === "ru" ) {
+      if (currentTrailer.axleNumber === 1) {
+        currentTrailer.singleAxleRoad = currentTrailer.axleLoadFull;
+      } else if (currentTrailer.axleNumber === 2) {
+        currentTrailer.singleAxleRoad = Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + " / " + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10;
+      } else if (currentTrailer.axleNumber === 3) {
+        currentTrailer.singleAxleRoad = Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + " / " + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + " / " + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10;
+      }
   } else {
     currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad / currentTrailer.axleNumber;
   }
@@ -8069,13 +8077,19 @@ function buildTrailer () {
   plateVar.version.innerText      = currentTrailer.version;
   plateVar.year.innerText         = currentTrailer.manufactured;
   plateVar.weight.innerText       = currentTrailer.weight;
-  plateVar.roadLoad.innerText     = currentTrailer.payload;
+  if (currentTrailer.country === "ru") {
+    plateVar.roadLoad.innerText     = currentTrailer.techPayload;
+  } else {
+    plateVar.roadLoad.innerText     = currentTrailer.payload;
+  }
+  
   plateVar.maxLoad.innerText      = currentTrailer.techPayload;
   plateVar.certificate.innerText  = currentTrailer.homologation;
   plateVar.pin.innerText          = currentTrailer.vinCode;
   plateVar.country.innerText      = currentTrailer.country.toUpperCase();  
 
-  plateVar.road.innerText         = currentTrailer.roadWeight;
+  plateVar.road.innerText         = currentTrailer.country === "ru" ? currentTrailer.weight + currentTrailer.techPayload : currentTrailer.roadWeight;
+
   plateVar.drawbar.innerText      = currentTrailer.couplingLoad;
   plateVar.axle1.innerText        = currentTrailer.singleAxleRoad;
   plateVar.axle2.innerText        = currentTrailer.axleNumber > 1 ? plateVar.axle1.innerText : "-" ;
