@@ -904,7 +904,7 @@ umegaTrailers = {
     weight:       11500,
     payload:      15500,
     techPayload:  42000,
-    roadWeight:   53500,
+    roadWeight:   27000,
     axleNum:      3,
     couplingLoad: 3000,
     couplingDval: 38000,
@@ -8053,9 +8053,9 @@ function buildTrailer () {
     if (currentTrailer.axleNumber === 1) {
       currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad;
     } else if (currentTrailer.axleNumber === 2) {
-      currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad/2 + " / " + currentTrailer.axleLoadRoad/2;
+      currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad/2) + " / " + Math.round(currentTrailer.axleLoadRoad/2);
     } else if (currentTrailer.axleNumber === 3) {
-      currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad/3 + " / " + currentTrailer.axleLoadRoad/3 + " / " + currentTrailer.axleLoadRoad/3;
+      currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad/3) + " / " + Math.round(currentTrailer.axleLoadRoad/3) + " / " + Math.round(currentTrailer.axleLoadRoad/3);
     }
   } else {
     currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad / currentTrailer.axleNumber;
