@@ -2568,7 +2568,7 @@ umegaTrailers = {
       }
     ]
   },
-  spc18l:   {
+  spc20l:   {
     name:         "SPC20L",
     category:     "R3a",
     variant:      "L",
