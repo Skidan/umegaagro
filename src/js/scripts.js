@@ -2569,14 +2569,14 @@ umegaTrailers = {
     ]
   },
   spc18l:   {
-    name:         "SPC18L",
+    name:         "SPC20L",
     category:     "R3a",
     variant:      "L",
     typeEC:       "TIP19",
     weight:       7200,
     payload:      13800,
     techPayload:  19500,
-    roadWeight:   24000,
+    roadWeight:   21000,
     axleNum:      2,
     couplingLoad: 3000,
     couplingDval: 38000,
@@ -2653,7 +2653,7 @@ umegaTrailers = {
       {
         name:   "Germany",
         locale: "de",
-        type:   "TW24"
+        type:   "SPC20L"
       },
       {
         name:   "Greece",
