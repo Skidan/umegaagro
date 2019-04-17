@@ -8427,8 +8427,8 @@ function certificateChange () {
   activator.checkup();
 }
 function yearChange () {
-  console.log("year has changed");
-  setForm ("undefined");
+  //setForm ("undefined");
+  setYear();
   activator.checkup();
 }
 function VINChange () {
