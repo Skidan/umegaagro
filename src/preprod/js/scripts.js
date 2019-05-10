@@ -6127,7 +6127,7 @@ umegaTrailers = {
     variant:      "16U",
     typeEC:       "SPP",
     weight:       4950,
-    payload:      13050,
+    payload:      15050,
     techPayload:  16000,
     roadWeight:   20000,
     axleNum:      2,
