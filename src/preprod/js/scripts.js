@@ -2220,7 +2220,7 @@ umegaTrailers = {
       {
         name:   "Estonia",
         locale: "ee",
-        type:   "SPC16"
+        type:   "SPC14"
       },
       {
         name:   "Finland",
@@ -2260,7 +2260,7 @@ umegaTrailers = {
       {
         name:   "Latvia",
         locale: "lv",
-        type:   "SPC16"
+        type:   "SPC14"
       },
       {
         name:   "Lithuania",
