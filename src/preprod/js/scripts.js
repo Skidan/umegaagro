@@ -2157,7 +2157,7 @@ umegaTrailers = {
     typeEC:       "TIP14",
     weight:       4500, // 4100!
     payload:      14000,
-    techPayload:  14000,
+    techPayload:  16000,
     roadWeight:   21000,
     axleNum:      2,
     couplingLoad: 3000,
@@ -2366,7 +2366,7 @@ umegaTrailers = {
     typeEC:       "SPC16",
     weight:       5500,
     payload:      15500,
-    techPayload:  16000,
+    techPayload:  18000,
     roadWeight:   21000,
     axleNum:      2,
     couplingLoad: 3000,
