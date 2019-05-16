@@ -2585,10 +2585,10 @@ umegaTrailers = {
         name: "No certification",
         number: ""
       },
-      /*{
+      {
         name: "European 167/2013",
-        number: "e32*167/2013*00000*00"
-      },
+        number: "e32*167/2013*00031*00"
+      }/*,
       {
         name: "Poland",
         number: "PL*4404*00"
@@ -2794,10 +2794,10 @@ umegaTrailers = {
         name: "No certification",
         number: ""
       },
-      /*{
+      {
         name: "European 167/2013",
-        number: "e32*167/2013*00000*00"
-      },*/
+        number: "e32*167/2013*00031*00"
+      },
       {
         name: "Poland",
         number: "PL*4404*00"
@@ -4259,7 +4259,7 @@ umegaTrailers = {
       },
       /*{
         name: "European 167/2013",
-        number: "e32*167/2013*00023*00"
+        number: "e32*167/2013*00031*00"
       },*/
       {
         name: "Poland",
@@ -4466,10 +4466,10 @@ umegaTrailers = {
         name: "No certification",
         number: ""
       },
-      /*{
+      {
         name: "European 167/2013",
-        number: "e32*167/2013*00023*00"
-      },*/
+        number: "e32*167/2013*00031*00"
+      },
       {
         name: "Poland",
         number: "PL*4404*00"
