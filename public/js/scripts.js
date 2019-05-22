@@ -5942,57 +5942,57 @@ umegaTrailers = {
       {
         name:   "Albania",
         locale: "al",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Austria",
         locale: "at",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Belgium",
         locale: "be",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Bosnia and Herzegovina",
         locale: "ba",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Bulgaria",
         locale: "bg",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Croatia",
         locale: "hr",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Czech Rep.",
         locale: "cz",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Denmark",
         locale: "dk",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Estonia",
         locale: "ee",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Finland",
         locale: "fi",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "France",
         locale: "fr",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Germany",
@@ -6002,122 +6002,122 @@ umegaTrailers = {
       {
         name:   "Greece",
         locale: "gr",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Hungary",
         locale: "hu",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Ireland",
         locale: "ie",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Italy",
         locale: "it",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Latvia",
         locale: "lv",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Lithuania",
         locale: "lt",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Macedonia",
         locale: "mk",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Moldova",
         locale: "md",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Montenegro",
         locale: "me",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Netherlands",
         locale: "nl",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Norway",
         locale: "no",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Poland",
         locale: "pl",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Portugal",
         locale: "pt",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Romania",
         locale: "ro",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Russia",
         locale: "ru",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Serbia",
         locale: "rs",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Slovakia",
         locale: "sk",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Slovenia",
         locale: "si",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Spain",
         locale: "es",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Sweden",
         locale: "se",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Switzerland",
         locale: "ch",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Ukraine",
         locale: "ua",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "United Kingdom",
         locale: "gb",
-        type:   "SPP16"
+        type:   "SPP16P"
       },
       {
         name:   "Other",
         locale: "univ",
-        type:   "SPP16"
+        type:   "SPP16P"
       }
     ]
   },
