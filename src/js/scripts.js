@@ -701,7 +701,7 @@ umegaTrailers = {
     techPayload:  20000,
     roadWeight:   24000,
     axleNum:      2,
-    couplingLoad: 3000,
+    couplingLoad: 4000,
     couplingDval: 31500,
     certificate: [
       {
