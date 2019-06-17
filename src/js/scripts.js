@@ -8055,7 +8055,7 @@ function buildTrailer () {
     } else if (currentTrailer.axleNumber === 2) {
       currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad/2) + " / " + Math.round(currentTrailer.axleLoadRoad/2);
     } else if (currentTrailer.axleNumber === 3) {
-      currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad/3) + " / " + Math.round(currentTrailer.axleLoadRoad/3) + " / " + Math.round(currentTrailer.axleLoadRoad/3);
+      currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad/3) + "/" + Math.round(currentTrailer.axleLoadRoad/3) + "/" + Math.round(currentTrailer.axleLoadRoad/3);
     }
   } else if(currentTrailer.country === "ru" ) {
       if (currentTrailer.axleNumber === 1) {
@@ -8063,12 +8063,12 @@ function buildTrailer () {
       } else if (currentTrailer.axleNumber === 2) {
         currentTrailer.singleAxleRoad = Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + " / " + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10;
       } else if (currentTrailer.axleNumber === 3) {
-        currentTrailer.singleAxleRoad = Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + " / " + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + " / " + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10;
+        currentTrailer.singleAxleRoad = Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + "/" + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10 + "/" + Math.round(Math.round(currentTrailer.axleLoadFull/2)/10)*10;
       }
   } else {
-    currentTrailer.singleAxleRoad = currentTrailer.axleLoadRoad / currentTrailer.axleNumber;
+    currentTrailer.singleAxleRoad = Math.round(currentTrailer.axleLoadRoad / currentTrailer.axleNumber);
   }
-  currentTrailer.singleAxleFull = currentTrailer.axleLoadFull / currentTrailer.axleNumber;
+  currentTrailer.singleAxleFull = Math.round(currentTrailer.axleLoadFull / currentTrailer.axleNumber);
 
 
   plateVar.category.innerText     = currentTrailer.category;
