@@ -12,35 +12,7 @@ CREATE TABLE axles (
 	axle_square_mm TINYINT(3) UNSIGNED NOT NULL,
 	axle_system_code CHAR(12)
 );
-INSERT INTO axles 
-    (axle_manufacturer,	axle_length_mm,	axle_brake_size, axle_maxload_kg, axle_is_steered, axle_square_mm, axle_system_code)
-VALUES
-    ('ADR', '1700', '300x60', 04512, false, 070, 0),
-    ('ADR', '1800', '400x80', 06854, false, 080, 0),
-    ('ADR', '1900', '400x80', 11400, false, 090, 0),
-    ('ADR', '2100', '400x80', 11000, false, 090, 0),
-    ('ADR', '2100', '400x80', 11200, false, 110, 0),
-    ('ADR', '2100', '400x80', 11500, true, 120, 0),
-    ('ADR', '1900', '406x120', 14000, true, 150, 0),
-    ('ADR', '1900', '406x120', 14000, false, 150, 0),
-    ('ADR', '1900', '406x120', 11000, true, 90, 0),
-    ('ADR', '1900', '406x120', 11000, true, 90, 0),
-    ('TVZ', '1700', '300x60', 04512, false, 070, 0),
-    ('TVZ', '1800', '400x80', 04512, false, 080, 0),
-    ('TVZ', '1900', '400x80', 11000, false, 090, 0),
-    ('TVZ', '1900', '400x80', 11400, false, 100, 0),
-    ('TVZ', '2000', '406x120', 14000, false, 120, 0),
-    ('TVZ', '2100', '400x80', 11400, false, 120, 0),
-    ('TVZ', '1900', '406x120', 14500, false, 150, 0),
-    ('TVZ', '1900', '406x120', 14200, true, 150, 0),
-    ('Teknoax', '1700', '300x60', 04512, false, 070, 0),
-    ('Teknoax', '1800', '400x80', 04512, false, 080, 0),
-    ('Teknoax', '1900', '400x80', 11000, false, 090, 0),
-    ('Teknoax', '1900', '400x80', 11400, false, 100, 0),
-    ('Teknoax', '2000', '406x120', 14000, false, 120, 0),
-    ('Teknoax', '2100', '400x80', 11400, false, 120, 0),
-    ('Teknoax', '1900', '406x120', 13800, false, 150, 0),
-    ('Teknoax', '1900', '406x120', 13800, true, 150, 0);
+
 
 CREATE TABLE suspension (
 	id_suspension TINYINT PRIMARY KEY AUTO_INCREMENT,
