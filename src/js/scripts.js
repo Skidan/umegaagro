@@ -901,12 +901,12 @@ umegaTrailers = {
     category:     "R3a",
     variant:      "42",
     typeEC:       "PI",
-    weight:       11500,
-    payload:      15500,
+    weight:       15000,
+    payload:      19000,
     techPayload:  42000,
-    roadWeight:   27000,
+    roadWeight:   34000,
     axleNum:      3,
-    couplingLoad: 3000,
+    couplingLoad: 4000,
     couplingDval: 38000,
     certificate: [
       {
