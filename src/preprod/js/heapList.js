@@ -1,15 +1,15 @@
-pi42:   {
-  name:         "PI42",
+spc24:   {
+  name:         "SPC24",
   category:     "R3a",
-  variant:      "42",
-  typeEC:       "PI",
-  weight:       11500,
-  payload:      15500,
-  techPayload:  42000,
-  roadWeight:   53500,
+  variant:      "C",
+  typeEC:       "SPC24",
+  weight:       9000,
+  payload:      22000,
+  techPayload:  24000,
+  roadWeight:   31000,
   axleNum:      3,
-  couplingLoad: 3000,
-  couplingDval: 38000,
+  couplingLoad: 4000,
+  couplingDval: 31500,
   certificate: [
     {
       name: "No certification",
@@ -17,7 +17,7 @@ pi42:   {
     }/*,
     {
       name: "European 167/2013",
-      number: "e32*167/2013*00023*00"
+      number: "e32*167/2013*00031*00"
     },
     {
       name: "Poland",
@@ -28,182 +28,182 @@ pi42:   {
     {
       name:   "Albania",
       locale: "al",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Austria",
       locale: "at",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Belgium",
       locale: "be",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Bosnia and Herzegovina",
       locale: "ba",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Bulgaria",
       locale: "bg",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Croatia",
       locale: "hr",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Czech Rep.",
       locale: "cz",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Denmark",
       locale: "dk",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Estonia",
       locale: "ee",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Finland",
       locale: "fi",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "France",
       locale: "fr",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Germany",
       locale: "de",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Greece",
       locale: "gr",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Hungary",
       locale: "hu",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Ireland",
       locale: "ie",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Italy",
       locale: "it",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Latvia",
       locale: "lv",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Lithuania",
       locale: "lt",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Macedonia",
       locale: "mk",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Moldova",
       locale: "md",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Montenegro",
       locale: "me",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Netherlands",
       locale: "nl",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Norway",
       locale: "no",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Poland",
       locale: "pl",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Portugal",
       locale: "pt",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Romania",
       locale: "ro",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Russia",
       locale: "ru",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Serbia",
       locale: "rs",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Slovakia",
       locale: "sk",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Slovenia",
       locale: "si",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Spain",
       locale: "es",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Sweden",
       locale: "se",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Switzerland",
       locale: "ch",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Ukraine",
       locale: "ua",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "United Kingdom",
       locale: "gb",
-      type:   "PI42"
+      type:   "SPC24"
     },
     {
       name:   "Other",
       locale: "univ",
-      type:   "PI42"
+      type:   "SPC24"
     }
   ]
-}
+},

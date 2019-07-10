@@ -3195,6 +3195,215 @@ umegaTrailers = {
       }
     ]
   },
+  spc24:   {
+    name:         "SPC24",
+    category:     "R3a",
+    variant:      "C",
+    typeEC:       "SPC24",
+    weight:       9000,
+    payload:      22000,
+    techPayload:  24000,
+    roadWeight:   31000,
+    axleNum:      3,
+    couplingLoad: 4000,
+    couplingDval: 31500,
+    certificate: [
+      {
+        name: "No certification",
+        number: ""
+      }/*,
+      {
+        name: "European 167/2013",
+        number: "e32*167/2013*00031*00"
+      },
+      {
+        name: "Poland",
+        number: "PL*4404*00"
+      }*/
+    ],
+    country: [
+      {
+        name:   "Albania",
+        locale: "al",
+        type:   "SPC24"
+      },
+      {
+        name:   "Austria",
+        locale: "at",
+        type:   "SPC24"
+      },
+      {
+        name:   "Belgium",
+        locale: "be",
+        type:   "SPC24"
+      },
+      {
+        name:   "Bosnia and Herzegovina",
+        locale: "ba",
+        type:   "SPC24"
+      },
+      {
+        name:   "Bulgaria",
+        locale: "bg",
+        type:   "SPC24"
+      },
+      {
+        name:   "Croatia",
+        locale: "hr",
+        type:   "SPC24"
+      },
+      {
+        name:   "Czech Rep.",
+        locale: "cz",
+        type:   "SPC24"
+      },
+      {
+        name:   "Denmark",
+        locale: "dk",
+        type:   "SPC24"
+      },
+      {
+        name:   "Estonia",
+        locale: "ee",
+        type:   "SPC24"
+      },
+      {
+        name:   "Finland",
+        locale: "fi",
+        type:   "SPC24"
+      },
+      {
+        name:   "France",
+        locale: "fr",
+        type:   "SPC24"
+      },
+      {
+        name:   "Germany",
+        locale: "de",
+        type:   "SPC24"
+      },
+      {
+        name:   "Greece",
+        locale: "gr",
+        type:   "SPC24"
+      },
+      {
+        name:   "Hungary",
+        locale: "hu",
+        type:   "SPC24"
+      },
+      {
+        name:   "Ireland",
+        locale: "ie",
+        type:   "SPC24"
+      },
+      {
+        name:   "Italy",
+        locale: "it",
+        type:   "SPC24"
+      },
+      {
+        name:   "Latvia",
+        locale: "lv",
+        type:   "SPC24"
+      },
+      {
+        name:   "Lithuania",
+        locale: "lt",
+        type:   "SPC24"
+      },
+      {
+        name:   "Macedonia",
+        locale: "mk",
+        type:   "SPC24"
+      },
+      {
+        name:   "Moldova",
+        locale: "md",
+        type:   "SPC24"
+      },
+      {
+        name:   "Montenegro",
+        locale: "me",
+        type:   "SPC24"
+      },
+      {
+        name:   "Netherlands",
+        locale: "nl",
+        type:   "SPC24"
+      },
+      {
+        name:   "Norway",
+        locale: "no",
+        type:   "SPC24"
+      },
+      {
+        name:   "Poland",
+        locale: "pl",
+        type:   "SPC24"
+      },
+      {
+        name:   "Portugal",
+        locale: "pt",
+        type:   "SPC24"
+      },
+      {
+        name:   "Romania",
+        locale: "ro",
+        type:   "SPC24"
+      },
+      {
+        name:   "Russia",
+        locale: "ru",
+        type:   "SPC24"
+      },
+      {
+        name:   "Serbia",
+        locale: "rs",
+        type:   "SPC24"
+      },
+      {
+        name:   "Slovakia",
+        locale: "sk",
+        type:   "SPC24"
+      },
+      {
+        name:   "Slovenia",
+        locale: "si",
+        type:   "SPC24"
+      },
+      {
+        name:   "Spain",
+        locale: "es",
+        type:   "SPC24"
+      },
+      {
+        name:   "Sweden",
+        locale: "se",
+        type:   "SPC24"
+      },
+      {
+        name:   "Switzerland",
+        locale: "ch",
+        type:   "SPC24"
+      },
+      {
+        name:   "Ukraine",
+        locale: "ua",
+        type:   "SPC24"
+      },
+      {
+        name:   "United Kingdom",
+        locale: "gb",
+        type:   "SPC24"
+      },
+      {
+        name:   "Other",
+        locale: "univ",
+        type:   "SPC24"
+      }
+    ]
+  },
   spc30:   {
     name:         "SPC30U",
     category:     "R3a",
@@ -7581,6 +7790,215 @@ umegaTrailers = {
         name:   "Other",
         locale: "univ",
         type:   "SPT16"
+      }
+    ]
+  },
+  spy5:   {
+    name:         "SPY5",
+    category:     "R3a",
+    variant:      "Y",
+    typeEC:       "SPY5",
+    weight:       1000,
+    payload:      5000,
+    techPayload:  5000,
+    roadWeight:   6000,
+    axleNum:      1,
+    couplingLoad: 500,
+    couplingDval: 30000,
+    certificate: [
+      {
+        name: "No certification",
+        number: ""
+      }/*,
+      {
+        name: "European 167/2013",
+        number: "e32*167/2013*00031*00"
+      },
+      {
+        name: "Poland",
+        number: "PL*4404*00"
+      }*/
+    ],
+    country: [
+      {
+        name:   "Albania",
+        locale: "al",
+        type:   "SPY5"
+      },
+      {
+        name:   "Austria",
+        locale: "at",
+        type:   "SPY5"
+      },
+      {
+        name:   "Belgium",
+        locale: "be",
+        type:   "SPY5"
+      },
+      {
+        name:   "Bosnia and Herzegovina",
+        locale: "ba",
+        type:   "SPY5"
+      },
+      {
+        name:   "Bulgaria",
+        locale: "bg",
+        type:   "SPY5"
+      },
+      {
+        name:   "Croatia",
+        locale: "hr",
+        type:   "SPY5"
+      },
+      {
+        name:   "Czech Rep.",
+        locale: "cz",
+        type:   "SPY5"
+      },
+      {
+        name:   "Denmark",
+        locale: "dk",
+        type:   "SPY5"
+      },
+      {
+        name:   "Estonia",
+        locale: "ee",
+        type:   "SPY5"
+      },
+      {
+        name:   "Finland",
+        locale: "fi",
+        type:   "SPY5"
+      },
+      {
+        name:   "France",
+        locale: "fr",
+        type:   "SPY5"
+      },
+      {
+        name:   "Germany",
+        locale: "de",
+        type:   "SPY5"
+      },
+      {
+        name:   "Greece",
+        locale: "gr",
+        type:   "SPY5"
+      },
+      {
+        name:   "Hungary",
+        locale: "hu",
+        type:   "SPY5"
+      },
+      {
+        name:   "Ireland",
+        locale: "ie",
+        type:   "SPY5"
+      },
+      {
+        name:   "Italy",
+        locale: "it",
+        type:   "SPY5"
+      },
+      {
+        name:   "Latvia",
+        locale: "lv",
+        type:   "SPY5"
+      },
+      {
+        name:   "Lithuania",
+        locale: "lt",
+        type:   "SPY5"
+      },
+      {
+        name:   "Macedonia",
+        locale: "mk",
+        type:   "SPY5"
+      },
+      {
+        name:   "Moldova",
+        locale: "md",
+        type:   "SPY5"
+      },
+      {
+        name:   "Montenegro",
+        locale: "me",
+        type:   "SPY5"
+      },
+      {
+        name:   "Netherlands",
+        locale: "nl",
+        type:   "SPY5"
+      },
+      {
+        name:   "Norway",
+        locale: "no",
+        type:   "SPY5"
+      },
+      {
+        name:   "Poland",
+        locale: "pl",
+        type:   "SPY5"
+      },
+      {
+        name:   "Portugal",
+        locale: "pt",
+        type:   "SPY5"
+      },
+      {
+        name:   "Romania",
+        locale: "ro",
+        type:   "SPY5"
+      },
+      {
+        name:   "Russia",
+        locale: "ru",
+        type:   "SPY5"
+      },
+      {
+        name:   "Serbia",
+        locale: "rs",
+        type:   "SPY5"
+      },
+      {
+        name:   "Slovakia",
+        locale: "sk",
+        type:   "SPY5"
+      },
+      {
+        name:   "Slovenia",
+        locale: "si",
+        type:   "SPY5"
+      },
+      {
+        name:   "Spain",
+        locale: "es",
+        type:   "SPY5"
+      },
+      {
+        name:   "Sweden",
+        locale: "se",
+        type:   "SPY5"
+      },
+      {
+        name:   "Switzerland",
+        locale: "ch",
+        type:   "SPY5"
+      },
+      {
+        name:   "Ukraine",
+        locale: "ua",
+        type:   "SPY5"
+      },
+      {
+        name:   "United Kingdom",
+        locale: "gb",
+        type:   "SPY5"
+      },
+      {
+        name:   "Other",
+        locale: "univ",
+        type:   "SPY5"
       }
     ]
   },
